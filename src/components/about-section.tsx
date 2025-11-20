@@ -1,0 +1,215 @@
+import { Button } from "./ui/button";
+import { Badge } from "./ui/badge";
+import {
+  CheckCircle,
+  Award,
+  BookOpen,
+  Users,
+  Target,
+  TrendingUp,
+} from "lucide-react";
+
+export function AboutSection() {
+  // const skills = [
+  //   { name: "Photoshop", level: 80 },
+  //   { name: "Illustrator", level: 85 },
+  //   { name: "Indesign", level: 78 },
+  //   { name: "Meta Ads (Facebook, Instagram, Thread)", level: 90 },
+  //   { name: "Video Editing", level: 60 },
+  //   { name: "Content Writing", level: 75 },
+  // ]
+
+  const certifications = [
+    "Digital Marketing Institute Certified",
+    "Graphics Design Institute Certified",
+  ];
+
+  const achievements = [
+    { icon: Users, number: "60+", label: "Happy Clients" },
+    { icon: Target, number: "90+", label: "Project Completed" },
+    { icon: TrendingUp, number: "2+", label: "Experience" },
+    // { icon: Award, number: "15+", label: "Industry Awards" },
+  ];
+
+  return (
+    <section
+      id="about"
+      className="py-20 bg-white dark:bg-slate-900 relative overflow-hidden"
+    >
+      {/* Background Elements */}
+      <div className="absolute inset-0 bg-grid-slate-100 dark:bg-grid-slate-800 [mask-image:radial-gradient(ellipse_at_center,white,transparent)]"></div>
+
+      <div className="container mx-auto px-4 relative">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
+          {/* Left Side - Image and Visual Elements */}
+          <div className="relative">
+            {/* Main Image Container */}
+            <div className="relative">
+              <div className="relative bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl p-8 transform rotate-3 hover:rotate-0 transition-transform duration-500">
+                {/* Profile placeholder - you can replace with actual image */}
+                <div className="bg-white/10 backdrop-blur rounded-xl p-6 text-center">
+                  <div className="w-32 h-32 bg-white/20 rounded-full mx-auto mb-4 flex items-center justify-center">
+                    <Users className="w-16 h-16 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-white mb-2">
+                    Amrit Paudel
+                  </h3>
+                  <p className="text-white/80">Digital Marketing Consultant</p>
+                </div>
+              </div>
+
+              {/* Floating Achievement Cards */}
+              {/* <div className="absolute -top-6 -right-6 bg-white dark:bg-slate-800 rounded-lg shadow-lg p-4 animate-float">
+                <div className="flex items-center space-x-2">
+                  <Award className="w-6 h-6 text-yellow-500" />
+                  <div>
+                    <div className="text-sm font-semibold text-slate-800 dark:text-white">Google Partner</div>
+                    <div className="text-xs text-slate-600 dark:text-slate-400">Premier Status</div>
+                  </div>
+                </div>
+              </div> */}
+
+              <div className="absolute -bottom-6 -left-6 bg-white dark:bg-slate-800 rounded-lg shadow-lg p-4 animate-float animation-delay-2000">
+                <div className="flex items-center space-x-2">
+                  <TrendingUp className="w-6 h-6 text-green-500" />
+                  <div>
+                    <div className="text-sm font-semibold text-slate-800 dark:text-white">
+                      2+ Years
+                    </div>
+                    <div className="text-xs text-slate-600 dark:text-slate-400">
+                      Experience
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Side - Content */}
+          <div className="space-y-8">
+            {/* Section Header */}
+            <div className="space-y-4">
+              <Badge className="bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200">
+                About Me
+              </Badge>
+              <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white">
+                Your Partner in
+                <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                  Digital Growth
+                </span>
+              </h2>
+              <p className="text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
+                With over 2 years of experience as a digital marketing
+                consultant and social media designer, I have helped multiple
+                businesses transform their online presence, strengthen their
+                brand identity, and achieve remarkable growth.
+              </p>
+            </div>
+
+            {/* Key Points */}
+            <div className="space-y-3">
+              <div className="flex items-start space-x-3">
+                <CheckCircle className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
+                <p className="text-slate-700 dark:text-slate-300">
+                  <span className="font-semibold">Consultation & Plannig:{" "}</span>
+                  We begin with one-on-one conversation to your specific business goals and
+                  target audience.
+                </p>
+              </div>
+              <div className="flex items-start space-x-3">
+                <CheckCircle className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
+                <p className="text-slate-700 dark:text-slate-300">
+                  <span className="font-semibold">Data-Driven Outcomes:{" "}</span>
+                 Every plans are based on client requirements and business goals.
+                </p>
+              </div>
+              <div className="flex items-start space-x-3">
+                <CheckCircle className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
+                <p className="text-slate-700 dark:text-slate-300">
+                  <span className="font-semibold">Service Support:{" "}</span>
+                  From planning to execution, I handle every aspect of clients need.
+                </p>
+              </div>
+            </div>
+
+            {/* Certifications */}
+            <div>
+              <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-4 flex items-center">
+                <BookOpen className="w-6 h-6 mr-2 text-blue-600" />
+                Certifications & Expertise
+              </h3>
+              <div className="flex flex-wrap gap-2">
+                {certifications.map((cert, index) => (
+                  <Badge
+                    key={index}
+                    variant="outline"
+                    className="text-sm hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors"
+                  >
+                    {cert}
+                  </Badge>
+                ))}
+              </div>
+            </div>
+
+            {/* CTA Button */}
+            <Button
+              size="lg"
+              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3"
+            >
+              Download My Resume
+            </Button>
+          </div>
+        </div>
+
+        {/* Skills Section */}
+        {/* <div className="mt-20">
+          <div className="text-center mb-12">
+            <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-4">Core Competencies</h3>
+            <p className="text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
+              My expertise spans across all major digital marketing channels with proven track records of success.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {skills.map((skill, index) => (
+              <div key={index} className="space-y-2">
+                <div className="flex justify-between">
+                  <span className="text-slate-700 dark:text-slate-300 font-medium">{skill.name}</span>
+                  <span className="text-slate-500 dark:text-slate-400">{skill.level}%</span>
+                </div>
+                <div className="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-2">
+                  <div 
+                    className="bg-gradient-to-r from-blue-500 to-purple-600 h-2 rounded-full transition-all duration-1000 ease-out"
+                    style={{ width: `${skill.level}%` }}
+                  ></div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div> */}
+
+        {/* Achievements Grid */}
+        <div className="mt-20">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+            {achievements.map((achievement, index) => (
+              <div
+                key={index}
+                className="text-center p-6 bg-white/50 dark:bg-slate-800/50 rounded-xl backdrop-blur border border-slate-200 dark:border-slate-700 hover:shadow-lg transition-all duration-300"
+              >
+                <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full mb-4">
+                  <achievement.icon className="w-6 h-6 text-white" />
+                </div>
+                <div className="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white">
+                  {achievement.number}
+                </div>
+                <div className="text-sm text-slate-600 dark:text-slate-400">
+                  {achievement.label}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
