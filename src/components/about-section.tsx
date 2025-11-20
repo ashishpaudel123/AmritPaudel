@@ -2,10 +2,10 @@ import { Button } from "./ui/button";
 import { Badge } from "./ui/badge";
 import {
   CheckCircle,
-  Award,
+  // Award,
   BookOpen,
   Users,
-  Target,
+  // Target,
   TrendingUp,
 } from "lucide-react";
 
@@ -24,12 +24,12 @@ export function AboutSection() {
     "Graphics Design Institute Certified",
   ];
 
-  const achievements = [
-    { icon: Users, number: "60+", label: "Happy Clients" },
-    { icon: Target, number: "90+", label: "Project Completed" },
-    { icon: TrendingUp, number: "2+", label: "Experience" },
-    // { icon: Award, number: "15+", label: "Industry Awards" },
-  ];
+  // const achievements = [
+  //   { icon: Users, number: "60+", label: "Happy Clients" },
+  //   { icon: Target, number: "90+", label: "Project Completed" },
+  //   { icon: TrendingUp, number: "2+", label: "Experience" },
+  //   // { icon: Award, number: "15+", label: "Industry Awards" },
+  // ];
 
   return (
     <section
@@ -188,7 +188,7 @@ export function AboutSection() {
           </div>
         </div> */}
 
-        {/* Achievements Grid */}
+        {/* Achievements Grid
         <div className="mt-20">
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
             {achievements.map((achievement, index) => (
@@ -208,7 +208,7 @@ export function AboutSection() {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );
