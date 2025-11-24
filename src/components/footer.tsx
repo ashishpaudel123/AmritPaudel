@@ -1,0 +1,282 @@
+import { Button } from "./ui/button"
+import { Badge } from "./ui/badge"
+import { 
+  Mail, 
+  Phone, 
+  MapPin,
+  ArrowUp,
+  Heart
+} from "lucide-react"
+
+export function Footer() {
+  const currentYear = new Date().getFullYear()
+
+  const services = [
+    { name: "SEO & Content Strategy", href: "#services" },
+    { name: "PPC & Google Ads", href: "#services" },
+    { name: "Social Media Marketing", href: "#services" },
+    { name: "Email Marketing", href: "#services" },
+    { name: "Analytics & Reporting", href: "#services" },
+    { name: "Marketing Automation", href: "#services" },
+  ]
+
+  const quickLinks = [
+    { name: "About Me", href: "#about" },
+    { name: "Services", href: "#services" },
+    { name: "Portfolio", href: "#portfolio" },
+    { name: "Testimonials", href: "#testimonials" },
+    { name: "Contact", href: "#contact" },
+    { name: "Blog", href: "#blog" },
+  ]
+
+  const resources = [
+    { name: "Free Marketing Audit", href: "#" },
+    { name: "Case Studies", href: "#portfolio" },
+    { name: "Marketing Tools", href: "#" },
+    { name: "Industry Reports", href: "#" },
+    { name: "Webinars", href: "#" },
+    { name: "Newsletter", href: "#" },
+  ]
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    })
+  }
+
+  return (
+    <footer className="bg-slate-900 text-white relative overflow-hidden">
+      {/* Background Elements */}
+      <div className="absolute inset-0">
+        <div className="absolute top-0 left-1/4 w-64 h-64 bg-gradient-to-r from-blue-500/10 to-purple-600/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-gradient-to-r from-cyan-500/10 to-pink-600/10 rounded-full blur-3xl"></div>
+      </div>
+
+      <div className="container mx-auto px-4 relative">
+        
+        {/* Newsletter Signup Section */}
+        <div className="py-12 border-b border-slate-800">
+          <div className="max-w-4xl mx-auto text-center">
+            <Badge className="bg-blue-100 text-blue-800 mb-4">
+              Stay Updated
+            </Badge>
+            <h3 className="text-2xl md:text-3xl font-bold mb-4">
+              Get Weekly Marketing Tips & Insights
+            </h3>
+            <p className="text-slate-300 text-lg mb-8 max-w-2xl mx-auto">
+              Join 10,000+ marketers who receive my weekly newsletter with the latest 
+              digital marketing strategies, case studies, and industry insights.
+            </p>
+            <div className="flex flex-col sm:flex-row max-w-md mx-auto gap-3">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="flex-1 px-4 py-3 rounded-lg bg-slate-800 border border-slate-700 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              />
+              <Button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 px-6">
+                Subscribe
+              </Button>
+            </div>
+            <p className="text-sm text-slate-400 mt-3">
+              No spam, unsubscribe at any time. Free digital marketing audit included!
+            </p>
+          </div>
+        </div>
+
+        {/* Main Footer Content */}
+        <div className="py-12">
+          <div className="grid lg:grid-cols-5 gap-8">
+            
+            {/* Company Info */}
+            <div className="lg:col-span-2 space-y-6">
+              <div>
+                {/* Logo */}
+                <div className="flex items-center space-x-3 mb-4">
+                  <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center font-bold text-lg">
+                    AM
+                  </div>
+                  <span className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                    Amrit paudel
+                  </span>
+                </div>
+                <p className="text-slate-300 leading-relaxed">
+                  Transforming businesses through strategic digital marketing. 
+                  I help companies achieve measurable growth with data-driven 
+                  strategies and proven methodologies.
+                </p>
+              </div>
+
+              {/* Contact Info */}
+              <div className="space-y-3">
+                <div className="flex items-center space-x-3 text-slate-300">
+                  <Mail className="w-5 h-5 text-blue-400" />
+                  <span>Amrit@digitalmarketer.com</span>
+                </div>
+                <div className="flex items-center space-x-3 text-slate-300">
+                  <Phone className="w-5 h-5 text-blue-400" />
+                  <span>+977 9865846429</span>
+                </div>
+                <div className="flex items-center space-x-3 text-slate-300">
+                  <MapPin className="w-5 h-5 text-blue-400" />
+                  <span>Kathmandu, Nepal</span>
+                </div>
+              </div>
+
+              {/* Social Links */}
+              <div>
+                <h4 className="text-lg font-semibold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-3">Follow Me</h4>
+                <div className="flex space-x-3">
+                  {/* LinkedIn - Official LinkedIn Blue Background */}
+                  <a 
+                    href="#" 
+                    className="group flex items-center justify-center w-10 h-10 bg-[#0077B5]/80 backdrop-blur-md hover:bg-[#0077B5] rounded-lg transition-all duration-300 shadow-md hover:shadow-lg hover:shadow-blue-500/25 hover:scale-105"
+                  >
+                    <svg className="w-5 h-5 group-hover:scale-110 transition-transform duration-200" viewBox="0 0 24 24">
+                      <path fill="white" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452z"/>
+                    </svg>
+                  </a>
+                  {/* X - Official Black Background */}
+                  <a 
+                    href="#" 
+                    className="group flex items-center justify-center w-10 h-10 bg-black/80 backdrop-blur-md hover:bg-black rounded-lg transition-all duration-300 shadow-md hover:shadow-lg hover:shadow-black/25 hover:scale-105"
+                  >
+                    <svg className="w-5 h-5 group-hover:scale-110 transition-transform duration-200" viewBox="0 0 24 24">
+                      <path fill="white" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                    </svg>
+                  </a>
+                  {/* Instagram - Official Instagram Gradient Background */}
+                  <a 
+                    href="#" 
+                    className="group flex items-center justify-center w-10 h-10 bg-gradient-to-tr from-[#833AB4] via-[#C13584] to-[#E1306C] backdrop-blur-md hover:from-[#7c2d8e] hover:via-[#b12a75] hover:to-[#d42c5c] rounded-lg transition-all duration-300 shadow-md hover:shadow-lg hover:shadow-pink-500/25 hover:scale-105"
+                  >
+                    <svg className="w-5 h-5 group-hover:scale-110 transition-transform duration-200" fill="white" viewBox="0 0 24 24">
+                      <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.40z"/>
+                    </svg>
+                  </a>
+                  {/* YouTube - Official Red Background */}
+                  <a 
+                    href="#" 
+                    className="group flex items-center justify-center w-10 h-10 bg-[#FF0000]/80 backdrop-blur-md hover:bg-[#FF0000] rounded-lg transition-all duration-300 shadow-md hover:shadow-lg hover:shadow-red-500/25 hover:scale-105"
+                  >
+                    <svg className="w-5 h-5 group-hover:scale-110 transition-transform duration-200" fill="white" viewBox="0 0 24 24">
+                      <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Services */}
+            <div>
+              <h4 className="text-lg font-semibold mb-4">Services</h4>
+              <ul className="space-y-3">
+                {services.map((service, index) => (
+                  <li key={index}>
+                    <a 
+                      href={service.href} 
+                      className="text-slate-300 hover:text-blue-400 transition-colors duration-300"
+                    >
+                      {service.name}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Quick Links */}
+            <div>
+              <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
+              <ul className="space-y-3">
+                {quickLinks.map((link, index) => (
+                  <li key={index}>
+                    <a 
+                      href={link.href} 
+                      className="text-slate-300 hover:text-blue-400 transition-colors duration-300"
+                    >
+                      {link.name}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Resources */}
+            <div>
+              <h4 className="text-lg font-semibold mb-4">Resources</h4>
+              <ul className="space-y-3">
+                {resources.map((resource, index) => (
+                  <li key={index}>
+                    <a 
+                      href={resource.href} 
+                      className="text-slate-300 hover:text-blue-400 transition-colors duration-300"
+                    >
+                      {resource.name}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom Section */}
+        <div className="py-6 border-t border-slate-800">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            
+            {/* Copyright */}
+            <div className="flex items-center space-x-1 text-slate-400 text-sm">
+              <span>© {currentYear} Amrit Paudel.</span>
+              <span>Design and Developed by Ashish Paudel</span>
+            </div>
+
+            {/* Legal Links */}
+            <div className="flex items-center space-x-6 text-sm text-slate-400 mt-4 md:mt-0">
+              <a href="#" className="hover:text-white transition-colors duration-300">
+                Privacy Policy
+              </a>
+              <a href="#" className="hover:text-white transition-colors duration-300">
+                Terms of Service
+              </a>
+              <a href="#" className="hover:text-white transition-colors duration-300">
+                Cookie Policy
+              </a>
+            </div>
+
+            {/* Back to Top */}
+            <button
+              onClick={scrollToTop}
+              className="flex items-center space-x-2 text-slate-400 hover:text-white transition-colors duration-300 mt-4 md:mt-0"
+            >
+              <span className="text-sm">Back to top</span>
+              <div className="w-8 h-8 bg-slate-800 hover:bg-blue-600 rounded-lg flex items-center justify-center transition-colors duration-300">
+                <ArrowUp className="w-4 h-4" />
+              </div>
+            </button>
+          </div>
+        </div>
+
+        {/* Trust Indicators */}
+        <div className="py-6 border-t border-slate-800">
+          <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8 text-center">
+            <div className="flex items-center space-x-2 text-slate-400">
+              <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
+                <div className="w-2 h-2 bg-white rounded-full"></div>
+              </div>
+              <span className="text-sm">Available for new projects</span>
+            </div>
+            <div className="text-slate-400 text-sm">
+              🏆 Google Partner Certified
+            </div>
+            <div className="text-slate-400 text-sm">
+              ⚡ 24h Response Time
+            </div>
+            <div className="text-slate-400 text-sm">
+              🔒 100% Confidential
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  )
+}
