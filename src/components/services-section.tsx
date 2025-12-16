@@ -268,30 +268,30 @@ export function ServicesSection({ onServiceClick }: ServicesSectionProps) {
 
           <div className="grid md:grid-cols-4 gap-8">
             {[
-              {
-                step: "01",
-                title: "Discovery & Audit",
-                description:
-                  "Analyze your current marketing efforts and identify opportunities for growth.",
-              },
-              {
-                step: "02",
-                title: "Strategy Development",
-                description:
-                  "Create a customized marketing strategy aligned with your business goals.",
-              },
-              {
-                step: "03",
-                title: "Implementation",
-                description:
-                  "Execute campaigns across all relevant channels with precision and expertise.",
-              },
-              {
-                step: "04",
-                title: "Optimization",
-                description:
-                  "Continuously monitor, analyze, and optimize for maximum performance.",
-              },
+          {
+          step: "01",
+          title: "Discovery and Strategy",
+          description:
+          "You share your goals. We study your business and audience. We define a clear digital plan focused on results.",
+          },
+          {
+          step: "02",
+          title: "Design and Content",
+          description:
+          "You get clean design and strong content. Everything matches your brand and drives action.",
+          },
+          {
+          step: "03",
+          title: "Development and Execution",
+          description:
+          "We build and launch. Websites, ads, campaigns, and systems run fast and work smoothly.",
+          },
+          {
+          step: "04",
+          title: "Optimization and Support",
+          description:
+          "We track performance. We improve results. You get ongoing support and clear growth.",
+          },
             ].map((process, index) => (
               <div key={index} className="text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full text-white font-bold text-lg mb-4">
