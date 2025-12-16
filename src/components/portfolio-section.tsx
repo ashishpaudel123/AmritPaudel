@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Button } from "./ui/button"
 import { Badge } from "./ui/badge"
 import { 
@@ -27,6 +27,23 @@ export function PortfolioSection() {
   const [selectedCategory, setSelectedCategory] = useState("all")
   const [selectedAnalytics, setSelectedAnalytics] = useState<number | null>(null)
   const [fullScreenImage, setFullScreenImage] = useState<string | null>(null)
+
+  // Prevent body scroll when any modal is open
+  useEffect(() => {
+    if (selectedAnalytics !== null || fullScreenImage !== null) {
+      const scrollY = window.scrollY
+      document.body.style.position = 'fixed'
+      document.body.style.top = `-${scrollY}px`
+      document.body.style.width = '100%'
+      
+      return () => {
+        document.body.style.position = ''
+        document.body.style.top = ''
+        document.body.style.width = ''
+        window.scrollTo(0, scrollY)
+      }
+    }
+  }, [selectedAnalytics, fullScreenImage])
 
   const categories = [
     { id: "all", label: "All Projects" },
@@ -261,7 +278,7 @@ export function PortfolioSection() {
 
       {/* Analytics Dashboard Modal */}
       {selectedProject && (
-        <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 overflow-y-auto">
+        <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
           <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-2xl max-w-6xl w-full max-h-[90vh] overflow-y-auto relative">
             {/* Header */}
             <div className="sticky top-0 bg-gradient-to-r from-blue-600 to-indigo-600 text-white p-6 rounded-t-2xl z-10">
