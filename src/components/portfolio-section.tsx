@@ -47,16 +47,17 @@ export function PortfolioSection() {
 
   const categories = [
     { id: "all", label: "All Projects" },
-    // { id: "ecommerce", label: "E-commerce" },
-    // { id: "saas", label: "SaaS" },
-    // { id: "local", label: "Local Business" },
-    // { id: "startup", label: "Startups" }
+    { id: "organic", label: "Social Media Optimization" },
+    { id: "paid", label: "Paid Advertisement(Meta Ad)" },
+    { id: "paidEngagement", label: "Paid Awareness" },
+    { id: "paidLeads", label: "Paid Leads" }
   ]
 
   const projects = [
     {
       id: 1,
-      category: "all",
+      category: "organic",
+      type: "Organic",
       title: "Education Consultancy Organic Growth",
       description: "Achieved strong organic growth for an education consultancy through strategic social media optimization.",
       image: "/api/placeholder/400/300",
@@ -67,9 +68,9 @@ export function PortfolioSection() {
         linkClicks: "1.1K",
         followers: "956",
         insightImages: [
-          "/public/project/project1.png",
-          "/public/project/project11.png",
-          "/public/project/project111.png",
+          "/project/project1.png",
+          "/project/project11.png",
+          "/project/project111.png",
         ],
         detailedMetrics: {
           viewsGrowth: "+94.7%",
@@ -97,144 +98,97 @@ export function PortfolioSection() {
     },
     {
       id: 2,
-      category: "saas",
-      title: "CloudSync SaaS Launch",
-      description: "Successfully launched a new SaaS platform with strategic content marketing and demand generation campaigns.",
+      category: "paid",
+      type: "Paid: Engagement",
+      title: "Scalable Lead Growth via Meta Advertising",
+      description: "Scaled high-intent leads for an education consultancy by targeting the right audience through a data-driven Meta ads strategy.",
       image: "/api/placeholder/400/300", 
       metaInsights: {
-        views: "1.8M",
-        viewers: "620K",
-        contentInteraction: "142K",
-        linkClicks: "78.3K",
-        followers: "32.8K",
+        messagingConversations: "140",
+        cpm: "$0.05",
+        amountSpent: "$7.15",
+        days: "4 days",
+        age: "18-44 years",
         insightImages: [
-          "/api/placeholder/800/400",
-          "/api/placeholder/800/400"
+          "/project/project2.png",
+          "/project/project22.png",
+          "/project/project222.png",
         ],
         detailedMetrics: {
           viewsGrowth: "+128%",
           avgEngagementRate: "6.5%",
-          peakReachDay: "Tuesday",
-          postFrequency: "10/week",
-          shares: "22.1K",
-          comments: "12.8K",
-          likes: "107.1K",
-          saves: "14.2K",
-          clickThroughRate: "4.8%",
-          followerGrowthRate: "+28%",
-          topAgeGroup: "25-34",
-          topGender: "58% Male",
-          topLocation: "United States",
-          videoViews: "1.4M",
-          avgWatchTime: "38s"
+          topAgeGroup: "18-34",
+          topGender: "60% Female",
+          location: "Nepal"
         }
       },
-      results: [
-        { metric: "Leads Generated", value: "1,500+", icon: Users },
-        { metric: "Trial Signups", value: "65%", icon: TrendingUp },
-        { metric: "Customer LTV", value: "$2,400", icon: DollarSign },
-        { metric: "Market Share", value: "15%", icon: Target }
-      ],
-      timeline: "8 months",
-      services: ["Content Marketing", "PPC", "Marketing Automation"],
+      timeline: "4 days",
+      services: ["35–45% improvement in cost efficiency (CPL)", "Conversion-focused messaging", "12.6× increase in qualified leads", "Audience research & segmentation"],
       challenge: "New market entry, unknown brand, limited budget for customer acquisition",
       solution: "Developed thought leadership content, targeted PPC campaigns, and automated lead nurturing",
-      note: "This case study is based on real campaign data. Due to client confidentiality and privacy agreements, we cannot disclose specific company details."
+      note: "This case study is based on single Meta Advertisement . Due to client confidentiality and privacy agreements, we cannot disclose specific company details."
     },
     {
       id: 3,
-      category: "local",
-      title: "GreenLeaf Restaurant Chain",
-      description: "Boosted local presence and online orders for a regional restaurant chain through local SEO and social media marketing.",
-      image: "/api/placeholder/400/300",
+      category: "paidEngagement",
+      type: "Paid: Awareness",
+      title: "Brand Awareness Campaign Setup",
+      description: "Designed and executed brand visibility campaigns to increase brand visibility and reach the intended audience using data-driven targeting and optimized creatives.",
+      image: "/project/project3.png",
       metaInsights: {
-        views: "3.2M",
-        viewers: "1.1M",
-        contentInteraction: "256K",
-        linkClicks: "128K",
-        followers: "68.5K",
+        reach: "93,658",
+        cpr: "$0.02",
+        amountSpent: "$2.08",
+        age: "18-54",
+        genderSplit: "57% Male",
         insightImages: [
-          "/api/placeholder/800/400",
-          "/api/placeholder/800/400",
-          "/api/placeholder/800/400",
-          "/api/placeholder/800/400"
+          "/project/project3.png",
+          "/project/project33.png",
+          "/project/project333.png",
         ],
         detailedMetrics: {
           viewsGrowth: "+185%",
           avgEngagementRate: "8.2%",
-          peakReachDay: "Friday",
-          postFrequency: "15/week",
-          shares: "35.2K",
-          comments: "18.9K",
-          likes: "201.9K",
-          saves: "22.4K",
-          clickThroughRate: "5.8%",
-          followerGrowthRate: "+38%",
           topAgeGroup: "35-44",
-          topGender: "55% Female",
-          topLocation: "United States",
-          videoViews: "2.5M",
-          avgWatchTime: "52s"
+          topGender: "57% Male",
+          location: "Nepal"
         }
       },
-      results: [
-        { metric: "Online Orders", value: "250%", icon: TrendingUp },
-        { metric: "Local Visibility", value: "180%", icon: Eye },
-        { metric: "Social Engagement", value: "320%", icon: Users },
-        { metric: "Revenue Growth", value: "85%", icon: DollarSign }
-      ],
-      timeline: "4 months", 
-      services: ["Local SEO", "Social Media", "Content Marketing"],
+      timeline: "2 days", 
+      services: ["Brand Awareness Campaign Setup", "Reach & Frequency Optimization", "Awareness Insights & Reporting"],
       challenge: "Poor online visibility, declining foot traffic, competition from delivery apps",
       solution: "Optimized Google My Business, created engaging social content, implemented online ordering system",
-      note: "This case study is based on real campaign data. Due to client confidentiality and privacy agreements, we cannot disclose specific company details."
+      note: "This case study is based on real campaign data of specific days. Due to client confidentiality and privacy agreements, we cannot disclose specific company details."
     },
     {
       id: 4,
-      category: "startup",
-      title: "FitTrack Fitness App",
-      description: "Drove app downloads and user engagement for a new fitness tracking mobile application through influencer partnerships and ASO.",
+      category: "paidLeads",
+      type: "Paid: Leads",
+      title: "Meta Ads - Lead Generation",
+      description: "Generated high-intent leads through strategically targeted and conversion-focused Meta ad campaigns.",
       image: "/api/placeholder/400/300",
       metaInsights: {
-        views: "1.5M",
-        viewers: "540K",
-        contentInteraction: "198K",
-        linkClicks: "65.7K",
-        followers: "52.3K",
+        leads: "52",
+        perMetaLeads: "$0.30",
+        amountSpent: "$18.6",
+        duration: "6 days",
+        targetAge: "18-34 years",
         insightImages: [
-          "/api/placeholder/800/400",
-          "/api/placeholder/800/400",
-          "/api/placeholder/800/400"
+          "/project/project4.png",
+          "/project/project44.png",
+          "/project/project444.png",
         ],
         detailedMetrics: {
-          viewsGrowth: "+142%",
-          avgEngagementRate: "9.1%",
-          peakReachDay: "Wednesday",
-          postFrequency: "14/week",
-          shares: "31.8K",
-          comments: "16.5K",
-          likes: "149.7K",
-          saves: "20.1K",
-          clickThroughRate: "6.1%",
-          followerGrowthRate: "+35%",
-          topAgeGroup: "18-24",
+          topAgeGroup: "18-54 years",
           topGender: "51% Female",
-          topLocation: "United States",
-          videoViews: "1.9M",
-          avgWatchTime: "48s"
+          location: "Nepal"
         }
       },
-      results: [
-        { metric: "App Downloads", value: "50K+", icon: TrendingUp },
-        { metric: "User Retention", value: "78%", icon: Users },
-        { metric: "In-app Revenue", value: "180%", icon: DollarSign },
-        { metric: "App Store Rating", value: "4.8★", icon: Target }
-      ],
-      timeline: "5 months",
-      services: ["App Store Optimization", "Influencer Marketing", "Social Media"],
+      timeline: "6 days",
+      services: ["Instant Forms & Message Lead Setup", "CPL & Lead Quality Optimization", "Conversion-Optimized Ad Creatives", "Performance Tracking & Lead Reportin"],
       challenge: "Saturated fitness app market, low initial downloads, poor user retention",
       solution: "Optimized app store presence, partnered with fitness influencers, created viral social campaigns",
-      note: "This case study is based on real campaign data. Due to client confidentiality and privacy agreements, we cannot disclose specific company details."
+      note: "This case study is based on real campaign data of specific time interval. Due to client confidentiality and privacy agreements, we cannot disclose specific company details."
     }
   ]
 
@@ -278,7 +232,7 @@ export function PortfolioSection() {
 
       {/* Analytics Dashboard Modal */}
       {selectedProject && (
-        <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
+        <div className="fixed mt-10 inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
           <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-2xl max-w-6xl w-full max-h-[90vh] overflow-y-auto relative">
             {/* Header */}
             <div className="sticky top-0 bg-gradient-to-r from-blue-600 to-indigo-600 text-white p-6 rounded-t-2xl z-10">
@@ -286,7 +240,7 @@ export function PortfolioSection() {
                 <div>
                   <div className="flex items-center gap-2 mb-2">
                     <BarChart3 className="w-6 h-6" />
-                    <h3 className="text-2xl font-bold">Meta Business Analytics</h3>
+                    <h3 className="text-2xl font-bold">Meta Business Analytics ({selectedProject.type})</h3>
                   </div>
                   <p className="text-blue-100 text-lg">{selectedProject.title}</p>
                   <div className="flex items-center gap-4 mt-3">
@@ -315,63 +269,110 @@ export function PortfolioSection() {
                 </h4>
                 <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
                   <div className="bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-950/50 dark:to-blue-900/50 rounded-xl p-4 border-2 border-blue-200 dark:border-blue-800">
-                    <Eye className="w-8 h-8 text-blue-600 mb-2" />
+                    {selectedProject.category === "paid" ? (
+                      <MessageCircle className="w-8 h-8 text-blue-600 mb-2" />
+                    ) : selectedProject.category === "paidLeads" ? (
+                      <Users className="w-8 h-8 text-blue-600 mb-2" />
+                    ) : (
+                      <Eye className="w-8 h-8 text-blue-600 mb-2" />
+                    )}
                     <div className="text-2xl font-bold text-slate-900 dark:text-white mb-1">
-                      {selectedProject.metaInsights.views}
+                      {selectedProject.category === "paid" ? selectedProject.metaInsights.messagingConversations : selectedProject.category === "paidEngagement" ? selectedProject.metaInsights.reach : selectedProject.category === "paidLeads" ? selectedProject.metaInsights.leads : selectedProject.metaInsights.views}
                     </div>
-                    <div className="text-sm text-slate-600 dark:text-slate-400 mb-2">Total Views</div>
+                    <div className="text-sm text-slate-600 dark:text-slate-400 mb-2">
+                      {selectedProject.category === "paid" ? "Messaging Conversations" : selectedProject.category === "paidEngagement" ? "Reach" : selectedProject.category === "paidLeads" ? "Leads" : "Total Views"}
+                    </div>
+                    {selectedProject.category !== "paidEngagement" && selectedProject.category !== "paidLeads" && (
                     <Badge className="bg-green-100 text-green-800 dark:bg-green-900/50 dark:text-green-200 text-xs">
                       {selectedProject.metaInsights.detailedMetrics.viewsGrowth}
                     </Badge>
+                    )}
                   </div>
 
                   <div className="bg-gradient-to-br from-green-50 to-green-100 dark:from-green-950/50 dark:to-green-900/50 rounded-xl p-4 border-2 border-green-200 dark:border-green-800">
-                    <Users className="w-8 h-8 text-green-600 mb-2" />
+                    {(selectedProject.category === "paid" || selectedProject.category === "paidEngagement" || selectedProject.category === "paidLeads") ? (
+                      <DollarSign className="w-8 h-8 text-green-600 mb-2" />
+                    ) : (
+                      <Users className="w-8 h-8 text-green-600 mb-2" />
+                    )}
                     <div className="text-2xl font-bold text-slate-900 dark:text-white mb-1">
-                      {selectedProject.metaInsights.viewers}
+                      {selectedProject.category === "paid" ? selectedProject.metaInsights.cpm : selectedProject.category === "paidEngagement" ? selectedProject.metaInsights.cpr : selectedProject.category === "paidLeads" ? selectedProject.metaInsights.perMetaLeads : selectedProject.metaInsights.viewers}
                     </div>
-                    <div className="text-sm text-slate-600 dark:text-slate-400 mb-2">Unique Viewers</div>
+                    <div className="text-sm text-slate-600 dark:text-slate-400 mb-2">
+                      {selectedProject.category === "paid" ? "CPM" : selectedProject.category === "paidEngagement" ? "CPR" : selectedProject.category === "paidLeads" ? "Per Meta Leads" : "Unique Viewers"}
+                    </div>
+                    {selectedProject.category !== "paidEngagement" && selectedProject.category !== "paidLeads" && (
                     <Badge className="bg-blue-100 text-blue-800 dark:bg-blue-900/50 dark:text-blue-200 text-xs">
-                      {selectedProject.metaInsights.detailedMetrics.avgEngagementRate} Engaged
+                      {selectedProject.category === "paid" ? "Cost" : selectedProject.metaInsights.detailedMetrics.avgEngagementRate + " Engaged"}
                     </Badge>
+                    )}
                   </div>
 
                   <div className="bg-gradient-to-br from-purple-50 to-purple-100 dark:from-purple-950/50 dark:to-purple-900/50 rounded-xl p-4 border-2 border-purple-200 dark:border-purple-800">
-                    <Activity className="w-8 h-8 text-purple-600 mb-2" />
+                    {(selectedProject.category === "paid" || selectedProject.category === "paidEngagement" || selectedProject.category === "paidLeads") ? (
+                      <DollarSign className="w-8 h-8 text-purple-600 mb-2" />
+                    ) : (
+                      <Activity className="w-8 h-8 text-purple-600 mb-2" />
+                    )}
                     <div className="text-2xl font-bold text-slate-900 dark:text-white mb-1">
-                      {selectedProject.metaInsights.contentInteraction}
+                      {(selectedProject.category === "paid" || selectedProject.category === "paidEngagement" || selectedProject.category === "paidLeads") ? selectedProject.metaInsights.amountSpent : selectedProject.metaInsights.contentInteraction}
                     </div>
-                    <div className="text-sm text-slate-600 dark:text-slate-400 mb-2">Interactions</div>
+                    <div className="text-sm text-slate-600 dark:text-slate-400 mb-2">
+                      {(selectedProject.category === "paid" || selectedProject.category === "paidEngagement" || selectedProject.category === "paidLeads") ? "Amount Spent" : "Interactions"}
+                    </div>
+                    {selectedProject.category !== "paidEngagement" && selectedProject.category !== "paidLeads" && (
                     <Badge className="bg-purple-100 text-purple-800 dark:bg-purple-900/50 dark:text-purple-200 text-xs">
-                      {selectedProject.metaInsights.detailedMetrics.avgEngagementRate} Rate
+                      {selectedProject.category === "paid" ? "Budget" : selectedProject.metaInsights.detailedMetrics.avgEngagementRate + " Rate"}
                     </Badge>
+                    )}
                   </div>
 
                   <div className="bg-gradient-to-br from-orange-50 to-orange-100 dark:from-orange-950/50 dark:to-orange-900/50 rounded-xl p-4 border-2 border-orange-200 dark:border-orange-800">
-                    <MousePointerClick className="w-8 h-8 text-orange-600 mb-2" />
+                    {(selectedProject.category === "paid" || selectedProject.category === "paidLeads") ? (
+                      <Calendar className="w-8 h-8 text-orange-600 mb-2" />
+                    ) : selectedProject.category === "paidEngagement" ? (
+                      <Target className="w-8 h-8 text-orange-600 mb-2" />
+                    ) : (
+                      <MousePointerClick className="w-8 h-8 text-orange-600 mb-2" />
+                    )}
                     <div className="text-2xl font-bold text-slate-900 dark:text-white mb-1">
-                      {selectedProject.metaInsights.linkClicks}
+                      {selectedProject.category === "paid" ? selectedProject.metaInsights.days : selectedProject.category === "paidEngagement" ? selectedProject.metaInsights.age : selectedProject.category === "paidLeads" ? selectedProject.metaInsights.duration : selectedProject.metaInsights.linkClicks}
                     </div>
-                    <div className="text-sm text-slate-600 dark:text-slate-400 mb-2">Link Clicks</div>
+                    <div className="text-sm text-slate-600 dark:text-slate-400 mb-2">
+                      {selectedProject.category === "paid" ? "Days" : selectedProject.category === "paidEngagement" ? "Top Age Group" : selectedProject.category === "paidLeads" ? "Duration" : "Link Clicks"}
+                    </div>
+                    {selectedProject.category !== "paidEngagement" && selectedProject.category !== "paidLeads" && (
                     <Badge className="bg-orange-100 text-orange-800 dark:bg-orange-900/50 dark:text-orange-200 text-xs">
-                      {selectedProject.metaInsights.detailedMetrics.clickThroughRate} CTR
+                      {selectedProject.category === "paid" ? "Duration" : selectedProject.metaInsights.detailedMetrics.clickThroughRate + " CTR"}
                     </Badge>
+                    )}
                   </div>
 
                   <div className="bg-gradient-to-br from-pink-50 to-pink-100 dark:from-pink-950/50 dark:to-pink-900/50 rounded-xl p-4 border-2 border-pink-200 dark:border-pink-800">
-                    <UserPlus className="w-8 h-8 text-pink-600 mb-2" />
+                    {selectedProject.category === "paid" ? (
+                      <Target className="w-8 h-8 text-pink-600 mb-2" />
+                    ) : (selectedProject.category === "paidEngagement" || selectedProject.category === "paidLeads") ? (
+                      <Users className="w-8 h-8 text-pink-600 mb-2" />
+                    ) : (
+                      <UserPlus className="w-8 h-8 text-pink-600 mb-2" />
+                    )}
                     <div className="text-2xl font-bold text-slate-900 dark:text-white mb-1">
-                      {selectedProject.metaInsights.followers}
+                      {selectedProject.category === "paid" ? selectedProject.metaInsights.age : selectedProject.category === "paidEngagement" ? selectedProject.metaInsights.genderSplit : selectedProject.category === "paidLeads" ? selectedProject.metaInsights.targetAge : selectedProject.metaInsights.followers}
                     </div>
-                    <div className="text-sm text-slate-600 dark:text-slate-400 mb-2">New Followers</div>
+                    <div className="text-sm text-slate-600 dark:text-slate-400 mb-2">
+                      {selectedProject.category === "paid" ? "Age" : selectedProject.category === "paidEngagement" ? "Gender Split" : selectedProject.category === "paidLeads" ? "Target Age" : "New Followers"}
+                    </div>
+                    {selectedProject.category !== "paidEngagement" && selectedProject.category !== "paidLeads" && (
                     <Badge className="bg-pink-100 text-pink-800 dark:bg-pink-900/50 dark:text-pink-200 text-xs">
-                      {selectedProject.metaInsights.detailedMetrics.followerGrowthRate}
+                      {selectedProject.category === "paid" ? "Range" : selectedProject.metaInsights.detailedMetrics.followerGrowthRate}
                     </Badge>
+                    )}
                   </div>
                 </div>
               </div>
 
               {/* Engagement Breakdown */}
+              {selectedProject.category !== "paid" && selectedProject.category !== "paidEngagement" && selectedProject.category !== "paidLeads" && (
               <div className="mb-8">
                 <h4 className="text-lg font-bold text-slate-900 dark:text-white mb-4 flex items-center">
                   <Activity className="w-5 h-5 mr-2 text-purple-600" />
@@ -411,8 +412,10 @@ export function PortfolioSection() {
                   </div>
                 </div>
               </div>
+              )}
 
               {/* Performance Insights */}
+              {selectedProject.category !== "paid" && selectedProject.category !== "paidEngagement" && selectedProject.category !== "paidLeads" && (
               <div className="grid md:grid-cols-2 gap-6 mb-8">
                 {/* Video Performance */}
                 <div className="bg-gradient-to-br from-indigo-50 to-purple-50 dark:from-indigo-950/30 dark:to-purple-950/30 rounded-xl p-6 border border-indigo-200 dark:border-indigo-800">
@@ -470,6 +473,7 @@ export function PortfolioSection() {
                   </div>
                 </div>
               </div>
+              )}
 
               {/* Audience Demographics */}
               <div className="mb-8">
@@ -479,11 +483,15 @@ export function PortfolioSection() {
                 </h4>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                   <div className="bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-950/30 dark:to-emerald-950/30 rounded-lg p-5 border border-green-200 dark:border-green-800">
-                    <div className="text-sm text-slate-600 dark:text-slate-400 mb-2">Top Age Group</div>
+                    <div className="text-sm text-slate-600 dark:text-slate-400 mb-2">
+                      {(selectedProject.category === "paid" || selectedProject.category === "paidEngagement" || selectedProject.category === "paidLeads") ? "Age" : "Top Age Group"}
+                    </div>
                     <div className="text-2xl font-bold text-slate-900 dark:text-white">
                       {selectedProject.metaInsights.detailedMetrics.topAgeGroup}
                     </div>
-                    <div className="text-xs text-slate-500 dark:text-slate-400 mt-1">Years old</div>
+                    <div className="text-xs text-slate-500 dark:text-slate-400 mt-1">
+                      {(selectedProject.category === "paid" || selectedProject.category === "paidEngagement" || selectedProject.category === "paidLeads") ? "Range" : "Years old"}
+                    </div>
                   </div>
 
                   <div className="bg-gradient-to-br from-pink-50 to-rose-50 dark:from-pink-950/30 dark:to-rose-950/30 rounded-lg p-5 border border-pink-200 dark:border-pink-800">
@@ -495,9 +503,11 @@ export function PortfolioSection() {
                   </div>
 
                   <div className="bg-gradient-to-br from-blue-50 to-sky-50 dark:from-blue-950/30 dark:to-sky-950/30 rounded-lg p-5 border border-blue-200 dark:border-blue-800">
-                    <div className="text-sm text-slate-600 dark:text-slate-400 mb-2">Top Location</div>
+                    <div className="text-sm text-slate-600 dark:text-slate-400 mb-2">
+                      {(selectedProject.category === "paid" || selectedProject.category === "paidEngagement" || selectedProject.category === "paidLeads") ? "Location" : "Top Location"}
+                    </div>
                     <div className="text-2xl font-bold text-slate-900 dark:text-white">
-                      {selectedProject.metaInsights.detailedMetrics.topLocation}
+                      {(selectedProject.category === "paid" || selectedProject.category === "paidEngagement" || selectedProject.category === "paidLeads") ? selectedProject.metaInsights.detailedMetrics.location : selectedProject.metaInsights.detailedMetrics.topLocation}
                     </div>
                     <div className="text-xs text-slate-500 dark:text-slate-400 mt-1">Primary market</div>
                   </div>
@@ -696,7 +706,7 @@ export function PortfolioSection() {
                   <div className="flex items-center gap-2 mb-3">
                     <BarChart3 className="w-5 h-5 text-blue-600 dark:text-blue-400" />
                     <h4 className="text-sm font-bold text-slate-900 dark:text-white">
-                      Meta Business Insights
+                      Meta Business Insights ({project?.type})
                     </h4>
                     <Badge variant="secondary" className="ml-auto text-xs bg-blue-100 text-blue-800 dark:bg-blue-900/50 dark:text-blue-200">
                       Verified
@@ -706,54 +716,80 @@ export function PortfolioSection() {
                   {/* Insights Grid */}
                   <div className="grid grid-cols-3 gap-2 mb-3">
                     <div className="bg-white dark:bg-slate-800 rounded-lg p-2.5 text-center border border-slate-200 dark:border-slate-700">
-                      <Eye className="w-4 h-4 mx-auto mb-1 text-blue-600 dark:text-blue-400" />
+                      {project.category === "paid" ? (
+                        <MessageCircle className="w-4 h-4 mx-auto mb-1 text-blue-600 dark:text-blue-400" />
+                      ) : project.category === "paidLeads" ? (
+                        <Users className="w-4 h-4 mx-auto mb-1 text-blue-600 dark:text-blue-400" />
+                      ) : (
+                        <Eye className="w-4 h-4 mx-auto mb-1 text-blue-600 dark:text-blue-400" />
+                      )}
                       <div className="text-sm font-bold text-slate-900 dark:text-white">
-                        {project.metaInsights.views}
+                        {project.category === "paid" ? project.metaInsights.messagingConversations : project.category === "paidEngagement" ? project.metaInsights.reach : project.category === "paidLeads" ? project.metaInsights.leads : project.metaInsights.views}
                       </div>
                       <div className="text-xs text-slate-600 dark:text-slate-400">
-                        Views
+                        {project.category === "paid" ? "Messages" : project.category === "paidEngagement" ? "Reach" : project.category === "paidLeads" ? "Leads" : "Views"}
                       </div>
                     </div>
                     
                     <div className="bg-white dark:bg-slate-800 rounded-lg p-2.5 text-center border border-slate-200 dark:border-slate-700">
-                      <Users className="w-4 h-4 mx-auto mb-1 text-green-600 dark:text-green-400" />
+                      {(project.category === "paid" || project.category === "paidEngagement" || project.category === "paidLeads") ? (
+                        <DollarSign className="w-4 h-4 mx-auto mb-1 text-green-600 dark:text-green-400" />
+                      ) : (
+                        <Users className="w-4 h-4 mx-auto mb-1 text-green-600 dark:text-green-400" />
+                      )}
                       <div className="text-sm font-bold text-slate-900 dark:text-white">
-                        {project.metaInsights.viewers}
+                        {project.category === "paid" ? project.metaInsights.cpm : project.category === "paidEngagement" ? project.metaInsights.cpr : project.category === "paidLeads" ? project.metaInsights.perMetaLeads : project.metaInsights.viewers}
                       </div>
                       <div className="text-xs text-slate-600 dark:text-slate-400">
-                        Viewers
+                        {project.category === "paid" ? "CPM" : project.category === "paidEngagement" ? "CPR" : project.category === "paidLeads" ? "Per Lead" : "Viewers"}
                       </div>
                     </div>
                     
                     <div className="bg-white dark:bg-slate-800 rounded-lg p-2.5 text-center border border-slate-200 dark:border-slate-700">
-                      <Activity className="w-4 h-4 mx-auto mb-1 text-purple-600 dark:text-purple-400" />
+                      {(project.category === "paid" || project.category === "paidEngagement" || project.category === "paidLeads") ? (
+                        <DollarSign className="w-4 h-4 mx-auto mb-1 text-purple-600 dark:text-purple-400" />
+                      ) : (
+                        <Activity className="w-4 h-4 mx-auto mb-1 text-purple-600 dark:text-purple-400" />
+                      )}
                       <div className="text-sm font-bold text-slate-900 dark:text-white">
-                        {project.metaInsights.contentInteraction}
+                        {(project.category === "paid" || project.category === "paidEngagement" || project.category === "paidLeads") ? project.metaInsights.amountSpent : project.metaInsights.contentInteraction}
                       </div>
                       <div className="text-xs text-slate-600 dark:text-slate-400">
-                        Interactions
+                        {(project.category === "paid" || project.category === "paidEngagement" || project.category === "paidLeads") ? "Spent" : "Interactions"}
                       </div>
                     </div>
                   </div>
 
                   <div className="grid grid-cols-2 gap-2">
                     <div className="bg-white dark:bg-slate-800 rounded-lg p-2.5 text-center border border-slate-200 dark:border-slate-700">
-                      <MousePointerClick className="w-4 h-4 mx-auto mb-1 text-orange-600 dark:text-orange-400" />
+                      {(project.category === "paid" || project.category === "paidLeads") ? (
+                        <Calendar className="w-4 h-4 mx-auto mb-1 text-orange-600 dark:text-orange-400" />
+                      ) : project.category === "paidEngagement" ? (
+                        <Target className="w-4 h-4 mx-auto mb-1 text-orange-600 dark:text-orange-400" />
+                      ) : (
+                        <MousePointerClick className="w-4 h-4 mx-auto mb-1 text-orange-600 dark:text-orange-400" />
+                      )}
                       <div className="text-sm font-bold text-slate-900 dark:text-white">
-                        {project.metaInsights.linkClicks}
+                        {project.category === "paid" ? project.metaInsights.days : project.category === "paidEngagement" ? project.metaInsights.age : project.category === "paidLeads" ? project.metaInsights.duration : project.metaInsights.linkClicks}
                       </div>
                       <div className="text-xs text-slate-600 dark:text-slate-400">
-                        Link Clicks
+                        {project.category === "paid" ? "Days" : project.category === "paidEngagement" ? "Age" : project.category === "paidLeads" ? "Duration" : "Link Clicks"}
                       </div>
                     </div>
                     
                     <div className="bg-white dark:bg-slate-800 rounded-lg p-2.5 text-center border border-slate-200 dark:border-slate-700">
-                      <UserPlus className="w-4 h-4 mx-auto mb-1 text-pink-600 dark:text-pink-400" />
+                      {project.category === "paid" ? (
+                        <Target className="w-4 h-4 mx-auto mb-1 text-pink-600 dark:text-pink-400" />
+                      ) : (project.category === "paidEngagement" || project.category === "paidLeads") ? (
+                        <Users className="w-4 h-4 mx-auto mb-1 text-pink-600 dark:text-pink-400" />
+                      ) : (
+                        <UserPlus className="w-4 h-4 mx-auto mb-1 text-pink-600 dark:text-pink-400" />
+                      )}
                       <div className="text-sm font-bold text-slate-900 dark:text-white">
-                        {project.metaInsights.followers}
+                        {project.category === "paid" ? project.metaInsights.age : project.category === "paidEngagement" ? project.metaInsights.genderSplit : project.category === "paidLeads" ? project.metaInsights.targetAge : project.metaInsights.followers}
                       </div>
                       <div className="text-xs text-slate-600 dark:text-slate-400">
-                        Followers
+                        {project.category === "paid" ? "Age" : project.category === "paidEngagement" ? "Gender Split" : project.category === "paidLeads" ? "Target Age" : "Followers"}
                       </div>
                     </div>
                   </div>
