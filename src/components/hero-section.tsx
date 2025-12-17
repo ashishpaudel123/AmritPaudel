@@ -1,5 +1,5 @@
 import { Button } from "./ui/button";
-import { ArrowRight, PlayCircle, TrendingUp, Users, Award, Target } from "lucide-react";
+import { ArrowRight, PlayCircle, TrendingUp, Users, Target } from "lucide-react";
 import { useContactModal } from "../hooks/use-contact-modal";
 
 export function HeroSection() {
@@ -57,7 +57,11 @@ export function HeroSection() {
                 </h2>
               </div>
               <p className="text-xl md:text-2xl text-slate-600 dark:text-slate-300 max-w-2xl leading-relaxed">
-                Enhanced Stats with glassmorphism */}
+                Transforming brands through data-driven digital strategies that deliver measurable results and sustainable growth.
+              </p>
+            </div>
+
+            {/* Enhanced Stats with glassmorphism */}
             <div className="grid grid-cols-3 gap-4 md:gap-6 py-6">
               {stats.map((stat, index) => (
                 <div
@@ -76,14 +80,13 @@ export function HeroSection() {
                     </div>
                     <div className="text-xs md:text-sm font-medium text-slate-600 dark:text-slate-400 mt-1">
                       {stat.label}
-                    </div>lassName="w-6 h-6 text-white" />
+                    </div>
                   </div>
-                  <div className="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white">
-                    {stat.number}
-                  </div>
-                  <div className="text-sm text-slate-600 dark:text-slate-400">
-                    {stat.label}
-                Enhanced CTA Buttons with glow effect */}
+                </div>
+              ))}
+            </div>
+
+            {/* Enhanced CTA Buttons with glow effect */}
             <div className="flex flex-col sm:flex-row gap-4">
               <Button
                 size="lg"
@@ -102,12 +105,7 @@ export function HeroSection() {
                 variant="outline"
                 className="group relative border-2 border-slate-300 dark:border-slate-600 hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 dark:hover:from-slate-800 dark:hover:to-slate-800 px-8 py-6 text-lg font-bold transform hover:scale-105 hover:border-purple-500 dark:hover:border-purple-500 transition-all duration-300 shadow-lg hover:shadow-xl"
               >
-                <PlayCircle className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform duration-300
-                size="lg"
-                variant="outline"
-                className="border-2 border-slate-300 dark:border-slate-600 hover:bg-slate-100 dark:hover:bg-slate-800 px-8 py-3 text-lg font-semibold transform hover:scale-105 transition-all duration-200"
-              >
-                <PlayCircle className="w-5 h-5 mr-2" />
+                <PlayCircle className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform duration-300" />
                 Look at My Work
               </Button>
             </div>
@@ -116,7 +114,12 @@ export function HeroSection() {
             <div className="flex items-center space-x-6 text-sm text-slate-600 dark:text-slate-400 pt-4">
               <div className="flex items-center space-x-2">
                 <Users className="w-4 h-4" />
-                <span>Meta AdsEnhanced Hero Image/Visual */}
+                <span>Trusted by 60+ Businesses</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Enhanced Hero Image/Visual */}
           <div className="relative animate-fade-in-right">
             {/* Image wrapper with relative positioning for absolute badges */}
             <div className="relative w-full max-w-lg mx-auto">
@@ -145,9 +148,8 @@ export function HeroSection() {
               {/* Enhanced decorative elements */}
               <div className="absolute inset-0 rounded-full border-2 border-purple-500/40 animate-ping-slow"></div>
               <div className="absolute inset-0 rounded-full border-2 border-blue-500/40 animate-ping-slow animation-delay-1000"></div>
-              <div className="absolute inset-0 rounded-full border border-pink-500/30 animate-ping-slow animation-delay-2
-                  />
-                  Enhanced floating skill badges with glassmorphism */}
+              <div className="absolute inset-0 rounded-full border border-pink-500/30 animate-ping-slow animation-delay-2000"></div>
+                  {/* Enhanced floating skill badges with glassmorphism */}
               {/* Skill 1: Top-left */}
               <div style={{ top: '30px', left: '-20px' }} className="group absolute bg-gradient-to-br from-pink-500 via-rose-500 to-red-500 rounded-2xl px-5 py-3 shadow-2xl shadow-pink-500/50 hover:shadow-pink-500/70 transform hover:scale-110 hover:-rotate-3 transition-all duration-300 animate-float z-10 backdrop-blur-sm border border-white/20">
                 <div className="text-white font-extrabold text-sm whitespace-nowrap drop-shadow-lg">Meta Ads</div>
@@ -173,16 +175,7 @@ export function HeroSection() {
               <div style={{ bottom: '30px', left: '-20px' }} className="group absolute bg-gradient-to-br from-yellow-500 via-orange-500 to-red-500 rounded-2xl px-5 py-3 shadow-2xl shadow-orange-500/50 hover:shadow-orange-500/70 transform hover:scale-110 hover:rotate-3 transition-all duration-300 animate-float animation-delay-3000 z-10 backdrop-blur-sm border border-white/20">
                 <div className="text-white font-extrabold text-sm whitespace-nowrap drop-shadow-lg">Social Media</div>
                 <div className="text-white/90 text-xs whitespace-nowrap font-medium">Pro 💎</div>
-                <div className="absolute -bottom-1 -right-1 w-3 h-3 bg-purple-400 rounded-full animate-ping animation-delay-3000">
-              <div style={{ bottom: '30px', right: '-20px' }} className="absolute bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl px-4 py-3 shadow-xl transform hover:scale-110 transition-all duration-300 animate-float animation-delay-2000 z-10">
-                <div className="text-white font-bold text-sm whitespace-nowrap">Google Ads</div>
-                <div className="text-white/80 text-xs whitespace-nowrap">Expert</div>
-              </div>
-
-              {/* Skill 4: Bottom-left */}
-              <div style={{ bottom: '30px', left: '-20px' }} className="absolute bg-gradient-to-r from-yellow-500 to-orange-500 rounded-2xl px-4 py-3 shadow-xl transform hover:scale-110 transition-all duration-300 animate-float animation-delay-3000 z-10">
-                <div className="text-white font-bold text-sm whitespace-nowrap">Social Media</div>
-                <div className="text-white/80 text-xs whitespace-nowrap">Pro</div>
+                <div className="absolute -bottom-1 -right-1 w-3 h-3 bg-purple-400 rounded-full animate-ping animation-delay-3000"></div>
               </div>
             </div>
           </div>
