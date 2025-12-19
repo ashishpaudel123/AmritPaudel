@@ -65,7 +65,7 @@ export function Header() {
             <NavigationMenuItem>
               <NavigationMenuLink 
                 className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-slate-100/80 dark:bg-slate-800/80 text-slate-700 dark:text-slate-200 px-4 py-2 text-sm font-medium transition-all duration-200 hover:bg-blue-50 hover:text-blue-700 dark:hover:bg-blue-900/50 dark:hover:text-blue-200 focus:bg-blue-50 focus:text-blue-700 dark:focus:bg-blue-900/50 dark:focus:text-blue-200 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-blue-100 data-[active]:text-blue-800 dark:data-[active]:bg-blue-900/70 dark:data-[active]:text-blue-100"
-                href="/about"
+                href="/#about"
               >
                 About Us
               </NavigationMenuLink>
@@ -200,7 +200,7 @@ export function Header() {
               Home
             </a>
             <a
-              href="/about"
+              href="/#about"
               className="block px-3 py-2 text-base font-medium text-foreground hover:bg-accent hover:text-accent-foreground rounded-md transition-colors"
             >
               About Us
