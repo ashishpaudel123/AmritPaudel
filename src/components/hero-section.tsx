@@ -135,7 +135,7 @@ export function HeroSection() {
                   <div className="relative rounded-full overflow-hidden bg-white dark:bg-slate-900 p-1 aspect-square">
                     {/* Profile Image */}
                     <img 
-                      src="/public/hero.png" 
+                      src="/project/hero.png" 
                       alt="Amrit Paudel - Digital Marketing Consultant"
                       className="w-full h-full object-cover rounded-full animate-fade-in"
                     />
