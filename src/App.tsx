@@ -14,6 +14,7 @@ import { ContactSection } from './components/contact-section'
 import { Footer } from './components/footer'
 import { ContactModalProvider, useContactModal } from './hooks/use-contact-modal'
 import { ContactModal } from './components/contact-modal'
+import { WhatsAppButton } from './components/whatsapp-button'
 import { useNavigate } from 'react-router-dom'
 import { useEffect } from 'react'
 
@@ -108,6 +109,7 @@ function AppContent() {
         </Routes>
         <Footer />
         <ContactModal isOpen={isOpen} onClose={closeModal} title={title} />
+        <WhatsAppButton phoneNumber="9779865846429" message="Hi! I'm interested in your services." />
       </ThemeProvider>
     </>
   )
