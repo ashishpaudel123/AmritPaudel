@@ -180,7 +180,7 @@ export function BlogSection({ onPostClick }: BlogSectionProps = {}) {
               {searchQuery && (
                 <button
                   onClick={clearSearch}
-                  className="absolute right-3 top-1/2 transform -translate-y-1/2 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors"
+                  className="absolute right-3 top-1/2 transform -translate-y-1/2 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors cursor-pointer"
                 >
                   <X className="w-4 h-4" />
                 </button>
@@ -193,7 +193,7 @@ export function BlogSection({ onPostClick }: BlogSectionProps = {}) {
                 <button
                   key={index}
                   onClick={() => setSelectedCategory(category.name)}
-                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 backdrop-blur-md ${
+                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 backdrop-blur-md cursor-pointer ${
                     selectedCategory === category.name
                       ? 'bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-lg' 
                       : 'bg-white/60 dark:bg-slate-800/60 text-slate-600 dark:text-slate-300 border border-slate-200/50 dark:border-slate-600/50 hover:bg-blue-50 dark:hover:bg-slate-700/60'
@@ -208,7 +208,7 @@ export function BlogSection({ onPostClick }: BlogSectionProps = {}) {
               {!showAllCategories && categories.length > 4 && (
                 <button 
                   onClick={() => setShowAllCategories(true)}
-                  className="px-4 py-2 rounded-lg text-sm font-medium bg-white/60 dark:bg-slate-800/60 backdrop-blur-md border border-slate-200/50 dark:border-slate-600/50 text-slate-600 dark:text-slate-300 hover:bg-blue-50 dark:hover:bg-slate-700/60 transition-all duration-300 flex items-center gap-2"
+                  className="px-4 py-2 rounded-lg text-sm font-medium bg-white/60 dark:bg-slate-800/60 backdrop-blur-md border border-slate-200/50 dark:border-slate-600/50 text-slate-600 dark:text-slate-300 hover:bg-blue-50 dark:hover:bg-slate-700/60 transition-all duration-300 flex items-center gap-2 cursor-pointer"
                 >
                   <Filter className="w-4 h-4" />
                   More
@@ -217,7 +217,7 @@ export function BlogSection({ onPostClick }: BlogSectionProps = {}) {
               {showAllCategories && (
                 <button 
                   onClick={() => setShowAllCategories(false)}
-                  className="px-4 py-2 rounded-lg text-sm font-medium bg-white/60 dark:bg-slate-800/60 backdrop-blur-md border border-slate-200/50 dark:border-slate-600/50 text-slate-600 dark:text-slate-300 hover:bg-blue-50 dark:hover:bg-slate-700/60 transition-all duration-300 flex items-center gap-2"
+                  className="px-4 py-2 rounded-lg text-sm font-medium bg-white/60 dark:bg-slate-800/60 backdrop-blur-md border border-slate-200/50 dark:border-slate-600/50 text-slate-600 dark:text-slate-300 hover:bg-blue-50 dark:hover:bg-slate-700/60 transition-all duration-300 flex items-center gap-2 cursor-pointer"
                 >
                   <X className="w-4 h-4" />
                   Less

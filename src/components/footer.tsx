@@ -246,7 +246,7 @@ export function Footer() {
             {/* Back to Top */}
             <button
               onClick={scrollToTop}
-              className="flex items-center space-x-2 text-slate-400 hover:text-white transition-colors duration-300 mt-4 md:mt-0"
+              className="flex items-center space-x-2 text-slate-400 hover:text-white transition-colors duration-300 mt-4 md:mt-0 cursor-pointer"
             >
               <span className="text-sm">Back to top</span>
               <div className="w-8 h-8 bg-slate-800 hover:bg-blue-600 rounded-lg flex items-center justify-center transition-colors duration-300">
