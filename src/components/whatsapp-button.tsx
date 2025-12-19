@@ -13,9 +13,9 @@ export function WhatsAppButton({ phoneNumber, message = 'Hello! I would like to 
   return (
     <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-2">
       {/* Chat bubble with text */}
-      <div className="relative animate-bounce-slow">
-        <div className="relative bg-[#25D366] px-6 py-3 rounded-2xl rounded-br-none shadow-lg">
-          <span className="text-white font-bold text-lg whitespace-nowrap">
+      <div className="relative animate-bounce-slow hidden md:block">
+        <div className="relative bg-[#25D366] px-5 py-3 rounded-2xl rounded-br-none shadow-lg">
+          <span className="text-white font-bold text-md whitespace-nowrap">
             LET'S CHAT!
           </span>
           {/* Speech bubble tail */}
