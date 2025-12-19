@@ -19,9 +19,6 @@ export function HeroSection() {
         <div className="absolute -top-40 -right-40 w-96 h-96 bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-500 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-3xl opacity-60 dark:opacity-30 animate-blob"></div>
         <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-gradient-to-r from-purple-400 via-pink-400 to-rose-500 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-3xl opacity-60 dark:opacity-30 animate-blob animation-delay-2000"></div>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-cyan-300 via-blue-400 to-indigo-500 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-3xl opacity-60 dark:opacity-30 animate-blob animation-delay-4000"></div>
-
-        {/* Animated grid pattern */}
-        <div className="absolute inset-0 bg-grid-slate-200/50 dark:bg-grid-slate-700/25 [mask-image:radial-gradient(ellipse_at_center,white,transparent)] animate-pulse"></div>
         
         {/* Floating particles */}
         <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-blue-400 rounded-full animate-float opacity-50"></div>
