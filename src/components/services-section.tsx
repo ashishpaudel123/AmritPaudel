@@ -6,7 +6,6 @@ import {
   Users,
   Mail,
   BarChart3,
-  Settings,
   ArrowRight,
   CheckCircle,
   Star,

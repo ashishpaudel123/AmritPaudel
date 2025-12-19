@@ -5,7 +5,6 @@ import {
   Phone, 
   MapPin,
   ArrowUp,
-  Heart
 } from "lucide-react"
 
 export function Footer() {
