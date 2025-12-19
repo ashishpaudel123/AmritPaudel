@@ -10,12 +10,13 @@ import { DigitalMarketingPortfolio } from './components/digital-marketing-portfo
 import { GraphicsDesignPortfolio } from './components/graphics-design-portfolio'
 import { TestimonialsSection } from './components/testimonials-section'
 import { BlogRouter } from './components/blog-router'
+import { BlogDetail } from './components/blog-detail'
 import { ContactSection } from './components/contact-section'
 import { Footer } from './components/footer'
 import { ContactModalProvider, useContactModal } from './hooks/use-contact-modal'
 import { ContactModal } from './components/contact-modal'
 import { WhatsAppButton } from './components/whatsapp-button'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import { useEffect } from 'react'
 
 function HomePage() {
@@ -95,6 +96,39 @@ function GraphicsDesignPage() {
   )
 }
 
+function BlogDetailPage() {
+  const navigate = useNavigate()
+  const { postId } = useParams()
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'instant' })
+  }, [postId])
+
+  const handleBack = () => {
+    navigate('/')
+    setTimeout(() => {
+      const blogSection = document.getElementById('blog')
+      if (blogSection) {
+        blogSection.scrollIntoView({ behavior: 'instant' })
+      }
+    }, 50)
+  }
+
+  const handlePostClick = (newPostId: number) => {
+    navigate(`/blog/${newPostId}`)
+  }
+
+  return (
+    <main className="pt-16">
+      <BlogDetail 
+        postId={postId ? parseInt(postId) : 1} 
+        onBackClick={handleBack}
+        onPostClick={handlePostClick}
+      />
+    </main>
+  )
+}
+
 function AppContent() {
   const { isOpen, title, closeModal } = useContactModal()
 
@@ -106,6 +140,7 @@ function AppContent() {
           <Route path="/" element={<HomePage />} />
           <Route path="/portfolio/digital-marketing" element={<DigitalMarketingPage />} />
           <Route path="/portfolio/graphics-design" element={<GraphicsDesignPage />} />
+          <Route path="/blog/:postId" element={<BlogDetailPage />} />
         </Routes>
         <Footer />
         <ContactModal isOpen={isOpen} onClose={closeModal} title={title} />
