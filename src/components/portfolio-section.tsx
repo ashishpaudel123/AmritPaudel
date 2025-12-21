@@ -188,10 +188,10 @@ export function PortfolioSection({ onDigitalMarketingClick, onGraphicsDesignClic
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
-              { number: "$2M+", label: "Total Revenue Generated", icon: TrendingUp },
+              { number: "193K+", label: "Total Reach Achieved", icon: TrendingUp },
               { number: "515+", label: "Projects Completed", icon: BarChart3 },
               { number: "100+", label: "Happy Clients", icon: Target },
-              { number: "98%", label: "Client Satisfaction", icon: Sparkles }
+              { number: "192+", label: "Leads Generated", icon: Sparkles }
             ].map((stat, index) => {
               const Icon = stat.icon
               return (
