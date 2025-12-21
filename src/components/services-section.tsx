@@ -317,7 +317,15 @@ export function ServicesSection({  }: ServicesSectionProps) {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3 text-lg font-semibold"
+                onClick={(e)=> {
+                  e.preventDefault();
+                  const element = document.getElementById("portfolio");
+                  if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }
+                }
+                className="border-2 border-white hover:bg-white hover:text-blue-600 px-8 py-3 text-lg font-semibold"
               >
                 View Case Studies
               </Button>
