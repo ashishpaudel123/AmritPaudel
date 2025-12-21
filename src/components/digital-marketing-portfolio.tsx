@@ -206,7 +206,7 @@ export function DigitalMarketingPortfolio({ onBack }: DigitalMarketingPortfolioP
     : null
 
   return (
-    <section id="digital-marketing" className="py-20 bg-white dark:bg-slate-900 relative overflow-hidden min-h-screen">
+    <section id="digital-marketing" className=" pt-10 py-20 bg-white dark:bg-slate-900 relative overflow-hidden min-h-screen">
       {/* Full Screen Image Modal */}
       {fullScreenImage && (
         <div 
@@ -636,7 +636,6 @@ export function DigitalMarketingPortfolio({ onBack }: DigitalMarketingPortfolioP
 
       <div className="container mx-auto px-4 relative">
         {/* Back Button */}
-        <div className="mb-8">
           <Button
             variant="outline"
             onClick={onBack}
@@ -645,7 +644,6 @@ export function DigitalMarketingPortfolio({ onBack }: DigitalMarketingPortfolioP
             <ArrowLeft className="w-4 h-4" />
             Back to Portfolio
           </Button>
-        </div>
 
         {/* Section Header */}
         <div className="text-center mb-16">

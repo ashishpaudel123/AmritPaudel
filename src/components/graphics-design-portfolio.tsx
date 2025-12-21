@@ -210,7 +210,7 @@ export function GraphicsDesignPortfolio({ onBack }: GraphicsDesignPortfolioProps
   ]
 
   return (
-    <section id="graphics-design" className="py-20 bg-white dark:bg-slate-900 relative overflow-hidden min-h-screen">
+    <section id="graphics-design" className=" pt-10 pb-20 bg-white dark:bg-slate-900 relative overflow-hidden min-h-screen">
       {/* Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-gradient-to-r from-pink-400/10 to-purple-500/10 rounded-full blur-3xl"></div>
@@ -220,7 +220,6 @@ export function GraphicsDesignPortfolio({ onBack }: GraphicsDesignPortfolioProps
 
       <div className="container mx-auto px-4 relative">
         {/* Back Button */}
-        <div className="mb-8">
           <Button
             variant="outline"
             onClick={onBack}
@@ -229,7 +228,6 @@ export function GraphicsDesignPortfolio({ onBack }: GraphicsDesignPortfolioProps
             <ArrowLeft className="w-4 h-4" />
             Back to Portfolio
           </Button>
-        </div>
 
         {/* Section Header */}
         <div className="text-center mb-16">
