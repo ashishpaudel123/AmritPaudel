@@ -5,6 +5,8 @@ export function BlogRouter() {
   const navigate = useNavigate()
 
   const handlePostClick = (postId: number) => {
+    // Save current scroll position before navigating
+    sessionStorage.setItem('blogScrollPosition', window.scrollY.toString())
     navigate(`/blog/${postId}`)
   }
 

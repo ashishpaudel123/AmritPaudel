@@ -22,6 +22,17 @@ import { useEffect } from 'react'
 function HomePage() {
   const navigate = useNavigate()
 
+  useEffect(() => {
+    // Restore scroll position if returning from blog detail
+    const savedScrollPosition = sessionStorage.getItem('blogScrollPosition')
+    if (savedScrollPosition) {
+      setTimeout(() => {
+        window.scrollTo(0, parseInt(savedScrollPosition))
+        sessionStorage.removeItem('blogScrollPosition')
+      }, 100)
+    }
+  }, [])
+
   const handleDigitalMarketingClick = () => {
     navigate('/portfolio/digital-marketing')
     window.scrollTo(0, 0)
@@ -101,17 +112,11 @@ function BlogDetailPage() {
   const { postId } = useParams()
 
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'instant' })
+    window.scrollTo(0, 0)
   }, [postId])
 
   const handleBack = () => {
     navigate('/')
-    setTimeout(() => {
-      const blogSection = document.getElementById('blog')
-      if (blogSection) {
-        blogSection.scrollIntoView({ behavior: 'instant' })
-      }
-    }, 50)
   }
 
   const handlePostClick = (newPostId: number) => {
