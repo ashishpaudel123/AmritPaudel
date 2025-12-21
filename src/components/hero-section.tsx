@@ -8,7 +8,7 @@ export function HeroSection() {
   const stats = [
     { icon: Users, number: "60+", label: "Happy Clients", color: "from-blue-500 to-cyan-500" },
     { icon: Target, number: "90+", label: "Project Completed", color: "from-purple-500 to-pink-500" },
-    { icon: TrendingUp, number: "2+", label: "Experience", color: "from-green-500 to-emerald-500" },
+    { icon: TrendingUp, number: "1+", label: "Experience", color: "from-green-500 to-emerald-500" },
   ];
   
   return (
@@ -100,10 +100,10 @@ export function HeroSection() {
               <Button
                 size="lg"
                 variant="outline"
-                className="group relative border-2 border-slate-300 dark:border-slate-600 hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 dark:hover:from-slate-800 dark:hover:to-slate-800 px-8 py-6 text-lg font-bold transform hover:scale-105 hover:border-purple-500 dark:hover:border-purple-500 transition-all duration-300 shadow-lg hover:shadow-xl"
+                className="group relativ border-2 border-slate-300 dark:border-slate-600 hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 dark:hover:from-slate-800 dark:hover:to-slate-800 px-8 py-5.5 text-lg font-bold transform hover:scale-105 hover:border-purple-500 dark:hover:border-purple-500 transition-all duration-300 shadow-lg hover:shadow-xl"
               >
                 <PlayCircle className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform duration-300" />
-                Look at My Work
+               <a href="#portfolio">Look at My Work</a>
               </Button>
             </div>
 
@@ -150,28 +150,28 @@ export function HeroSection() {
               {/* Skill 1: Top-left */}
               <div style={{ top: '30px', left: '-20px' }} className="group absolute bg-gradient-to-br from-pink-500 via-rose-500 to-red-500 rounded-2xl px-5 py-3 shadow-2xl shadow-pink-500/50 hover:shadow-pink-500/70 transform hover:scale-110 hover:-rotate-3 transition-all duration-300 animate-float z-10 backdrop-blur-sm border border-white/20">
                 <div className="text-white font-extrabold text-sm whitespace-nowrap drop-shadow-lg">Meta Ads</div>
-                <div className="text-white/90 text-xs whitespace-nowrap font-medium">Specialist ⭐</div>
+                {/* <div className="text-white/90 text-xs whitespace-nowrap font-medium">Specialist</div> */}
                 <div className="absolute -top-1 -right-1 w-3 h-3 bg-yellow-400 rounded-full animate-ping"></div>
               </div>
               
               {/* Skill 2: Top-right */}
               <div style={{ top: '30px', right: '-20px' }} className="group absolute bg-gradient-to-br from-blue-500 via-cyan-500 to-teal-500 rounded-2xl px-5 py-3 shadow-2xl shadow-blue-500/50 hover:shadow-blue-500/70 transform hover:scale-110 hover:rotate-3 transition-all duration-300 animate-float animation-delay-1000 z-10 backdrop-blur-sm border border-white/20">
                 <div className="text-white font-extrabold text-sm whitespace-nowrap drop-shadow-lg">SEO</div>
-                <div className="text-white/90 text-xs whitespace-nowrap font-medium">Master 🎯</div>
+                {/* <div className="text-white/90 text-xs whitespace-nowrap font-medium">Master</div> */}
                 <div className="absolute -top-1 -left-1 w-3 h-3 bg-green-400 rounded-full animate-ping animation-delay-1000"></div>
               </div>
               
               {/* Skill 3: Bottom-right */}
               <div style={{ bottom: '30px', right: '-20px' }} className="group absolute bg-gradient-to-br from-green-500 via-emerald-500 to-teal-500 rounded-2xl px-5 py-3 shadow-2xl shadow-green-500/50 hover:shadow-green-500/70 transform hover:scale-110 hover:-rotate-3 transition-all duration-300 animate-float animation-delay-2000 z-10 backdrop-blur-sm border border-white/20">
                 <div className="text-white font-extrabold text-sm whitespace-nowrap drop-shadow-lg">Google Ads</div>
-                <div className="text-white/90 text-xs whitespace-nowrap font-medium">Expert 🚀</div>
+                {/* <div className="text-white/90 text-xs whitespace-nowrap font-medium">Expert</div> */}
                 <div className="absolute -bottom-1 -left-1 w-3 h-3 bg-blue-400 rounded-full animate-ping animation-delay-2000"></div>
               </div>
 
               {/* Skill 4: Bottom-left */}
               <div style={{ bottom: '30px', left: '-20px' }} className="group absolute bg-gradient-to-br from-yellow-500 via-orange-500 to-red-500 rounded-2xl px-5 py-3 shadow-2xl shadow-orange-500/50 hover:shadow-orange-500/70 transform hover:scale-110 hover:rotate-3 transition-all duration-300 animate-float animation-delay-3000 z-10 backdrop-blur-sm border border-white/20">
                 <div className="text-white font-extrabold text-sm whitespace-nowrap drop-shadow-lg">Social Media</div>
-                <div className="text-white/90 text-xs whitespace-nowrap font-medium">Pro 💎</div>
+                {/* <div className="text-white/90 text-xs whitespace-nowrap font-medium">Pro</div> */}
                 <div className="absolute -bottom-1 -right-1 w-3 h-3 bg-purple-400 rounded-full animate-ping animation-delay-3000"></div>
               </div>
             </div>
