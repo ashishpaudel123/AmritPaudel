@@ -23,17 +23,17 @@ export function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   const marketingServices = [
-    { name: "Graphics Design", href: "#services" },
-    { name: "Meta Ads", href: "#services" },
-    { name: "Social Media Marketing", href: "#services" },
-    { name: "SEO", href: "#services" },
-    { name: "Content Strategy & Writing", href: "#services" },
+    { name: "Graphics Design", href: "/#services" },
+    { name: "Meta Ads", href: "/#services" },
+    { name: "Social Media Marketing", href: "/#services" },
+    { name: "SEO", href: "/#services" },
+    { name: "Content Strategy & Writing", href: "/#services" },
   ]
 
   const consultingServices = [
-    { name: "Premium Digital Growth Package", href: "#services" },
-    { name: "Strategic Marketing Consultation", href: "#services" },
-    { name: "Advanced Analytics & Reporting", href: "#services" },
+    { name: "Premium Digital Growth Package", href: "/#services" },
+    { name: "Strategic Marketing Consultation", href: "/#services" },
+    { name: "Advanced Analytics & Reporting", href: "/#services" },
   ]
 
   return (
@@ -118,7 +118,7 @@ export function Header() {
             <NavigationMenuItem>
               <NavigationMenuLink 
                 className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-slate-100/80 dark:bg-slate-800/80 text-slate-700 dark:text-slate-200 px-4 py-2 text-sm font-medium transition-all duration-200 hover:bg-blue-50 hover:text-blue-700 dark:hover:bg-blue-900/50 dark:hover:text-blue-200 focus:bg-blue-50 focus:text-blue-700 dark:focus:bg-blue-900/50 dark:focus:text-blue-200 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-blue-100 data-[active]:text-blue-800 dark:data-[active]:bg-blue-900/70 dark:data-[active]:text-blue-100"
-                href="#portfolio"
+                href="/#portfolio"
               >
                 Portfolio
               </NavigationMenuLink>
@@ -126,7 +126,7 @@ export function Header() {
             <NavigationMenuItem>
               <NavigationMenuLink 
                 className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-slate-100/80 dark:bg-slate-800/80 text-slate-700 dark:text-slate-200 px-4 py-2 text-sm font-medium transition-all duration-200 hover:bg-blue-50 hover:text-blue-700 dark:hover:bg-blue-900/50 dark:hover:text-blue-200 focus:bg-blue-50 focus:text-blue-700 dark:focus:bg-blue-900/50 dark:focus:text-blue-200 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-blue-100 data-[active]:text-blue-800 dark:data-[active]:bg-blue-900/70 dark:data-[active]:text-blue-100"
-                href="#testimonials"
+                href="/#testimonials"
               >
                 Testimonials
               </NavigationMenuLink>
@@ -134,7 +134,7 @@ export function Header() {
             <NavigationMenuItem>
               <NavigationMenuLink 
                 className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-slate-100/80 dark:bg-slate-800/80 text-slate-700 dark:text-slate-200 px-4 py-2 text-sm font-medium transition-all duration-200 hover:bg-blue-50 hover:text-blue-700 dark:hover:bg-blue-900/50 dark:hover:text-blue-200 focus:bg-blue-50 focus:text-blue-700 dark:focus:bg-blue-900/50 dark:focus:text-blue-200 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-blue-100 data-[active]:text-blue-800 dark:data-[active]:bg-blue-900/70 dark:data-[active]:text-blue-100"
-                href="#blog"
+                href="/#blog"
               >
                 Blog
               </NavigationMenuLink>
@@ -142,7 +142,7 @@ export function Header() {
             <NavigationMenuItem>
               <NavigationMenuLink 
                 className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-slate-100/80 dark:bg-slate-800/80 text-slate-700 dark:text-slate-200 px-4 py-2 text-sm font-medium transition-all duration-200 hover:bg-blue-50 hover:text-blue-700 dark:hover:bg-blue-900/50 dark:hover:text-blue-200 focus:bg-blue-50 focus:text-blue-700 dark:focus:bg-blue-900/50 dark:focus:text-blue-200 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-blue-100 data-[active]:text-blue-800 dark:data-[active]:bg-blue-900/70 dark:data-[active]:text-blue-100"
-                href="#contact"
+                href="/#contact"
               >
                 Contact
               </NavigationMenuLink>

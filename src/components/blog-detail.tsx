@@ -668,8 +668,8 @@ export function BlogDetail({
       <div className="absolute bottom-20 right-10 w-40 h-40 bg-gradient-to-r from-purple-400/20 to-pink-400/20 rounded-full blur-xl animate-float animation-delay-2000"></div>
 
       {/* Header Navigation */}
-      <div className="container mx-auto px-4 pt-24 pb-8 relative">
-        <div className="flex items-center gap-4 mb-8">
+      <div className="container mx-auto px-4 pt-10 pb-8 relative">
+        <div className="flex items-center gap-4">
           <Button
             variant="ghost"
             className="bg-white/60 dark:bg-slate-800/60 backdrop-blur-md border border-slate-200/50 dark:border-slate-600/50 hover:bg-blue-50 dark:hover:bg-slate-700/60"
