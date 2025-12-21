@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { useNavigate, useLocation } from "react-router-dom"
 import { Menu, X, ChevronDown, Phone } from "lucide-react"
 import { Button } from "./ui/button"
 import {
@@ -21,19 +22,40 @@ import { useContactModal } from "../hooks/use-contact-modal"
 export function Header() {
   const { openModal } = useContactModal()
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const navigate = useNavigate()
+  const location = useLocation()
+
+  const handleSectionClick = (e: React.MouseEvent<HTMLAnchorElement>, section: string) => {
+    e.preventDefault()
+    
+    if (location.pathname === '/') {
+      const element = document.getElementById(section)
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' })
+      }
+    } else {
+      navigate('/')
+      setTimeout(() => {
+        const element = document.getElementById(section)
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' })
+        }
+      }, 100)
+    }
+  }
 
   const marketingServices = [
-    { name: "Graphics Design", href: "/#services" },
-    { name: "Meta Ads", href: "/#services" },
-    { name: "Social Media Marketing", href: "/#services" },
-    { name: "SEO", href: "/#services" },
-    { name: "Content Strategy & Writing", href: "/#services" },
+    { name: "Graphics Design", section: "services" },
+    { name: "Meta Ads", section: "services" },
+    { name: "Social Media Marketing", section: "services" },
+    { name: "SEO", section: "services" },
+    { name: "Content Strategy & Writing", section: "services" },
   ]
 
   const consultingServices = [
-    { name: "Premium Digital Growth Package", href: "/#services" },
-    { name: "Strategic Marketing Consultation", href: "/#services" },
-    { name: "Advanced Analytics & Reporting", href: "/#services" },
+    { name: "Premium Digital Growth Package", section: "services" },
+    { name: "Strategic Marketing Consultation", section: "services" },
+    { name: "Advanced Analytics & Reporting", section: "services" },
   ]
 
   return (
@@ -66,6 +88,7 @@ export function Header() {
               <NavigationMenuLink 
                 className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-slate-100/80 dark:bg-slate-800/80 text-slate-700 dark:text-slate-200 px-4 py-2 text-sm font-medium transition-all duration-200 hover:bg-blue-50 hover:text-blue-700 dark:hover:bg-blue-900/50 dark:hover:text-blue-200 focus:bg-blue-50 focus:text-blue-700 dark:focus:bg-blue-900/50 dark:focus:text-blue-200 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-blue-100 data-[active]:text-blue-800 dark:data-[active]:bg-blue-900/70 dark:data-[active]:text-blue-100"
                 href="/#about"
+                onClick={(e) => handleSectionClick(e, "about")}
               >
                 About Us
               </NavigationMenuLink>
@@ -83,7 +106,8 @@ export function Header() {
                         <li key={service.name}>
                           <NavigationMenuLink
                             className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                            href={service.href}
+                            href={`/#${service.section}`}
+                            onClick={(e) => handleSectionClick(e, service.section)}
                           >
                             <div className="text-sm font-medium leading-none">
                               {service.name}
@@ -102,7 +126,8 @@ export function Header() {
                         <li key={service.name}>
                           <NavigationMenuLink
                             className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                            href={service.href}
+                            href={`/#${service.section}`}
+                            onClick={(e) => handleSectionClick(e, service.section)}
                           >
                             <div className="text-sm font-medium leading-none">
                               {service.name}
@@ -119,6 +144,7 @@ export function Header() {
               <NavigationMenuLink 
                 className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-slate-100/80 dark:bg-slate-800/80 text-slate-700 dark:text-slate-200 px-4 py-2 text-sm font-medium transition-all duration-200 hover:bg-blue-50 hover:text-blue-700 dark:hover:bg-blue-900/50 dark:hover:text-blue-200 focus:bg-blue-50 focus:text-blue-700 dark:focus:bg-blue-900/50 dark:focus:text-blue-200 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-blue-100 data-[active]:text-blue-800 dark:data-[active]:bg-blue-900/70 dark:data-[active]:text-blue-100"
                 href="/#portfolio"
+                onClick={(e) => handleSectionClick(e, "portfolio")}
               >
                 Portfolio
               </NavigationMenuLink>
@@ -127,6 +153,7 @@ export function Header() {
               <NavigationMenuLink 
                 className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-slate-100/80 dark:bg-slate-800/80 text-slate-700 dark:text-slate-200 px-4 py-2 text-sm font-medium transition-all duration-200 hover:bg-blue-50 hover:text-blue-700 dark:hover:bg-blue-900/50 dark:hover:text-blue-200 focus:bg-blue-50 focus:text-blue-700 dark:focus:bg-blue-900/50 dark:focus:text-blue-200 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-blue-100 data-[active]:text-blue-800 dark:data-[active]:bg-blue-900/70 dark:data-[active]:text-blue-100"
                 href="/#testimonials"
+                onClick={(e) => handleSectionClick(e, "testimonials")}
               >
                 Testimonials
               </NavigationMenuLink>
@@ -135,6 +162,7 @@ export function Header() {
               <NavigationMenuLink 
                 className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-slate-100/80 dark:bg-slate-800/80 text-slate-700 dark:text-slate-200 px-4 py-2 text-sm font-medium transition-all duration-200 hover:bg-blue-50 hover:text-blue-700 dark:hover:bg-blue-900/50 dark:hover:text-blue-200 focus:bg-blue-50 focus:text-blue-700 dark:focus:bg-blue-900/50 dark:focus:text-blue-200 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-blue-100 data-[active]:text-blue-800 dark:data-[active]:bg-blue-900/70 dark:data-[active]:text-blue-100"
                 href="/#blog"
+                onClick={(e) => handleSectionClick(e, "blog")}
               >
                 Blog
               </NavigationMenuLink>
@@ -143,6 +171,7 @@ export function Header() {
               <NavigationMenuLink 
                 className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-slate-100/80 dark:bg-slate-800/80 text-slate-700 dark:text-slate-200 px-4 py-2 text-sm font-medium transition-all duration-200 hover:bg-blue-50 hover:text-blue-700 dark:hover:bg-blue-900/50 dark:hover:text-blue-200 focus:bg-blue-50 focus:text-blue-700 dark:focus:bg-blue-900/50 dark:focus:text-blue-200 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-blue-100 data-[active]:text-blue-800 dark:data-[active]:bg-blue-900/70 dark:data-[active]:text-blue-100"
                 href="/#contact"
+                onClick={(e) => handleSectionClick(e, "contact")}
               >
                 Contact
               </NavigationMenuLink>
@@ -201,6 +230,7 @@ export function Header() {
             </a>
             <a
               href="/#about"
+              onClick={(e) => handleSectionClick(e, "about")}
               className="block px-3 py-2 text-base font-medium text-foreground hover:bg-accent hover:text-accent-foreground rounded-md transition-colors"
             >
               About Us
@@ -217,7 +247,7 @@ export function Header() {
                   <p className="text-xs font-medium text-muted-foreground mb-2">Marketing Services</p>
                   {marketingServices.map((service) => (
                     <DropdownMenuItem key={service.name} asChild>
-                      <a href={service.href} className="text-sm">
+                      <a href={`/#${service.section}`} onClick={(e) => handleSectionClick(e, service.section)} className="text-sm">
                         {service.name}
                       </a>
                     </DropdownMenuItem>
@@ -227,7 +257,7 @@ export function Header() {
                   <p className="text-xs font-medium text-muted-foreground mb-2">Consulting Services</p>
                   {consultingServices.map((service) => (
                     <DropdownMenuItem key={service.name} asChild>
-                      <a href={service.href} className="text-sm">
+                      <a href={`/#${service.section}`} onClick={(e) => handleSectionClick(e, service.section)} className="text-sm">
                         {service.name}
                       </a>
                     </DropdownMenuItem>
@@ -237,25 +267,29 @@ export function Header() {
             </DropdownMenu>
             
             <a
-              href="#portfolio"
+              href="/#portfolio"
+              onClick={(e) => handleSectionClick(e, "portfolio")}
               className="block px-3 py-2 text-base font-medium text-foreground hover:bg-accent hover:text-accent-foreground rounded-md transition-colors"
             >
               Portfolio
             </a>
             <a
-              href="#testimonials"
+              href="/#testimonials"
+              onClick={(e) => handleSectionClick(e, "testimonials")}
               className="block px-3 py-2 text-base font-medium text-foreground hover:bg-accent hover:text-accent-foreground rounded-md transition-colors"
             >
               Testimonials
             </a>
             <a
-              href="#blog"
+              href="/#blog"
+              onClick={(e) => handleSectionClick(e, "blog")}
               className="block px-3 py-2 text-base font-medium text-foreground hover:bg-accent hover:text-accent-foreground rounded-md transition-colors"
             >
               Blog
             </a>
             <a
-              href="#contact"
+              href="/#contact"
+              onClick={(e) => handleSectionClick(e, "contact")}
               className="block px-3 py-2 text-base font-medium text-foreground hover:bg-accent hover:text-accent-foreground rounded-md transition-colors"
             >
               Contact
