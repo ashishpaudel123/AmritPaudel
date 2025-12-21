@@ -18,17 +18,15 @@ export function GraphicsDesignPortfolio({ onBack }: GraphicsDesignPortfolioProps
 
   const categories = [
     { id: "all", label: "All Designs" },
-    { id: "branding", label: "Branding & Logo" },
+    // { id: "branding", label: "Branding & Logo" },
     { id: "consultancy", label: "Consultancy" },
     { id: "recruitment", label: "Recruitment" },
     { id: "festival", label: "Festival" },
     { id: "ceremony", label: "Ceremony / Celebrations" },
     { id: "social-media", label: "Social Media" },
-    { id: "marketing", label: "Marketing Materials" },
-    { id: "ui-ux", label: "UI/UX Design" },
-    { id: "packaging", label: "Packaging Design" },
-    { id: "illustration", label: "Illustration" },
-    { id: "infographics", label: "Infographics" }
+    // { id: "marketing", label: "Marketing Materials" },
+    // { id: "packaging", label: "Packaging Design" },
+    // { id: "illustration", label: "Illustration" },
   ]
 
   // Sample portfolio items - replace with real data
@@ -37,85 +35,162 @@ export function GraphicsDesignPortfolio({ onBack }: GraphicsDesignPortfolioProps
       id: 1,
       category: "consultancy",
       title: "Education Consultancy Brand",
-      image: "/hiring/1.jpg",
+      image: "/hiring/1.png",
       description: "Complete branding for education consultancy"
     },
     {
       id: 2,
       category: "recruitment",
       title: "Recruitment Agency Poster",
-      image: "/api/placeholder/400/400",
+      image: "/hiring/2.png",
       description: "Hiring campaign poster design"
     },
     {
       id: 3,
-      category: "festival",
-      title: "Dashain Festival Graphics",
-      image: "/api/placeholder/400/400",
-      description: "Festival celebration social media posts"
+      category: "consultancy",
+      title: "Education Consultancy Brand",
+      image: "/hiring/3.png",
+      description: "Complete branding for education consultancy"
     },
     {
       id: 4,
       category: "ceremony",
       title: "Wedding Ceremony Design",
-      image: "/api/placeholder/400/400",
+      image: "/hiring/4.png",
       description: "Wedding invitation and ceremony graphics"
     },
     {
       id: 5,
-      category: "branding",
+      category: "consultancy",
       title: "Tech Startup Logo",
-      image: "/api/placeholder/400/400",
+      image: "/hiring/5.png",
       description: "Modern logo design for tech company"
     },
     {
       id: 6,
-      category: "social-media",
+      category: "consultancy",
       title: "Instagram Feed Design",
-      image: "/api/placeholder/400/400",
+      image: "/hiring/6.png",
       description: "Cohesive Instagram feed layout"
     },
     {
       id: 7,
-      category: "marketing",
+      category: "consultancy",
       title: "Product Brochure",
-      image: "/api/placeholder/400/400",
+      image: "/hiring/7.png",
       description: "Tri-fold marketing brochure"
     },
     {
       id: 8,
-      category: "ui-ux",
+      category: "social-media",
       title: "Mobile App Interface",
-      image: "/api/placeholder/400/400",
+      image: "/hiring/8.png",
       description: "User interface design for mobile app"
     },
     {
       id: 9,
-      category: "packaging",
+      category: "consultancy",
       title: "Product Packaging",
-      image: "/api/placeholder/400/400",
+      image: "/hiring/9.png",
       description: "Consumer product packaging design"
     },
     {
       id: 10,
-      category: "illustration",
+      category: "recruitment",
       title: "Custom Illustrations",
-      image: "/api/placeholder/400/400",
+      image: "/hiring/10.png",
       description: "Hand-drawn digital illustrations"
     },
     {
       id: 11,
-      category: "infographics",
+      category: "recruitment",
       title: "Data Visualization",
-      image: "/api/placeholder/400/400",
+      image: "/hiring/11.png",
       description: "Infographic for business presentation"
     },
     {
       id: 12,
-      category: "festival",
+      category: "social-media",
       title: "Tihar Festival Design",
-      image: "/api/placeholder/400/400",
+      image: "/hiring/12.png",
       description: "Festival celebration graphics"
+    },
+    {
+      id: 13,
+      category: "festival",
+      title: "Festival Design 1",
+      image: "/festival/1.jpeg",
+      description: "Festival celebration design"
+    },
+    {
+      id: 14,
+      category: "festival",
+      title: "Festival Design 2",
+      image: "/festival/2.jpeg",
+      description: "Festival greeting graphics"
+    },
+    {
+      id: 15,
+      category: "festival",
+      title: "Festival Design 3",
+      image: "/festival/3.jpeg",
+      description: "Festival celebration artwork"
+    },
+    {
+      id: 16,
+      category: "festival",
+      title: "Festival Design 4",
+      image: "/festival/4.jpeg",
+      description: "Festival promotional design"
+    },
+    {
+      id: 17,
+      category: "festival",
+      title: "Festival Design 5",
+      image: "/festival/5.jpeg",
+      description: "Festival social media post"
+    },
+    {
+      id: 18,
+      category: "festival",
+      title: "Festival Design 6",
+      image: "/festival/6.jpeg",
+      description: "Festival greeting card"
+    },
+    {
+      id: 19,
+      category: "festival",
+      title: "Festival Design 7",
+      image: "/festival/7.jpeg",
+      description: "Festival celebration banner"
+    },
+    {
+      id: 20,
+      category: "festival",
+      title: "Festival Design 8",
+      image: "/festival/8.jpeg",
+      description: "Festival promotional material"
+    },
+    {
+      id: 21,
+      category: "festival",
+      title: "Festival Design 9",
+      image: "/festival/9.jpeg",
+      description: "Festival celebration graphics"
+    },
+    {
+      id: 22,
+      category: "festival",
+      title: "Festival Design 10",
+      image: "/festival/10.jpeg",
+      description: "Festival social media design"
+    },
+    {
+      id: 23,
+      category: "festival",
+      title: "Festival Design 11",
+      image: "/festival/11.jpeg",
+      description: "Festival greeting design"
     }
   ]
 
