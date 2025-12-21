@@ -23,17 +23,18 @@ export function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   const marketingServices = [
-    { name: "SEO & Content Strategy", href: "#services" },
+    { name: "Graphics Design", href: "#services" },
+    { name: "Meta Ads", href: "#services" },
     { name: "Social Media Marketing", href: "#services" },
-    { name: "PPC & Google Ads", href: "#services" },
-    { name: "Email Marketing", href: "#services" },
+    { name: "SEO", href: "#services" },
+    { name: "Content Strategy & Writing", href: "#services" },
   ]
 
   const consultingServices = [
-    { name: "Marketing Strategy", href: "#services" },
-    { name: "Brand Development", href: "#services" },
-    { name: "Analytics & Reporting", href: "#services" },
-    { name: "Marketing Automation", href: "#services" },
+    { name: "Premium Digital Growth Package", href: "#services" },
+    { name: "Strategic Marketing Consultation", href: "#services" },
+    { name: "Logo Design", href: "#services" },
+    { name: "Advanced Analytics & Reporting", href: "#services" },
   ]
 
   return (
