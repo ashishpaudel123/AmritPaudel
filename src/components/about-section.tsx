@@ -74,7 +74,7 @@ export function AboutSection() {
                   <TrendingUp className="w-6 h-6 text-green-500" />
                   <div>
                     <div className="text-sm font-semibold text-slate-800 dark:text-white">
-                      2+ Years
+                      1+ Years
                     </div>
                     <div className="text-xs text-slate-600 dark:text-slate-400">
                       Experience
