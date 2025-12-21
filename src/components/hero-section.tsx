@@ -29,7 +29,7 @@ export function HeroSection() {
       <div className="relative container mx-auto px-4 py-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
           {/* Left Content */}
-          <div className="space-y-8 animate-fade-in-up">
+          <div className="order-2 lg:order-1 space-y-8 animate-fade-in-up">
             {/* Badge */}
             {/* <div className="inline-flex items-center space-x-2 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 px-4 py-2 rounded-full text-sm font-medium">
               <Award className="w-4 h-4" />
@@ -117,7 +117,7 @@ export function HeroSection() {
           </div>
 
           {/* Enhanced Hero Image/Visual */}
-          <div className="relative animate-fade-in-right">
+          <div className="order-1 lg:order-2 relative animate-fade-in-right">
             {/* Image wrapper with relative positioning for absolute badges */}
             <div className="relative w-full max-w-lg mx-auto">
               {/* Enhanced animated background gradient rings with glow */}
