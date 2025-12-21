@@ -6,7 +6,6 @@ import {
   Users,
   Mail,
   BarChart3,
-  ArrowRight,
   CheckCircle,
   Star,
   PenTool,
@@ -20,7 +19,7 @@ interface ServicesSectionProps {
   onServiceClick?: (serviceId: number) => void;
 }
 
-export function ServicesSection({ onServiceClick }: ServicesSectionProps) {
+export function ServicesSection({  }: ServicesSectionProps) {
   const { openModal } = useContactModal();
   const services = [
     {
