@@ -33,7 +33,6 @@ export function Header() {
   const consultingServices = [
     { name: "Premium Digital Growth Package", href: "#services" },
     { name: "Strategic Marketing Consultation", href: "#services" },
-    { name: "Logo Design", href: "#services" },
     { name: "Advanced Analytics & Reporting", href: "#services" },
   ]
 
