@@ -225,24 +225,6 @@ export function ServicesSection({ onServiceClick }: ServicesSectionProps) {
                     </li>
                   ))}
                 </ul>
-
-                {/* Pricing */}
-                <div className="border-t border-slate-200 dark:border-slate-700 pt-4">
-                  <div className="flex items-center justify-between">
-                    <span className="text-lg font-bold text-slate-900 dark:text-white">
-                      {service.price}
-                    </span>
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      onClick={() => onServiceClick?.(service.id)}
-                      className="group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-purple-600 group-hover:text-white group-hover:border-transparent transition-all duration-300 cursor-pointer"
-                    >
-                      Learn More
-                      <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
-                    </Button>
-                  </div>
-                </div>
               </div>
 
               {/* Hover Gradient Border */}
