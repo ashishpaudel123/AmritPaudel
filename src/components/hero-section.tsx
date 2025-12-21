@@ -15,7 +15,7 @@ export function HeroSection() {
     <section className="relative min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50 dark:from-slate-950 dark:via-slate-900 dark:to-purple-950 overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
-        {/* Enhanced animated gradient orbs */}
+        {/* animated gradient orbs */}
         <div className="absolute -top-40 -right-40 w-96 h-96 bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-500 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-3xl opacity-60 dark:opacity-30 animate-blob"></div>
         <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-gradient-to-r from-purple-400 via-pink-400 to-rose-500 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-3xl opacity-60 dark:opacity-30 animate-blob animation-delay-2000"></div>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-cyan-300 via-blue-400 to-indigo-500 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-3xl opacity-60 dark:opacity-30 animate-blob animation-delay-4000"></div>
@@ -36,7 +36,7 @@ export function HeroSection() {
               <span>Certified Digital Marketing Consultant</span>
             </div> */}
 
-            {/* Main Heading with enhanced styling */}
+            {/* Main Heading */}
             <div className="space-y-6">
               <div className="space-y-2">
                 <div className="inline-block">
@@ -58,19 +58,19 @@ export function HeroSection() {
               </p>
             </div>
 
-            {/* Enhanced Stats with glassmorphism */}
+            {/* Stats */}
             <div className="grid grid-cols-3 gap-4 md:gap-6 py-6">
               {stats.map((stat, index) => (
                 <div
                   key={index}
-                  className="group relative text-center p-4 md:p-6 bg-white/60 dark:bg-slate-800/60 rounded-2xl backdrop-blur-xl border border-slate-200/50 dark:border-slate-700/50 hover:shadow-2xl hover:shadow-purple-500/20 dark:hover:shadow-purple-500/30 hover:scale-105 hover:-translate-y-1 transition-all duration-300 cursor-pointer"
+                  className="group relative text-center p-4 bg-white/60 dark:bg-slate-800/60 rounded-2xl backdrop-blur-xl border border-slate-200/50 dark:border-slate-700/50 hover:shadow-2xl hover:shadow-purple-500/20 dark:hover:shadow-purple-500/30 hover:scale-105 hover:-translate-y-1 transition-all duration-300 cursor-pointer"
                 >
                   {/* Gradient background on hover */}
                   <div className={`absolute inset-0 bg-gradient-to-r ${stat.color} rounded-2xl opacity-0 group-hover:opacity-10 transition-opacity duration-300`}></div>
                   
                   <div className="relative">
-                    <div className={`inline-flex items-center justify-center w-14 h-14 md:w-16 md:h-16 bg-gradient-to-r ${stat.color} rounded-2xl mb-3 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
-                      <stat.icon className="w-6 h-6 md:w-8 md:h-8 text-white" />
+                    <div className={`inline-flex items-center justify-center w-10 h-10 md:w-14 md:h-14 bg-gradient-to-r ${stat.color} rounded-2xl mb-3 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                      <stat.icon className="w-6 h-6 md:w-6 md:h-6 text-white" />
                     </div>
                     <div className="text-3xl md:text-4xl font-extrabold bg-gradient-to-r from-slate-900 to-slate-700 dark:from-white dark:to-slate-300 bg-clip-text text-transparent">
                       {stat.number}
@@ -83,7 +83,7 @@ export function HeroSection() {
               ))}
             </div>
 
-            {/* Enhanced CTA Buttons with glow effect */}
+            {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
               <Button
                 size="lg"
@@ -123,16 +123,16 @@ export function HeroSection() {
             </div>
           </div>
 
-          {/* Enhanced Hero Image/Visual */}
+          {/* Hero Image/Visual */}
           <div className="order-1 lg:order-2 relative animate-fade-in-right">
-            {/* Image wrapper with relative positioning for absolute badges */}
+            {/* Image wrapper*/}
             <div className="relative w-full max-w-lg mx-auto">
-              {/* Enhanced animated background gradient rings with glow */}
+              {/* animated background gradient rings with glow */}
               <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-full animate-spin-slow opacity-80 blur-3xl scale-110"></div>
               <div className="absolute inset-0 bg-gradient-to-r from-pink-500 via-rose-500 to-orange-500 rounded-full animate-spin-reverse opacity-80 blur-3xl animation-delay-2000 scale-110"></div>
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-600 rounded-full animate-spin-slow opacity-60 blur-2xl animation-delay-1000 scale-105"></div>
               
-              {/* Main image container with enhanced styling */}
+              {/* Main image container */}
               <div className="relative bg-gradient-to-br from-white to-slate-50 dark:from-slate-800 dark:to-slate-900 rounded-full p-2 shadow-2xl transform hover:scale-[1.02] transition-all duration-500">
                 {/* Gradient border effect */}
                 <div className="relative rounded-full p-2 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 animate-gradient">
@@ -143,37 +143,32 @@ export function HeroSection() {
                       alt="Amrit Paudel - Digital Marketing Consultant"
                       className="w-full h-full object-cover rounded-full animate-fade-in"
                     />
-                    {/* Enhanced overlay gradient on hover */}
+                    {/* overlay gradient on hover */}
                     <div className="absolute inset-0 bg-gradient-to-t from-purple-900/60 via-purple-500/20 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-500"></div>
                   </div>
                 </div>
               </div>
 
-              {/* Enhanced decorative elements */}
+              {/* decorative elements */}
               <div className="absolute inset-0 rounded-full border-2 border-purple-500/40 animate-ping-slow"></div>
               <div className="absolute inset-0 rounded-full border-2 border-blue-500/40 animate-ping-slow animation-delay-1000"></div>
               <div className="absolute inset-0 rounded-full border border-pink-500/30 animate-ping-slow animation-delay-2000"></div>
-                  {/* Enhanced floating skill badges with glassmorphism */}
-              {/* Skill 1: Top-left */}
+              {/* skill badges */}
               <div style={{ top: '30px', left: '-20px' }} className="group absolute bg-gradient-to-br from-pink-500 via-rose-500 to-red-500 rounded-2xl px-5 py-3 shadow-2xl shadow-pink-500/50 hover:shadow-pink-500/70 transform hover:scale-110 hover:-rotate-3 transition-all duration-300 animate-float z-10 backdrop-blur-sm border border-white/20">
                 <div className="text-white font-extrabold text-sm whitespace-nowrap drop-shadow-lg">Meta Ads</div>
-                {/* <div className="text-white/90 text-xs whitespace-nowrap font-medium">Specialist</div> */}
                 <div className="absolute -top-1 -right-1 w-3 h-3 bg-yellow-400 rounded-full animate-ping"></div>
               </div>
               
-              {/* Skill 2: Top-right */}
               <div style={{ top: '30px', right: '-20px' }} className="group absolute bg-gradient-to-br from-blue-500 via-cyan-500 to-teal-500 rounded-2xl px-5 py-3 shadow-2xl shadow-blue-500/50 hover:shadow-blue-500/70 transform hover:scale-110 hover:rotate-3 transition-all duration-300 animate-float animation-delay-1000 z-10 backdrop-blur-sm border border-white/20">
                 <div className="text-white font-extrabold text-sm whitespace-nowrap drop-shadow-lg">SEO</div>
                 <div className="absolute -top-1 -left-1 w-3 h-3 bg-green-400 rounded-full animate-ping animation-delay-1000"></div>
               </div>
               
-              {/* Skill 3: Bottom-right */}
               <div style={{ bottom: '30px', right: '-20px' }} className="group absolute bg-gradient-to-br from-green-500 via-emerald-500 to-teal-500 rounded-2xl px-5 py-3 shadow-2xl shadow-green-500/50 hover:shadow-green-500/70 transform hover:scale-110 hover:-rotate-3 transition-all duration-300 animate-float animation-delay-2000 z-10 backdrop-blur-sm border border-white/20">
                 <div className="text-white font-extrabold text-sm whitespace-nowrap drop-shadow-lg">Google Ads</div>
                 <div className="absolute -bottom-1 -left-1 w-3 h-3 bg-blue-400 rounded-full animate-ping animation-delay-2000"></div>
               </div>
 
-              {/* Skill 4: Bottom-left */}
               <div style={{ bottom: '30px', left: '-20px' }} className="group absolute bg-gradient-to-br from-yellow-500 via-orange-500 to-red-500 rounded-2xl px-5 py-3 shadow-2xl shadow-orange-500/50 hover:shadow-orange-500/70 transform hover:scale-110 hover:rotate-3 transition-all duration-300 animate-float animation-delay-3000 z-10 backdrop-blur-sm border border-white/20">
                 <div className="text-white font-extrabold text-sm whitespace-nowrap drop-shadow-lg">Social Media</div>
                 <div className="absolute -bottom-1 -right-1 w-3 h-3 bg-purple-400 rounded-full animate-ping animation-delay-3000"></div>
