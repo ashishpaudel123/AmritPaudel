@@ -11,7 +11,7 @@ import {
   Filter,
   X
 } from "lucide-react"
-import { useState, useMemo } from "react"
+import { useState, useMemo, useEffect } from "react"
 
 interface BlogSectionProps {
   onPostClick?: (postId: number) => void
@@ -21,6 +21,13 @@ export function BlogSection({ onPostClick }: BlogSectionProps = {}) {
   const [searchQuery, setSearchQuery] = useState("")
   const [selectedCategory, setSelectedCategory] = useState("All Posts")
   const [showAllCategories, setShowAllCategories] = useState(false)
+  const [visiblePosts, setVisiblePosts] = useState(5);
+  
+  // Reset visible posts when search or category changes
+  useEffect(() => {
+    setVisiblePosts(5)
+  }, [searchQuery, selectedCategory])
+  
   const blogPosts = [
     {
       id: 1,
@@ -102,14 +109,22 @@ export function BlogSection({ onPostClick }: BlogSectionProps = {}) {
     }
   ]
 
+  const categoryCounts = useMemo(() => {
+    const counts: Record<string, number> = {}
+    blogPosts.forEach(post => {
+      counts[post.category] = (counts[post.category] || 0) + 1
+    })
+    return counts
+  }, [])
+
   const categories = [
-    { name: "All Posts", count: 24 },
-    { name: "Trends", count: 6 },
-    { name: "SEO", count: 8 },
-    { name: "PPC", count: 5 },
-    { name: "Social Media", count: 7 },
-    { name: "Email Marketing", count: 4 },
-    { name: "Analytics", count: 3 }
+    { name: "All Posts", count: blogPosts.length },
+    { name: "Trends", count: categoryCounts["Trends"] || 0 },
+    { name: "SEO", count: categoryCounts["SEO"] || 0 },
+    { name: "PPC", count: categoryCounts["PPC"] || 0 },
+    { name: "Social Media", count: categoryCounts["Social Media"] || 0 },
+    { name: "Email Marketing", count: categoryCounts["Email Marketing"] || 0 },
+    { name: "Analytics", count: categoryCounts["Analytics"] || 0 }
   ]
 
   // Filter posts based on search query and category
@@ -129,11 +144,18 @@ export function BlogSection({ onPostClick }: BlogSectionProps = {}) {
 
   const featuredPost = filteredPosts.find(post => post.featured)
   const regularPosts = filteredPosts.filter(post => !post.featured)
+  
+  // Get visible posts based on the current limit
+  const displayedPosts = regularPosts.slice(0, visiblePosts)
+  const hasMorePosts = regularPosts.length > visiblePosts
 
-  // Clear search function
   const clearSearch = () => {
     setSearchQuery("")
     setSelectedCategory("All Posts")
+  }
+  
+  const loadMorePosts = () => {
+    setVisiblePosts(prev => prev + 6)
   }
 
   return (
@@ -360,7 +382,7 @@ export function BlogSection({ onPostClick }: BlogSectionProps = {}) {
         {/* Blog Grid */}
         {regularPosts.length > 0 && (
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          {regularPosts.map((post, index) => (
+          {displayedPosts.map((post, index) => (
             <article 
               key={post.id} 
               className="group bg-white/60 dark:bg-slate-800/60 backdrop-blur-md rounded-2xl border border-slate-200/50 dark:border-slate-600/50 overflow-hidden hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-500 hover:scale-105 animate-fade-in-up cursor-pointer"
@@ -427,10 +449,16 @@ export function BlogSection({ onPostClick }: BlogSectionProps = {}) {
         {/* Load More & Newsletter */}
         {regularPosts.length > 0 && (
           <div className="text-center space-y-8">
-            <Button size="lg" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 px-8">
-              Load More Articles
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Button>
+            {hasMorePosts && (
+              <Button 
+                size="lg" 
+                onClick={loadMorePosts}
+                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 px-8"
+              >
+                Load More Articles
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Button>
+            )}
             
             {/* Newsletter Signup */}
             <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 backdrop-blur-md rounded-2xl border border-blue-200/50 dark:border-purple-400/30 p-8 max-w-2xl mx-auto">
