@@ -29,10 +29,10 @@ export function PortfolioSection({ onDigitalMarketingClick, onGraphicsDesignClic
       accentColor: "text-blue-600 dark:text-blue-400",
       borderColor: "border-blue-200 dark:border-blue-800",
       features: [
-        "📊 Organic Growth Campaigns",
-        "🎯 Meta Ads & PPC Management",
-        "💬 Lead Generation Funnels",
-        "🚀 Brand Awareness Strategies"
+        "Organic Growth Campaigns",
+        "Meta Ads Performance",
+        "Lead Generation Funnels",
+        "Brand Awareness Strategies"
       ],
       badge: "Case Studies Inside",
       onClick: onDigitalMarketingClick
@@ -48,10 +48,10 @@ export function PortfolioSection({ onDigitalMarketingClick, onGraphicsDesignClic
       accentColor: "text-pink-600 dark:text-pink-400",
       borderColor: "border-pink-200 dark:border-pink-800",
       features: [
-        "🎨 Brand Identity & Logos",
-        "📱 Social Media Graphics",
-        "📄 Marketing Collaterals",
-        "✨ UI/UX & Illustrations"
+        "Brand Identity & Logos",
+        "Social Media Graphics",
+        "Marketing Assets",
+        "Print Design"
       ],
       badge: "Portfolio Inside",
       onClick: onGraphicsDesignClick
