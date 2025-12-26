@@ -181,10 +181,10 @@ export const portfolioCategories = [
     description:
       "Real campaigns. Real results. Real analytics. Explore case studies with verified Meta Business insights, detailed performance metrics, and proven strategies that drive measurable success.",
     icon: Megaphone,
-    color: "from-blue-600 to-indigo-600",
-    hoverColor: "hover:from-blue-700 hover:to-indigo-700",
-    accentColor: "text-blue-600 dark:text-blue-400",
-    borderColor: "border-blue-200 dark:border-blue-800",
+    color: "from-pink-600 to-purple-600",
+    hoverColor: "hover:from-pink-700 hover:to-purple-700",
+    accentColor: "text-pink-600 dark:text-pink-400",
+    borderColor: "border-pink-200 dark:border-pink-800",
     features: [
       "Organic Growth Campaigns",
       "Meta Ads Performance",
