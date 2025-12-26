@@ -1,11 +1,9 @@
 import { useState, useEffect } from "react";
 import { Button } from "./ui/button";
 import { Badge } from "./ui/badge";
-import { Star, Quote, ChevronLeft, ChevronRight, Play } from "lucide-react";
-import { useContactModal } from "../hooks/use-contact-modal";
+import { Star, Quote, ChevronLeft, ChevronRight } from "lucide-react";
 
 export function TestimonialsSection() {
-  const { openModal } = useContactModal();
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const testimonials = [

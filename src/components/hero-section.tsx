@@ -6,11 +6,8 @@ import {
   Users,
   Target,
 } from "lucide-react";
-import { useContactModal } from "../hooks/use-contact-modal";
 
 export function HeroSection() {
-  const { openModal } = useContactModal();
-
   const stats = [
     {
       icon: Users,
@@ -51,12 +48,6 @@ export function HeroSection() {
         <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
           {/* Left Content */}
           <div className="order-2 lg:order-1 space-y-8 animate-fade-in-up">
-            {/* Badge */}
-            {/* <div className="inline-flex items-center space-x-2 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 px-4 py-2 rounded-full text-sm font-medium">
-              <Award className="w-4 h-4" />
-              <span>Certified Digital Marketing Consultant</span>
-            </div> */}
-
             {/* Main Heading */}
             <div className="space-y-6">
               <div className="space-y-2">

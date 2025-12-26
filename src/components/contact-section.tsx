@@ -2,11 +2,9 @@ import { useState } from "react";
 import { Button } from "./ui/button";
 import { Badge } from "./ui/badge";
 import { Send, CheckCircle } from "lucide-react";
-import { useContactModal } from "../hooks/use-contact-modal";
 import { services } from "@/lib/utils";
 
 export function ContactSection() {
-  const { openModal } = useContactModal();
   const [formData, setFormData] = useState({
     name: "",
     email: "",

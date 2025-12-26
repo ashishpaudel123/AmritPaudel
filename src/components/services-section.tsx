@@ -1,7 +1,6 @@
 import { Button } from "./ui/button";
 import { Badge } from "./ui/badge";
 import { CheckCircle } from "lucide-react";
-import { useContactModal } from "../hooks/use-contact-modal";
 import { useState } from "react";
 import { services } from "@/lib/utils";
 
@@ -10,8 +9,6 @@ interface ServicesSectionProps {
 }
 
 export function ServicesSection({}: ServicesSectionProps) {
-  const { openModal } = useContactModal();
-
   const [visibleCount, setVisibleCount] = useState(6);
   const hasMoreServices = services.length > visibleCount;
 
