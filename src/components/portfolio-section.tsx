@@ -1,66 +1,31 @@
 import { Button } from "./ui/button";
 import { Badge } from "./ui/badge";
-import {
-  TrendingUp,
-  BarChart3,
-  ArrowRight,
-  Palette,
-  Megaphone,
-  Sparkles,
-  Target,
-} from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import { portfolioCategories } from "@/lib/utils";
 
-interface PortfolioSectionProps {
+export interface PortfolioSectionProps {
   onDigitalMarketingClick: () => void;
   onGraphicsDesignClick: () => void;
 }
+
+export type PortfolioCategory = "digital-marketing" | "graphics-design";
 
 export function PortfolioSection({
   onDigitalMarketingClick,
   onGraphicsDesignClick,
 }: PortfolioSectionProps) {
-  const portfolioCategories = [
-    {
-      id: 1,
-      title: "Digital Marketing",
-      tagline: "Turn Data Into Growth",
-      description:
-        "Real campaigns. Real results. Real analytics. Explore case studies with verified Meta Business insights, detailed performance metrics, and proven strategies that drive measurable success.",
-      icon: Megaphone,
-      color: "from-blue-600 to-indigo-600",
-      hoverColor: "hover:from-blue-700 hover:to-indigo-700",
-      accentColor: "text-blue-600 dark:text-blue-400",
-      borderColor: "border-blue-200 dark:border-blue-800",
-      features: [
-        "Organic Growth Campaigns",
-        "Meta Ads Performance",
-        "Lead Generation Funnels",
-        "Brand Awareness Strategies",
-      ],
-      badge: "Case Studies Inside",
-      onClick: onDigitalMarketingClick,
-    },
-    {
-      id: 2,
-      title: "Graphics Design",
-      tagline: "Where Creativity Meets Purpose",
-      description:
-        "From concept to creation. Browse stunning visual designs that tell stories, build brands, and captivate audiences across all platforms and mediums.",
-      icon: Palette,
-      color: "from-pink-600 to-purple-600",
-      hoverColor: "hover:from-pink-700 hover:to-purple-700",
-      accentColor: "text-pink-600 dark:text-pink-400",
-      borderColor: "border-pink-200 dark:border-pink-800",
-      features: [
-        "Brand Identity & Logos",
-        "Social Media Graphics",
-        "Marketing Assets",
-        "Print Design",
-      ],
-      badge: "Portfolio Inside",
-      onClick: onGraphicsDesignClick,
-    },
-  ];
+  const handleCategoryClick = (action: PortfolioCategory) => {
+    switch (action) {
+      case "digital-marketing":
+        onDigitalMarketingClick();
+        break;
+      case "graphics-design":
+        onGraphicsDesignClick();
+        break;
+      default:
+        break;
+    }
+  };
 
   return (
     <section
@@ -101,7 +66,7 @@ export function PortfolioSection({
               <div
                 key={category.id}
                 className="group relative bg-white dark:bg-slate-800 rounded-3xl shadow-2xl border-2 border-slate-200 dark:border-slate-700 overflow-hidden hover:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.3)] transition-all duration-700 hover:scale-[1.02] cursor-pointer"
-                onClick={category.onClick}
+                onClick={handleCategoryClick.bind(null, category.action)}
               >
                 {/* Animated gradient border on hover */}
                 <div
