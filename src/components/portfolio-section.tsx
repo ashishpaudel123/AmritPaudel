@@ -1,28 +1,31 @@
-import { Button } from "./ui/button"
-import { Badge } from "./ui/badge"
-import { 
-  TrendingUp, 
+import { Button } from "./ui/button";
+import { Badge } from "./ui/badge";
+import {
+  TrendingUp,
   BarChart3,
   ArrowRight,
   Palette,
   Megaphone,
   Sparkles,
-  Target
-} from "lucide-react"
+  Target,
+} from "lucide-react";
 
 interface PortfolioSectionProps {
-  onDigitalMarketingClick: () => void
-  onGraphicsDesignClick: () => void
+  onDigitalMarketingClick: () => void;
+  onGraphicsDesignClick: () => void;
 }
 
-export function PortfolioSection({ onDigitalMarketingClick, onGraphicsDesignClick }: PortfolioSectionProps) {
-
+export function PortfolioSection({
+  onDigitalMarketingClick,
+  onGraphicsDesignClick,
+}: PortfolioSectionProps) {
   const portfolioCategories = [
     {
       id: 1,
       title: "Digital Marketing",
       tagline: "Turn Data Into Growth",
-      description: "Real campaigns. Real results. Real analytics. Explore case studies with verified Meta Business insights, detailed performance metrics, and proven strategies that drive measurable success.",
+      description:
+        "Real campaigns. Real results. Real analytics. Explore case studies with verified Meta Business insights, detailed performance metrics, and proven strategies that drive measurable success.",
       icon: Megaphone,
       color: "from-blue-600 to-indigo-600",
       hoverColor: "hover:from-blue-700 hover:to-indigo-700",
@@ -32,16 +35,17 @@ export function PortfolioSection({ onDigitalMarketingClick, onGraphicsDesignClic
         "Organic Growth Campaigns",
         "Meta Ads Performance",
         "Lead Generation Funnels",
-        "Brand Awareness Strategies"
+        "Brand Awareness Strategies",
       ],
       badge: "Case Studies Inside",
-      onClick: onDigitalMarketingClick
+      onClick: onDigitalMarketingClick,
     },
     {
       id: 2,
       title: "Graphics Design",
       tagline: "Where Creativity Meets Purpose",
-      description: "From concept to creation. Browse stunning visual designs that tell stories, build brands, and captivate audiences across all platforms and mediums.",
+      description:
+        "From concept to creation. Browse stunning visual designs that tell stories, build brands, and captivate audiences across all platforms and mediums.",
       icon: Palette,
       color: "from-pink-600 to-purple-600",
       hoverColor: "hover:from-pink-700 hover:to-purple-700",
@@ -51,15 +55,18 @@ export function PortfolioSection({ onDigitalMarketingClick, onGraphicsDesignClic
         "Brand Identity & Logos",
         "Social Media Graphics",
         "Marketing Assets",
-        "Print Design"
+        "Print Design",
       ],
       badge: "Portfolio Inside",
-      onClick: onGraphicsDesignClick
-    }
-  ]
+      onClick: onGraphicsDesignClick,
+    },
+  ];
 
   return (
-    <section id="portfolio" className="py-20 bg-white dark:bg-slate-900 relative overflow-hidden">
+    <section
+      id="portfolio"
+      className="py-20 bg-white dark:bg-slate-900 relative overflow-hidden"
+    >
       {/* Background Elements */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/3 right-1/4 w-72 h-72 bg-gradient-to-r from-purple-400/10 to-pink-500/10 rounded-full blur-3xl"></div>
@@ -73,49 +80,64 @@ export function PortfolioSection({ onDigitalMarketingClick, onGraphicsDesignClic
             Portfolio
           </Badge>
           <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6">
-            My Work 
-            <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent"> Speaks For Itself</span>
+            My Work
+            <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+              {" "}
+              Speaks For Itself
+            </span>
           </h2>
           <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
-            Explore my expertise across digital marketing and creative design. 
-            Choose a category to see detailed case studies and project showcases.
+            Explore my expertise across digital marketing and creative design.
+            Choose a category to see detailed case studies and project
+            showcases.
           </p>
         </div>
 
         {/* Portfolio Categories - Two Main Cards */}
         <div className="grid md:grid-cols-2 gap-8 mb-16 max-w-6xl mx-auto">
           {portfolioCategories.map((category) => {
-            const Icon = category.icon
+            const Icon = category.icon;
             return (
-              <div 
+              <div
                 key={category.id}
                 className="group relative bg-white dark:bg-slate-800 rounded-3xl shadow-2xl border-2 border-slate-200 dark:border-slate-700 overflow-hidden hover:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.3)] transition-all duration-700 hover:scale-[1.02] cursor-pointer"
                 onClick={category.onClick}
               >
                 {/* Animated gradient border on hover */}
-                <div className={`absolute inset-0 bg-gradient-to-r ${category.color} opacity-0 group-hover:opacity-10 transition-opacity duration-700 rounded-3xl`}></div>
-                
+                <div
+                  className={`absolute inset-0 bg-gradient-to-r ${category.color} opacity-0 group-hover:opacity-10 transition-opacity duration-700 rounded-3xl`}
+                ></div>
+
                 {/* Header with gradient and animated background */}
-                <div className={`relative h-44 bg-gradient-to-br ${category.color} overflow-hidden`}>
+                <div
+                  className={`relative h-44 bg-gradient-to-br ${category.color} overflow-hidden`}
+                >
                   {/* Animated background pattern */}
                   <div className="absolute inset-0 opacity-30">
                     <div className="absolute top-0 -left-1/4 w-96 h-96 bg-white/20 rounded-full blur-3xl animate-pulse"></div>
-                    <div className="absolute bottom-0 -right-1/4 w-96 h-96 bg-white/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+                    <div
+                      className="absolute bottom-0 -right-1/4 w-96 h-96 bg-white/20 rounded-full blur-3xl animate-pulse"
+                      style={{ animationDelay: "1s" }}
+                    ></div>
                   </div>
-                  
+
                   {/* Decorative grid pattern */}
-                  <div className="absolute inset-0 opacity-10" style={{
-                    backgroundImage: 'linear-gradient(white 1px, transparent 1px), linear-gradient(90deg, white 1px, transparent 1px)',
-                    backgroundSize: '50px 50px'
-                  }}></div>
-                  
+                  <div
+                    className="absolute inset-0 opacity-10"
+                    style={{
+                      backgroundImage:
+                        "linear-gradient(white 1px, transparent 1px), linear-gradient(90deg, white 1px, transparent 1px)",
+                      backgroundSize: "50px 50px",
+                    }}
+                  ></div>
+
                   {/* Badge */}
                   <div className="absolute top-6 right-6 z-10">
                     <Badge className="bg-white/20 backdrop-blur-md text-white border-white/30 px-4 py-1.5 text-sm font-semibold">
                       {category.badge}
                     </Badge>
                   </div>
-                  
+
                   {/* Icon with glow effect */}
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="relative">
@@ -134,11 +156,13 @@ export function PortfolioSection({ onDigitalMarketingClick, onGraphicsDesignClic
                     <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-2 group-hover:translate-x-2 transition-transform duration-300">
                       {category.title}
                     </h3>
-                    <p className={`text-lg font-semibold ${category.accentColor} italic`}>
+                    <p
+                      className={`text-lg font-semibold ${category.accentColor} italic`}
+                    >
                       {category.tagline}
                     </p>
                   </div>
-                  
+
                   <p className="text-slate-600 dark:text-slate-300 mb-8 text-base leading-relaxed">
                     {category.description}
                   </p>
@@ -146,24 +170,26 @@ export function PortfolioSection({ onDigitalMarketingClick, onGraphicsDesignClic
                   {/* Features as bullet points */}
                   <ul className="space-y-3 mb-8">
                     {category.features.map((feature, index) => (
-                      <li 
+                      <li
                         key={index}
                         className="flex items-start gap-3 text-slate-700 dark:text-slate-300 group-hover:translate-x-1 transition-transform duration-300"
                         style={{ transitionDelay: `${index * 50}ms` }}
                       >
                         <span className="text-lg mt-0.5 flex-shrink-0">•</span>
-                        <span className="text-sm leading-relaxed">{feature}</span>
+                        <span className="text-sm leading-relaxed">
+                          {feature}
+                        </span>
                       </li>
                     ))}
                   </ul>
 
                   {/* CTA Button with enhanced design */}
-                  <Button 
+                  <Button
                     className={`w-full bg-gradient-to-r ${category.color} ${category.hoverColor} text-white font-bold py-6 text-lg shadow-lg group-hover:shadow-2xl transition-all duration-300 relative overflow-hidden`}
                   >
                     {/* Shine effect */}
                     <div className="absolute inset-0 w-1/2 h-full bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12 -translate-x-full group-hover:translate-x-[200%] transition-transform duration-1000"></div>
-                    
+
                     <span className="relative flex items-center justify-center gap-2">
                       Explore Projects
                       <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform duration-300" />
@@ -171,40 +197,10 @@ export function PortfolioSection({ onDigitalMarketingClick, onGraphicsDesignClic
                   </Button>
                 </div>
               </div>
-            )
+            );
           })}
-        </div>
-
-        {/* Overall Stats Section */}
-        <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-8 md:p-12 text-white">
-          <div className="text-center mb-8">
-            <h3 className="text-3xl md:text-4xl font-bold mb-4">
-              Proven Track Record
-            </h3>
-            <p className="text-xl opacity-90 max-w-2xl mx-auto">
-              Numbers don't lie. Here's the cumulative impact of my work across all projects.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {[
-              { number: "193K+", label: "Total Reach Achieved", icon: TrendingUp },
-              { number: "515+", label: "Projects Completed", icon: BarChart3 },
-              { number: "100+", label: "Happy Clients", icon: Target },
-              { number: "192+", label: "Leads Generated", icon: Sparkles }
-            ].map((stat, index) => {
-              const Icon = stat.icon
-              return (
-                <div key={index} className="text-center group">
-                  <Icon className="w-8 h-8 mx-auto mb-3 opacity-80 group-hover:scale-110 transition-transform duration-300" />
-                  <div className="text-3xl md:text-4xl font-bold mb-2">{stat.number}</div>
-                  <div className="text-sm opacity-80">{stat.label}</div>
-                </div>
-              )
-            })}
-          </div>
         </div>
       </div>
     </section>
-  )
+  );
 }
