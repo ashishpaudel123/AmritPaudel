@@ -347,7 +347,7 @@ export function BlogSection({ onPostClick }: BlogSectionProps = {}) {
 
         {/* Blog Grid */}
         {regularPosts.length > 0 && (
-          <div className="grid grid-cols-2 gap-8 mb-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
             {displayedPosts.map((post, index) => (
               <article
                 key={post.id}
@@ -379,7 +379,7 @@ export function BlogSection({ onPostClick }: BlogSectionProps = {}) {
                   >
                     {/* Title and Excerpt */}
                     <div className="flex-1">
-                      <h3 className="text-2xl text-blue-600 font-bold mb-6 leading-tight">
+                      <h3 className="text-2xl text-black font-semibold mb-6 leading-tight">
                         {post.title}
                       </h3>
 
