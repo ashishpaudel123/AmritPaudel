@@ -1,16 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "./ui/button";
 import { Badge } from "./ui/badge";
-import {
-  Star,
-  Quote,
-  ChevronLeft,
-  ChevronRight,
-  Play,
-  Award,
-  TrendingUp,
-  Users,
-} from "lucide-react";
+import { Star, Quote, ChevronLeft, ChevronRight, Play } from "lucide-react";
 import { useContactModal } from "../hooks/use-contact-modal";
 
 export function TestimonialsSection() {
@@ -120,7 +111,7 @@ export function TestimonialsSection() {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % testimonials.length);
-    }, 6000); // Change slide every 6 seconds
+    }, 3000);
 
     return () => clearInterval(timer);
   }, [testimonials.length]);
@@ -153,12 +144,12 @@ export function TestimonialsSection() {
       <div className="container mx-auto px-4 relative">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <Badge className="bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-200 mb-4">
+          <Badge className="bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200 mb-4">
             Client Success Stories
           </Badge>
           <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6">
             What My Clients Say About
-            <span className="bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
               {" "}
               Working Together
             </span>
@@ -181,7 +172,7 @@ export function TestimonialsSection() {
                   <div className="space-y-6">
                     {/* Avatar and Basic Info */}
                     <div className="flex items-center space-x-4">
-                      <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-full flex items-center justify-center text-white font-bold text-xl">
+                      <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center text-white font-bold text-xl">
                         {testimonials[currentSlide].avatar}
                       </div>
                       <div>
@@ -191,14 +182,14 @@ export function TestimonialsSection() {
                         <p className="text-slate-600 dark:text-slate-300">
                           {testimonials[currentSlide].position}
                         </p>
-                        <p className="text-emerald-600 font-medium">
+                        <p className="text-purple-600 font-medium">
                           {testimonials[currentSlide].company}
                         </p>
                       </div>
                     </div>
 
                     {/* Rating */}
-                    <div className="flex items-center space-x-1">
+                    <div className="flex items-center space-x-1 ps-19">
                       {[...Array(5)].map((_, i) => (
                         <Star
                           key={i}
@@ -206,39 +197,11 @@ export function TestimonialsSection() {
                         />
                       ))}
                     </div>
-
-                    {/* Industry & Video Badge */}
-                    <div className="space-y-2">
-                      <Badge variant="outline" className="text-xs">
-                        {testimonials[currentSlide].industry}
-                      </Badge>
-                      {testimonials[currentSlide].videoTestimonial && (
-                        <div className="flex items-center text-sm text-slate-600 dark:text-slate-400">
-                          <Play className="w-4 h-4 mr-1" />
-                          Video Testimonial Available
-                        </div>
-                      )}
-                    </div>
-
-                    {/* Results Box */}
-                    <div className="bg-emerald-50 dark:bg-emerald-900/20 rounded-xl p-4 border border-emerald-200 dark:border-emerald-700">
-                      <div className="text-center">
-                        <div className="text-2xl font-bold text-emerald-800 dark:text-emerald-300">
-                          {testimonials[currentSlide].results.value}
-                        </div>
-                        <div className="text-sm text-emerald-600 dark:text-emerald-400">
-                          {testimonials[currentSlide].results.metric}
-                        </div>
-                        <div className="text-xs text-slate-500 dark:text-slate-400 mt-1">
-                          in {testimonials[currentSlide].results.timeframe}
-                        </div>
-                      </div>
-                    </div>
                   </div>
 
                   {/* Center - Quote */}
                   <div className="lg:col-span-2 space-y-6">
-                    <Quote className="w-12 h-12 text-emerald-500 opacity-50" />
+                    <Quote className="w-12 h-12 text-purple-600 opacity-50" />
                     <blockquote className="text-2xl md:text-3xl font-medium text-slate-900 dark:text-white leading-relaxed">
                       "{testimonials[currentSlide].text}"
                     </blockquote>
@@ -278,7 +241,7 @@ export function TestimonialsSection() {
                 onClick={() => goToSlide(index)}
                 className={`w-3 h-3 rounded-full transition-all duration-300 cursor-pointer ${
                   currentSlide === index
-                    ? "bg-emerald-600"
+                    ? "bg-purple-600"
                     : "bg-slate-300 dark:bg-slate-600 hover:bg-slate-400 dark:hover:bg-slate-500"
                 }`}
               />
@@ -297,7 +260,7 @@ export function TestimonialsSection() {
               {/* Header */}
               <div className="flex items-center justify-between mb-4">
                 <div className="flex items-center space-x-3">
-                  <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-full flex items-center justify-center text-white font-bold">
+                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center text-white font-bold">
                     {testimonial.avatar}
                   </div>
                   <div>
@@ -323,16 +286,6 @@ export function TestimonialsSection() {
               <p className="text-slate-700 dark:text-slate-300 text-sm line-clamp-4 mb-4">
                 "{testimonial.text}"
               </p>
-
-              {/* Result */}
-              <div className="bg-slate-50 dark:bg-slate-800 rounded-lg p-3 text-center">
-                <div className="text-lg font-bold text-emerald-600">
-                  {testimonial.results.value}
-                </div>
-                <div className="text-xs text-slate-600 dark:text-slate-400">
-                  {testimonial.results.metric}
-                </div>
-              </div>
             </div>
           ))}
         </div>

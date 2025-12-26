@@ -1,35 +1,12 @@
 import { Button } from "./ui/button";
 import { Badge } from "./ui/badge";
-import {
-  CheckCircle,
-  // Award,
-  BookOpen,
-  Users,
-  // Target,
-  TrendingUp,
-} from "lucide-react";
+import { CheckCircle, BookOpen, Users, TrendingUp } from "lucide-react";
 
 export function AboutSection() {
-  // const skills = [
-  //   { name: "Photoshop", level: 80 },
-  //   { name: "Illustrator", level: 85 },
-  //   { name: "Indesign", level: 78 },
-  //   { name: "Meta Ads (Facebook, Instagram, Thread)", level: 90 },
-  //   { name: "Video Editing", level: 60 },
-  //   { name: "Content Writing", level: 75 },
-  // ]
-
   const certifications = [
     "Digital Marketing Institute Certified",
     "Graphics Design Institute Certified",
   ];
-
-  // const achievements = [
-  //   { icon: Users, number: "60+", label: "Happy Clients" },
-  //   { icon: Target, number: "90+", label: "Project Completed" },
-  //   { icon: TrendingUp, number: "2+", label: "Experience" },
-  //   // { icon: Award, number: "15+", label: "Industry Awards" },
-  // ];
 
   return (
     <section
@@ -58,17 +35,6 @@ export function AboutSection() {
                 </div>
               </div>
 
-              {/* Floating Achievement Cards */}
-              {/* <div className="absolute -top-6 -right-6 bg-white dark:bg-slate-800 rounded-lg shadow-lg p-4 animate-float">
-                <div className="flex items-center space-x-2">
-                  <Award className="w-6 h-6 text-yellow-500" />
-                  <div>
-                    <div className="text-sm font-semibold text-slate-800 dark:text-white">Google Partner</div>
-                    <div className="text-xs text-slate-600 dark:text-slate-400">Premier Status</div>
-                  </div>
-                </div>
-              </div> */}
-
               <div className="absolute -bottom-6 -left-6 bg-white dark:bg-slate-800 rounded-lg shadow-lg p-4 animate-float animation-delay-2000">
                 <div className="flex items-center space-x-2">
                   <TrendingUp className="w-6 h-6 text-green-500" />
@@ -88,17 +54,18 @@ export function AboutSection() {
           {/* Right Side - Content */}
           <div className="space-y-8">
             {/* Section Header */}
-            <div className="space-y-4">
-              <Badge className="bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200">
+            <div className="text-center mb-16">
+              <Badge className="bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200 mb-4">
                 About Me
               </Badge>
-              <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white">
+              <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6">
                 Your Partner in
-                <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+                  {" "}
                   Digital Growth
                 </span>
               </h2>
-              <p className="text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
+              <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
                 With over 2 years of experience as a digital marketing
                 consultant and social media designer, I have helped multiple
                 businesses transform their online presence, strengthen their
@@ -111,23 +78,27 @@ export function AboutSection() {
               <div className="flex items-start space-x-3">
                 <CheckCircle className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
                 <p className="text-slate-700 dark:text-slate-300">
-                  <span className="font-semibold">Consultation & Plannig:{" "}</span>
-                  We begin with one-on-one conversation to your specific business goals and
-                  target audience.
+                  <span className="font-semibold">
+                    Consultation & Plannig:{" "}
+                  </span>
+                  We begin with one-on-one conversation to your specific
+                  business goals and target audience.
                 </p>
               </div>
               <div className="flex items-start space-x-3">
                 <CheckCircle className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
                 <p className="text-slate-700 dark:text-slate-300">
-                  <span className="font-semibold">Data-Driven Outcomes:{" "}</span>
-                 Every plans are based on client requirements and business goals.
+                  <span className="font-semibold">Data-Driven Outcomes: </span>
+                  Every plans are based on client requirements and business
+                  goals.
                 </p>
               </div>
               <div className="flex items-start space-x-3">
                 <CheckCircle className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
                 <p className="text-slate-700 dark:text-slate-300">
-                  <span className="font-semibold">Service Support:{" "}</span>
-                  From planning to execution, I handle every aspect of clients need.
+                  <span className="font-semibold">Service Support: </span>
+                  From planning to execution, I handle every aspect of clients
+                  need.
                 </p>
               </div>
             </div>

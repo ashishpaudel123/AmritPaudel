@@ -33,12 +33,12 @@ export function ServicesSection({}: ServicesSectionProps) {
       <div className="container mx-auto px-4 relative">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <Badge className="bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 mb-4">
+          <Badge className="bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200 mb-4">
             My Services
           </Badge>
           <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6">
             Comprehensive Digital Marketing
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
               {" "}
               Solutions
             </span>

@@ -61,12 +61,12 @@ export function ContactSection() {
       <div className="container mx-auto px-4 relative">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <Badge className="bg-cyan-100 text-cyan-800 dark:bg-cyan-900 dark:text-cyan-200 mb-4">
+          <Badge className="bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200 mb-4">
             Let's Work Together
           </Badge>
           <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6">
             Ready to Transform Your
-            <span className="bg-gradient-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
               {" "}
               Digital Presence?
             </span>
@@ -161,12 +161,15 @@ export function ContactSection() {
               </div>
 
               <Button
-                type="submit"
-                size="lg"
-                className="w-full bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 text-white px-8 py-3 text-lg font-semibold"
+                className={`w-full bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-700 hover:to-purple-700 text-white font-bold py-6 text-lg shadow-lg group-hover:shadow-2xl transition-all duration-300 relative overflow-hidden`}
               >
-                Send Message
-                <Send className="w-5 h-5 ml-2" />
+                {/* Shine effect */}
+                <div className="absolute inset-0 w-1/2 h-full bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12 -translate-x-full group-hover:translate-x-[200%] transition-transform duration-1000"></div>
+
+                <span className="relative flex items-center justify-center gap-2">
+                  Send Message
+                  <Send className="w-5 h-5 group-hover:translate-x-2 transition-transform duration-300" />
+                </span>
               </Button>
             </form>
           ) : (
