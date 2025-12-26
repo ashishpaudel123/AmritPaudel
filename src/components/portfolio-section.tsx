@@ -59,7 +59,7 @@ export function PortfolioSection({
         </div>
 
         {/* Portfolio Categories - Two Main Cards */}
-        <div className="grid md:grid-cols-2 gap-8 mb-16 max-w-6xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-8 mb-16 max-w-6xl mx-auto">
           {portfolioCategories.map((category) => {
             const Icon = category.icon;
             return (
