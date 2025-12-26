@@ -14,12 +14,13 @@ import {
   PackageSearch,
 } from "lucide-react";
 import { useContactModal } from "../hooks/use-contact-modal";
+import { useState } from "react";
 
 interface ServicesSectionProps {
   onServiceClick?: (serviceId: number) => void;
 }
 
-export function ServicesSection({  }: ServicesSectionProps) {
+export function ServicesSection({}: ServicesSectionProps) {
   const { openModal } = useContactModal();
   const services = [
     {
@@ -157,6 +158,12 @@ export function ServicesSection({  }: ServicesSectionProps) {
       gradient: "from-rose-500 to-red-600",
     },
   ];
+  const [visibleCount, setVisibleCount] = useState(6);
+  const hasMoreServices = services.length > visibleCount;
+
+  const moreServices = () => {
+    setVisibleCount(services.length);
+  };
 
   return (
     <section
@@ -191,7 +198,7 @@ export function ServicesSection({  }: ServicesSectionProps) {
 
         {/* Services Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {services.map((service, index) => (
+          {services.slice(0, visibleCount).map((service, index) => (
             <div
               key={index}
               className="group relative bg-white dark:bg-slate-900 rounded-2xl p-8 shadow-lg border border-slate-200 dark:border-slate-700 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
@@ -233,6 +240,18 @@ export function ServicesSection({  }: ServicesSectionProps) {
             </div>
           ))}
         </div>
+        {hasMoreServices && (
+          <div className="text-center mb-20">
+            <Button
+              variant="outline"
+              size="lg"
+              onClick={moreServices}
+              className="bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800"
+            >
+              View All Services
+            </Button>
+          </div>
+        )}
 
         {/* Process Section */}
         <div className="bg-white dark:bg-slate-900 rounded-3xl p-8 md:p-12 border border-slate-200 dark:border-slate-700">
@@ -248,30 +267,30 @@ export function ServicesSection({  }: ServicesSectionProps) {
 
           <div className="grid md:grid-cols-4 gap-8">
             {[
-          {
-          step: "01",
-          title: "Discovery and Strategy",
-          description:
-          "You share your goals. We study your business and audience. We define a clear digital plan focused on results.",
-          },
-          {
-          step: "02",
-          title: "Design and Content",
-          description:
-          "You get clean design and strong content. Everything matches your brand and drives action.",
-          },
-          {
-          step: "03",
-          title: "Development and Execution",
-          description:
-          "We build and launch. Websites, ads, campaigns, and systems run fast and work smoothly.",
-          },
-          {
-          step: "04",
-          title: "Optimization and Support",
-          description:
-          "We track performance. We improve results. You get ongoing support and clear growth.",
-          },
+              {
+                step: "01",
+                title: "Discovery and Strategy",
+                description:
+                  "You share your goals. We study your business and audience. We define a clear digital plan focused on results.",
+              },
+              {
+                step: "02",
+                title: "Design and Content",
+                description:
+                  "You get clean design and strong content. Everything matches your brand and drives action.",
+              },
+              {
+                step: "03",
+                title: "Development and Execution",
+                description:
+                  "We build and launch. Websites, ads, campaigns, and systems run fast and work smoothly.",
+              },
+              {
+                step: "04",
+                title: "Optimization and Support",
+                description:
+                  "We track performance. We improve results. You get ongoing support and clear growth.",
+              },
             ].map((process, index) => (
               <div key={index} className="text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full text-white font-bold text-lg mb-4">
@@ -285,51 +304,6 @@ export function ServicesSection({  }: ServicesSectionProps) {
                 </p>
               </div>
             ))}
-          </div>
-        </div>
-
-        {/* CTA Section */}
-        <div className="text-center mt-16">
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl p-8 md:p-12 text-white">
-            <div className="flex items-center justify-center mb-4">
-              <Star className="w-6 h-6 text-yellow-400 mr-2" />
-              <Star className="w-6 h-6 text-yellow-400 mr-2" />
-              <Star className="w-6 h-6 text-yellow-400 mr-2" />
-              <Star className="w-6 h-6 text-yellow-400 mr-2" />
-              <Star className="w-6 h-6 text-yellow-400" />
-            </div>
-            <h3 className="text-3xl md:text-4xl font-bold mb-4">
-              Ready to Transform Your Digital Presence?
-            </h3>
-            <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
-              Let's discuss how my proven strategies can drive real growth for
-              your business. Get a free consultation and custom strategy
-              proposal.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button
-                size="lg"
-                onClick={() => openModal("Get Free Strategy Session")}
-                className="bg-white text-blue-600 hover:bg-gray-50 px-8 py-3 text-lg font-semibold cursor-pointer"
-              >
-                Get Free Strategy Session
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                onClick={(e)=> {
-                  e.preventDefault();
-                  const element = document.getElementById("portfolio");
-                  if (element) {
-                    element.scrollIntoView({ behavior: 'smooth' });
-                  }
-                }
-                }
-                className="border-2 border-white hover:bg-white hover:text-blue-600 px-8 py-3 text-lg font-semibold"
-              >
-                View Case Studies
-              </Button>
-            </div>
           </div>
         </div>
       </div>
