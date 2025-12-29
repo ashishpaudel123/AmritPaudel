@@ -150,32 +150,14 @@ export function HeroSection() {
           <div className="order-1 lg:order-2 relative animate-fade-in-right">
             {/* Image wrapper*/}
             <div className="relative w-full max-w-lg mx-auto">
-              {/* animated background gradient rings with glow */}
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-full animate-spin-slow opacity-80 blur-3xl scale-110"></div>
-              <div className="absolute inset-0 bg-gradient-to-r from-pink-500 via-rose-500 to-orange-500 rounded-full animate-spin-reverse opacity-80 blur-3xl animation-delay-2000 scale-110"></div>
-              <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-600 rounded-full animate-spin-slow opacity-60 blur-2xl animation-delay-1000 scale-105"></div>
-
               {/* Main image container */}
-              <div className="relative bg-gradient-to-br from-white to-slate-50 dark:from-slate-800 dark:to-slate-900 rounded-full p-2 shadow-2xl transform hover:scale-[1.02] transition-all duration-500">
-                {/* Gradient border effect */}
-                <div className="relative rounded-full p-2 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 animate-gradient">
-                  <div className="relative rounded-full overflow-hidden bg-white dark:bg-slate-900 p-1 aspect-square">
-                    {/* Profile Image */}
-                    <img
-                      src="/hero.png"
-                      alt="Amrit Paudel - Digital Marketing Consultant"
-                      className="w-full h-full object-cover rounded-full animate-fade-in"
-                    />
-                    {/* overlay gradient on hover */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-purple-900/60 via-purple-500/20 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-500"></div>
-                  </div>
-                </div>
+              <div className="relative right-[20%] overflow-hidden aspect-square">
+                <img
+                  src="video/hero.gif"
+                  alt="Amrit Paudel - Digital Marketing Consultant"
+                  className="animate-fade-in absolute right-0"
+                />
               </div>
-
-              {/* decorative elements */}
-              <div className="absolute inset-0 rounded-full border-2 border-purple-500/40 animate-ping-slow"></div>
-              <div className="absolute inset-0 rounded-full border-2 border-blue-500/40 animate-ping-slow animation-delay-1000"></div>
-              <div className="absolute inset-0 rounded-full border border-pink-500/30 animate-ping-slow animation-delay-2000"></div>
               {/* skill badges */}
               <div
                 style={{ top: "30px", left: "-20px" }}
