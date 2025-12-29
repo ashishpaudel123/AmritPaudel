@@ -56,9 +56,9 @@ function HomePage() {
         onDigitalMarketingClick={handleDigitalMarketingClick}
         onGraphicsDesignClick={handleGraphicsDesignClick}
       />
+      <CollabSection />
       <TestimonialsSection />
       <BlogRouter />
-      <CollabSection />
       <ContactSection />
     </main>
   );
