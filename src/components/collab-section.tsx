@@ -1,35 +1,83 @@
+import { useState } from "react";
+
 export function CollabSection() {
+  const companies = [
+    {
+      name: "VizaNation",
+      logo: "collab/vnation.png",
+      url: "https://www.facebook.com/profile.php?id=61571326718352",
+    },
+    {
+      name: "getjobnepal.com",
+      logo: "collab/getjob.png",
+      url: "https://www.facebook.com/getjobnep",
+    },
+    {
+      name: "Vizanation Dhangadhi Branch",
+      logo: "collab/vnation-dhangadhi.png",
+      url: "https://www.facebook.com/profile.php?id=61574117789962",
+    },
+  ];
+
+  const [currentPage, setCurrentPage] = useState(0);
+  const logosPerPage = 3;
+  const totalPages = Math.ceil(companies.length / logosPerPage);
+
+  const visibleCompanies = companies.slice(
+    currentPage * logosPerPage,
+    (currentPage + 1) * logosPerPage
+  );
+
   return (
-    <section className="py-16 bg-gray-50 dark:bg-neutral-900 text-center">
-      <div className="max-w-2xl mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-4">Let’s Collaborate!</h2>
-        <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">
-          Have a project in mind or want to work together? I’m always open to
-          new opportunities and creative collaborations. Let’s build something
-          amazing!
-        </p>
-        <a
-          href="#contact"
-          className="inline-block px-8 py-3 bg-primary text-white rounded-lg font-semibold shadow hover:bg-primary-dark transition mb-10"
-        >
-          Get in Touch
-        </a>
-      </div>
-      <div className="mt-16">
-        <h3 className="text-xl font-semibold mb-6">Collaborated With</h3>
-        <div className="flex flex-wrap justify-center gap-8">
-          {/* Replace these placeholders with actual company logos or names */}
-          <div className="w-32 h-16 bg-white dark:bg-neutral-800 rounded shadow flex items-center justify-center text-gray-500 text-lg font-medium">
-            Company 1
-          </div>
-          <div className="w-32 h-16 bg-white dark:bg-neutral-800 rounded shadow flex items-center justify-center text-gray-500 text-lg font-medium">
-            Company 2
-          </div>
-          <div className="w-32 h-16 bg-white dark:bg-neutral-800 rounded shadow flex items-center justify-center text-gray-500 text-lg font-medium">
-            Company 3
-          </div>
+    <section className="py-20 bg-neutral-50 dark:bg-neutral-900 text-center">
+      <div className="mb-16">
+        <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-2">
+          COLLABORATED WITH
+        </h2>
+        <div className="flex justify-center mt-3">
+          <div className="w-32 h-1 bg-purple-600"></div>
         </div>
       </div>
+
+      <div className="relative overflow-hidden px-8 mb-12">
+        <div className="flex justify-center items-center gap-12 min-h-[160px] transition-opacity duration-500">
+          {visibleCompanies.map((company, index) => (
+            <a
+              key={currentPage * logosPerPage + index}
+              href={company.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group transition-all duration-300 hover:scale-110"
+            >
+              <div className="w-40 h-40 flex items-center justify-center">
+                <img
+                  src={company.logo}
+                  alt={company.name}
+                  className="max-w-full max-h-full object-contain transition-opacity duration-300 group-hover:opacity-80"
+                />
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+
+      {/* Dots Navigation */}
+      {totalPages > 1 && (
+        <div className="flex justify-center gap-2">
+          {Array.from({ length: totalPages }).map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentPage(index)}
+              className={`transition-all duration-300 ${
+                index === currentPage
+                  ? "bg-gray-800 dark:bg-white w-8 h-2"
+                  : "bg-gray-300 dark:bg-gray-600 w-2 h-2"
+              } rounded-full`}
+              aria-label={`Go to page ${index + 1}`}
+            />
+          ))}
+        </div>
+      )}
     </section>
   );
 }
