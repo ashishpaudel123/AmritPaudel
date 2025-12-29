@@ -29,7 +29,7 @@ export function CollabSection() {
   );
 
   return (
-    <section className=" bg-white dark:bg-neutral-900 text-center">
+    <section className="pb-20 bg-white dark:bg-neutral-900 text-center">
       <div className="mb-1">
         <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-2">
           COLLABORATED WITH
