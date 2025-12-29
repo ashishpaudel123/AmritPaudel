@@ -121,7 +121,7 @@ export function ContactSection() {
                     value={formData.contact}
                     onChange={handleInputChange}
                     className="w-full px-4 py-3 border border-slate-300 dark:border-slate-600 rounded-lg bg-white dark:bg-slate-700 text-slate-900 dark:text-white placeholder-slate-500 dark:placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-colors"
-                    placeholder="Your company name"
+                    placeholder="Your contact number"
                   />
                 </div>
                 <div>
@@ -180,10 +180,7 @@ export function ContactSection() {
               </h3>
               <p className="text-slate-600 dark:text-slate-300 mb-4">
                 Thank you for reaching out. I'll review your information and get
-                back to you within 24 hours with a custom strategy proposal.
-              </p>
-              <p className="text-sm text-slate-500 dark:text-slate-400">
-                Check your email for a confirmation message.
+                back to you within 24 hours.
               </p>
             </div>
           )}

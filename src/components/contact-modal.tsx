@@ -6,7 +6,6 @@ import {
   Mail,
   Phone,
   User,
-  Building,
   MessageSquare,
   Send,
   CheckCircle,
@@ -27,7 +26,6 @@ export function ContactModal({
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    company: "",
     phone: "",
     service: "",
     message: "",
@@ -60,7 +58,6 @@ export function ContactModal({
       setFormData({
         name: "",
         email: "",
-        company: "",
         phone: "",
         service: "",
         message: "",
