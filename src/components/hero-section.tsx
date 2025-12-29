@@ -2,32 +2,32 @@ import { Button } from "./ui/button";
 import {
   ArrowRight,
   PlayCircle,
-  TrendingUp,
+  // TrendingUp,
   Users,
-  Target,
+  // Target,
 } from "lucide-react";
 
 export function HeroSection() {
-  const stats = [
-    {
-      icon: Users,
-      number: "60+",
-      label: "Happy Clients",
-      color: "from-blue-500 to-cyan-500",
-    },
-    {
-      icon: Target,
-      number: "90+",
-      label: "Project Completed",
-      color: "from-purple-500 to-pink-500",
-    },
-    {
-      icon: TrendingUp,
-      number: "1+",
-      label: "Experience",
-      color: "from-green-500 to-emerald-500",
-    },
-  ];
+  // const stats = [
+  //   {
+  //     icon: Users,
+  //     number: "60+",
+  //     label: "Happy Clients",
+  //     color: "from-blue-500 to-cyan-500",
+  //   },
+  //   {
+  //     icon: Target,
+  //     number: "90+",
+  //     label: "Project Completed",
+  //     color: "from-purple-500 to-pink-500",
+  //   },
+  //   {
+  //     icon: TrendingUp,
+  //     number: "1+",
+  //     label: "Experience",
+  //     color: "from-green-500 to-emerald-500",
+  //   },
+  // ];
 
   return (
     <section className="relative min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50 dark:from-slate-950 dark:via-slate-900 dark:to-purple-950 overflow-hidden">
@@ -44,7 +44,7 @@ export function HeroSection() {
         <div className="absolute top-1/2 right-1/3 w-2 h-2 bg-pink-400 rounded-full animate-float animation-delay-2000 opacity-50"></div>
       </div>
 
-      <div className="relative container mx-auto px-4 py-20">
+      <div className="relative container mx-auto px-4 pt-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
           {/* Left Content */}
           <div className="order-2 lg:order-1 space-y-8 animate-fade-in-up">
@@ -65,20 +65,25 @@ export function HeroSection() {
                   </span>
                 </h2>
               </div>
-              <p className="text-xl md:text-2xl text-slate-600 dark:text-slate-300 max-w-2xl leading-relaxed">
-                Transforming brands through data-driven digital strategies that
-                deliver measurable results and sustainable growth.
+              <p className="text-xl text-slate-600 dark:text-slate-300 max-w-2xl text-justify leading-relaxed">
+                with 1 year of hands-on experience in social media marketing,
+                paid advertising, branding, and graphic design. I have worked on
+                real projects for businesses, focusing on creating visually
+                engaging content and optimizing campaigns to improve reach,
+                engagement, and conversions. Skilled in Ads Manager, Adobe
+                design, reporting, analytics, and AI tools. Actively upscaling
+                my SEO strategies such as keyword research and on-page
+                optimization to deliver measurable results.
               </p>
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-3 gap-4 md:gap-6 py-6">
+            {/* <div className="grid grid-cols-3 gap-4 md:gap-6 py-6">
               {stats.map((stat, index) => (
                 <div
                   key={index}
                   className="group relative text-center p-4 bg-white/60 dark:bg-slate-800/60 rounded-2xl backdrop-blur-xl border border-slate-200/50 dark:border-slate-700/50 hover:shadow-2xl hover:shadow-purple-500/20 dark:hover:shadow-purple-500/30 hover:scale-105 hover:-translate-y-1 transition-all duration-300 cursor-pointer"
                 >
-                  {/* Gradient background on hover */}
                   <div
                     className={`absolute inset-0 bg-gradient-to-r ${stat.color} rounded-2xl opacity-0 group-hover:opacity-10 transition-opacity duration-300`}
                   ></div>
@@ -98,10 +103,10 @@ export function HeroSection() {
                   </div>
                 </div>
               ))}
-            </div>
+            </div> */}
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col mt-10 sm:flex-row gap-4">
               <Button
                 size="lg"
                 onClick={(e) => {
@@ -138,10 +143,13 @@ export function HeroSection() {
             </div>
 
             {/* Trust Indicators */}
-            <div className="flex items-center space-x-6 text-sm text-slate-600 dark:text-slate-400 pt-4">
+            <div className="flex items-center space-x-6 text-sm text-slate-600 dark:text-slate-400">
               <div className="flex items-center space-x-2">
                 <Users className="w-4 h-4" />
-                <span>Trusted by 60+ Businesses</span>
+                <span>
+                  Helping brands grow through ads, design & data-driven
+                  marketing.
+                </span>
               </div>
             </div>
           </div>
