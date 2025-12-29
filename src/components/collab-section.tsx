@@ -29,15 +29,10 @@ export function CollabSection() {
   );
 
   return (
-    <section className="py-20 bg-neutral-50 dark:bg-neutral-900 text-center">
-      <div className="mb-16">
-        <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-2">
-          COLLABORATED WITH
-        </h2>
-        <div className="flex justify-center mt-3">
-          <div className="w-32 h-1 bg-purple-600"></div>
-        </div>
-      </div>
+    <section className="pb-20 bg-white dark:bg-neutral-900 text-center">
+      <h2 className="text-4xl pb-10 font-bold text-gray-900 dark:text-white mb-2">
+        COLLABORATED WITH
+      </h2>
 
       <div className="relative overflow-hidden px-8 mb-12">
         <div className="flex justify-center items-center gap-12 min-h-[160px] transition-opacity duration-500">
