@@ -1,5 +1,3 @@
-import React from "react";
-
 export function CollabSection() {
   return (
     <section className="py-16 bg-gray-50 dark:bg-neutral-900 text-center">
