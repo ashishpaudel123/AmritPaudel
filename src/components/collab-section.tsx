@@ -29,28 +29,36 @@ export function CollabSection() {
   );
 
   return (
-    <section className="pb-20 bg-white dark:bg-neutral-900 text-center">
-      <h2 className="text-4xl pb-10 font-bold text-gray-900 dark:text-white mb-2">
-        COLLABORATED WITH
-      </h2>
+    <section className=" bg-white dark:bg-neutral-900 text-center">
+      <div className="mb-1">
+        <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-2">
+          COLLABORATED WITH
+        </h2>
+        <div className="flex justify-center mt-3">
+          <div className="w-80 h-1 bg-gradient-to-r from-blue-400 to-purple-600"></div>
+        </div>
+      </div>
 
-      <div className="relative overflow-hidden px-8 mb-12">
-        <div className="flex justify-center items-center gap-12 min-h-[160px] transition-opacity duration-500">
+      <div className="relative overflow-hidden p-8">
+        <div className="flex justify-center items-center gap-12 transition-opacity duration-500">
           {visibleCompanies.map((company, index) => (
             <a
               key={currentPage * logosPerPage + index}
               href={company.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="group transition-all duration-300 hover:scale-110"
+              className="group transition-all duration-300 hover:scale-110 flex flex-col items-center"
             >
-              <div className="w-40 h-40 flex items-center justify-center">
+              <div className="w-40 h-40 rounded-full overflow-hidden dark:bg-neutral-800 shadow-lg flex items-center justify-center dark:border-neutral-700">
                 <img
                   src={company.logo}
                   alt={company.name}
-                  className="max-w-full max-h-full object-contain transition-opacity duration-300 group-hover:opacity-80"
+                  className="w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-80"
                 />
               </div>
+              <p className="text-lg text-wrap capitalize pt-2 font-semibold text-gray-700 dark:text-gray-300 text-center">
+                {company.name}
+              </p>
             </a>
           ))}
         </div>

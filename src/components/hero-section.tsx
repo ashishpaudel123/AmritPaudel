@@ -1,34 +1,7 @@
 import { Button } from "./ui/button";
-import {
-  ArrowRight,
-  PlayCircle,
-  // TrendingUp,
-  Users,
-  // Target,
-} from "lucide-react";
+import { ArrowRight, PlayCircle, Users } from "lucide-react";
 
 export function HeroSection() {
-  // const stats = [
-  //   {
-  //     icon: Users,
-  //     number: "60+",
-  //     label: "Happy Clients",
-  //     color: "from-blue-500 to-cyan-500",
-  //   },
-  //   {
-  //     icon: Target,
-  //     number: "90+",
-  //     label: "Project Completed",
-  //     color: "from-purple-500 to-pink-500",
-  //   },
-  //   {
-  //     icon: TrendingUp,
-  //     number: "1+",
-  //     label: "Experience",
-  //     color: "from-green-500 to-emerald-500",
-  //   },
-  // ];
-
   return (
     <section className="relative min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50 dark:from-slate-950 dark:via-slate-900 dark:to-purple-950 overflow-hidden">
       {/* Background Elements */}
@@ -76,34 +49,6 @@ export function HeroSection() {
                 optimization to deliver measurable results.
               </p>
             </div>
-
-            {/* Stats */}
-            {/* <div className="grid grid-cols-3 gap-4 md:gap-6 py-6">
-              {stats.map((stat, index) => (
-                <div
-                  key={index}
-                  className="group relative text-center p-4 bg-white/60 dark:bg-slate-800/60 rounded-2xl backdrop-blur-xl border border-slate-200/50 dark:border-slate-700/50 hover:shadow-2xl hover:shadow-purple-500/20 dark:hover:shadow-purple-500/30 hover:scale-105 hover:-translate-y-1 transition-all duration-300 cursor-pointer"
-                >
-                  <div
-                    className={`absolute inset-0 bg-gradient-to-r ${stat.color} rounded-2xl opacity-0 group-hover:opacity-10 transition-opacity duration-300`}
-                  ></div>
-
-                  <div className="relative">
-                    <div
-                      className={`inline-flex items-center justify-center w-10 h-10 md:w-14 md:h-14 bg-gradient-to-r ${stat.color} rounded-2xl mb-3 shadow-lg group-hover:scale-110 transition-transform duration-300`}
-                    >
-                      <stat.icon className="w-6 h-6 md:w-6 md:h-6 text-white" />
-                    </div>
-                    <div className="text-3xl md:text-4xl font-extrabold bg-gradient-to-r from-slate-900 to-slate-700 dark:from-white dark:to-slate-300 bg-clip-text text-transparent">
-                      {stat.number}
-                    </div>
-                    <div className="text-xs md:text-sm font-medium text-slate-600 dark:text-slate-400 mt-1">
-                      {stat.label}
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div> */}
 
             {/* CTA Buttons */}
             <div className="flex flex-col mt-10 sm:flex-row gap-4">
