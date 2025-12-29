@@ -144,7 +144,7 @@ export function HeroSection() {
 
             {/* Trust Indicators */}
             <div className="flex items-center space-x-6 text-sm text-slate-600 dark:text-slate-400">
-              <div className="flex items-center space-x-2">
+              <div className="flex items-center py-3 space-x-2">
                 <Users className="w-4 h-4" />
                 <span>
                   Helping brands grow through ads, design & data-driven
@@ -172,7 +172,7 @@ export function HeroSection() {
                 className="group absolute bg-gradient-to-br from-pink-500 via-rose-500 to-red-500 rounded-2xl px-5 py-3 shadow-2xl shadow-pink-500/50 hover:shadow-pink-500/70 transform hover:scale-110 hover:-rotate-3 transition-all duration-300 animate-float z-10 backdrop-blur-sm border border-white/20"
               >
                 <div className="text-white font-extrabold text-sm whitespace-nowrap drop-shadow-lg">
-                  Meta Ads
+                  IDEA
                 </div>
                 <div className="absolute -top-1 -right-1 w-3 h-3 bg-yellow-400 rounded-full animate-ping"></div>
               </div>
@@ -182,27 +182,27 @@ export function HeroSection() {
                 className="group absolute bg-gradient-to-br from-blue-500 via-cyan-500 to-teal-500 rounded-2xl px-5 py-3 shadow-2xl shadow-blue-500/50 hover:shadow-blue-500/70 transform hover:scale-110 hover:rotate-3 transition-all duration-300 animate-float animation-delay-1000 z-10 backdrop-blur-sm border border-white/20"
               >
                 <div className="text-white font-extrabold text-sm whitespace-nowrap drop-shadow-lg">
-                  SEO
+                  DESIGN
                 </div>
                 <div className="absolute -top-1 -left-1 w-3 h-3 bg-green-400 rounded-full animate-ping animation-delay-1000"></div>
               </div>
 
               <div
-                style={{ bottom: "30px", right: "-20px" }}
+                style={{ bottom: "40px", right: "-20px" }}
                 className="group absolute bg-gradient-to-br from-green-500 via-emerald-500 to-teal-500 rounded-2xl px-5 py-3 shadow-2xl shadow-green-500/50 hover:shadow-green-500/70 transform hover:scale-110 hover:-rotate-3 transition-all duration-300 animate-float animation-delay-2000 z-10 backdrop-blur-sm border border-white/20"
               >
                 <div className="text-white font-extrabold text-sm whitespace-nowrap drop-shadow-lg">
-                  Google Ads
+                  RESULT
                 </div>
                 <div className="absolute -bottom-1 -left-1 w-3 h-3 bg-blue-400 rounded-full animate-ping animation-delay-2000"></div>
               </div>
 
               <div
-                style={{ bottom: "30px", left: "-20px" }}
+                style={{ bottom: "40px", left: "-20px" }}
                 className="group absolute bg-gradient-to-br from-yellow-500 via-orange-500 to-red-500 rounded-2xl px-5 py-3 shadow-2xl shadow-orange-500/50 hover:shadow-orange-500/70 transform hover:scale-110 hover:rotate-3 transition-all duration-300 animate-float animation-delay-3000 z-10 backdrop-blur-sm border border-white/20"
               >
                 <div className="text-white font-extrabold text-sm whitespace-nowrap drop-shadow-lg">
-                  Social Media
+                  MARKETING
                 </div>
                 <div className="absolute -bottom-1 -right-1 w-3 h-3 bg-purple-400 rounded-full animate-ping animation-delay-3000"></div>
               </div>
@@ -212,7 +212,7 @@ export function HeroSection() {
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <div className="hidden md:block absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
         <div className="w-6 h-10 border-2 border-slate-400 dark:border-slate-600 rounded-full flex justify-center">
           <div className="w-1 h-3 bg-slate-400 dark:bg-slate-600 rounded-full mt-2 animate-pulse"></div>
         </div>

@@ -36,7 +36,6 @@ export function ServicesSection({}: ServicesSectionProps) {
           <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6">
             Comprehensive Digital Marketing
             <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
-              {" "}
               Solutions
             </span>
           </h2>
@@ -106,15 +105,9 @@ export function ServicesSection({}: ServicesSectionProps) {
 
         {/* Process Section */}
         <div className="bg-white dark:bg-slate-900 rounded-3xl p-8 md:p-12 border border-slate-200 dark:border-slate-700">
-          <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-4">
-              My Proven Process
-            </h3>
-            <p className="text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
-              A systematic approach that ensures consistent results and maximum
-              ROI for every client.
-            </p>
-          </div>
+          <h3 className="text-3xl text-center font-bold text-slate-900 dark:text-white mb-10">
+            My Proven Process
+          </h3>
 
           <div className="grid md:grid-cols-4 gap-8">
             {[

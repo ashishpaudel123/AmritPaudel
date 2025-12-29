@@ -1,6 +1,6 @@
 import { Button } from "./ui/button";
 import { Badge } from "./ui/badge";
-import { CheckCircle, BookOpen, Users, TrendingUp } from "lucide-react";
+import { CheckCircle, BookOpen } from "lucide-react";
 
 export function AboutSection() {
   const certifications = [
@@ -15,40 +15,11 @@ export function AboutSection() {
     >
       {/* Background Elements */}
       <div className="absolute inset-0 bg-grid-slate-100 dark:bg-grid-slate-800 [mask-image:radial-gradient(ellipse_at_center,white,transparent)]"></div>
-
       <div className="container mx-auto px-4 relative">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Left Side - Image and Visual Elements */}
+          {/* Left Side - Image */}
           <div className="relative">
-            {/* Main Image Container */}
-            <div className="relative">
-              <div className="relative bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl p-8 transform rotate-3 hover:rotate-0 transition-transform duration-500">
-                {/* Profile placeholder - you can replace with actual image */}
-                <div className="bg-white/10 backdrop-blur rounded-xl p-6 text-center">
-                  <div className="w-32 h-32 bg-white/20 rounded-full mx-auto mb-4 flex items-center justify-center">
-                    <Users className="w-16 h-16 text-white" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-white mb-2">
-                    Amrit Paudel
-                  </h3>
-                  <p className="text-white/80">Digital Marketing Consultant</p>
-                </div>
-              </div>
-
-              <div className="absolute -bottom-6 -left-6 bg-white dark:bg-slate-800 rounded-lg shadow-lg p-4 animate-float animation-delay-2000">
-                <div className="flex items-center space-x-2">
-                  <TrendingUp className="w-6 h-6 text-green-500" />
-                  <div>
-                    <div className="text-sm font-semibold text-slate-800 dark:text-white">
-                      1+ Years
-                    </div>
-                    <div className="text-xs text-slate-600 dark:text-slate-400">
-                      Experience
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <img src="hero.png" alt="Amrit Paudel" />
           </div>
 
           {/* Right Side - Content */}
@@ -60,12 +31,11 @@ export function AboutSection() {
               </Badge>
               <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6">
                 Your Partner in
-                <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
-                  {" "}
+                <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent ps-2.5">
                   Digital Growth
                 </span>
               </h2>
-              <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
+              <p className="text-xl text-justify text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
                 With over 2 years of experience as a digital marketing
                 consultant and social media designer, I have helped multiple
                 businesses transform their online presence, strengthen their
@@ -77,17 +47,15 @@ export function AboutSection() {
             <div className="space-y-3">
               <div className="flex items-start space-x-3">
                 <CheckCircle className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
-                <p className="text-slate-700 dark:text-slate-300">
-                  <span className="font-semibold">
-                    Consultation & Plannig:{" "}
-                  </span>
+                <p className="text-slate-700 text-justify dark:text-slate-300">
+                  <span className="font-semibold">Consultation & Plannig:</span>
                   We begin with one-on-one conversation to your specific
                   business goals and target audience.
                 </p>
               </div>
               <div className="flex items-start space-x-3">
                 <CheckCircle className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
-                <p className="text-slate-700 dark:text-slate-300">
+                <p className="text-slate-700 text-justify dark:text-slate-300">
                   <span className="font-semibold">Data-Driven Outcomes: </span>
                   Every plans are based on client requirements and business
                   goals.
