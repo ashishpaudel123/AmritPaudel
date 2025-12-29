@@ -2,108 +2,10 @@ import { useState, useEffect } from "react";
 import { Button } from "./ui/button";
 import { Badge } from "./ui/badge";
 import { Star, Quote, ChevronLeft, ChevronRight } from "lucide-react";
+import { testimonials } from "@/lib/utils";
 
 export function TestimonialsSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
-
-  const testimonials = [
-    {
-      id: 1,
-      name: "Sarah Johnson",
-      position: "CEO",
-      company: "TechStore",
-      avatar: "SJ",
-      rating: 5,
-      text: "Amrit completely transformed our e-commerce business. In just 6 months, we saw a 340% increase in revenue and became the market leader in our niche. His strategic approach and attention to detail are unmatched.",
-      results: {
-        metric: "Revenue Growth",
-        value: "340%",
-        timeframe: "6 months",
-      },
-      industry: "E-commerce",
-      videoTestimonial: true,
-    },
-    {
-      id: 2,
-      name: "Mike Chen",
-      position: "Founder",
-      company: "CloudSync",
-      avatar: "MC",
-      rating: 5,
-      text: "From zero to market leader! Amrit's content marketing and PPC strategies helped us acquire over 1,500 qualified leads in our first year. The ROI has been absolutely incredible - best investment we've made.",
-      results: {
-        metric: "Leads Generated",
-        value: "1,500+",
-        timeframe: "8 months",
-      },
-      industry: "SaaS",
-      videoTestimonial: false,
-    },
-    {
-      id: 3,
-      name: "David Rodriguez",
-      position: "Owner",
-      company: "GreenLeaf Restaurants",
-      avatar: "DR",
-      rating: 5,
-      text: "Our restaurant chain was struggling with declining foot traffic. Amrit's local SEO and social media strategy increased our online orders by 250% and brought customers back to our locations. Amazing results!",
-      results: {
-        metric: "Online Orders",
-        value: "250%",
-        timeframe: "4 months",
-      },
-      industry: "Food & Beverage",
-      videoTestimonial: true,
-    },
-    {
-      id: 4,
-      name: "Emma Thompson",
-      position: "Co-founder",
-      company: "FitTrack",
-      avatar: "ET",
-      rating: 5,
-      text: "Amrit took our fitness app from zero to 50,000 downloads in just 5 months. His influencer marketing and ASO strategies were game-changing. We couldn't be happier with the results and ongoing partnership.",
-      results: {
-        metric: "App Downloads",
-        value: "50K+",
-        timeframe: "5 months",
-      },
-      industry: "Mobile Apps",
-      videoTestimonial: false,
-    },
-    {
-      id: 5,
-      name: "Lisa Park",
-      position: "Marketing Director",
-      company: "EcoHome Solutions",
-      avatar: "LP",
-      rating: 5,
-      text: "Working with Amrit has been transformative for our B2B lead generation. His LinkedIn marketing and content strategy generated 200% more qualified leads than our previous agency, at half the cost.",
-      results: {
-        metric: "Qualified Leads",
-        value: "200%",
-        timeframe: "7 months",
-      },
-      industry: "Home Improvement",
-      videoTestimonial: true,
-    },
-    {
-      id: 6,
-      name: "James Wilson",
-      position: "CEO",
-      company: "MedTech Innovations",
-      avatar: "JW",
-      rating: 5,
-      text: "Amrit's expertise in healthcare marketing compliance while driving results is exceptional. We achieved 180% growth in qualified physician leads while maintaining all regulatory requirements. Highly recommend!",
-      results: {
-        metric: "Physician Leads",
-        value: "180%",
-        timeframe: "9 months",
-      },
-      industry: "Healthcare",
-      videoTestimonial: false,
-    },
-  ];
 
   // Auto-advance carousel
   useEffect(() => {
