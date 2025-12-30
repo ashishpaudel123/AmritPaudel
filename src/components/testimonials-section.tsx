@@ -11,7 +11,7 @@ export function TestimonialsSection() {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % testimonials.length);
-    }, 3000);
+    }, 6000);
 
     return () => clearInterval(timer);
   }, [testimonials.length]);
