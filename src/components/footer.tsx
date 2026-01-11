@@ -30,7 +30,7 @@ export function Footer() {
 
       <div className="container mx-auto px-4 relative">
         {/* Main Footer Content */}
-        <div className="py-12">
+        <div className="py-12" data-aos="fade-up" data-aos-duration="800">
           <div className="grid lg:grid-cols-5 gap-8">
             {/* Company Info */}
             <div className="lg:col-span-2 space-y-6">
