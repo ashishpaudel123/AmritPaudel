@@ -56,9 +56,8 @@ export function ServicesSection({}: ServicesSectionProps) {
             <div
               key={index}
               className="group relative bg-white dark:bg-slate-900 rounded-2xl p-8 shadow-lg border border-slate-200 dark:border-slate-700 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
-              data-aos="fade-up"
-              data-aos-duration="600"
-              data-aos-delay={(index % 3) * 100}
+              data-aos="flip-left"
+              data-aos-delay={(index % 3) * 500}
             >
               {/* Icon */}
               <div
@@ -147,7 +146,12 @@ export function ServicesSection({}: ServicesSectionProps) {
                   "We track performance. We improve results. You get ongoing support and clear growth.",
               },
             ].map((process, index) => (
-              <div key={index} className="text-center">
+              <div
+                data-aos="zoom-in"
+                data-aos-delay={(index % 3) * 200}
+                key={index}
+                className="text-center"
+              >
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full text-white font-bold text-lg mb-4">
                   {process.step}
                 </div>
