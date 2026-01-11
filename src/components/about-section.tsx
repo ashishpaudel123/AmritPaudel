@@ -18,12 +18,21 @@ export function AboutSection() {
       <div className="container mx-auto px-4 relative">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left Side - Image */}
-          <div className="relative">
+          <div
+            className="relative"
+            data-aos="fade-right"
+            data-aos-duration="1000"
+          >
             <img src="hero.png" alt="Amrit Paudel" />
           </div>
 
           {/* Right Side - Content */}
-          <div className="space-y-8">
+          <div
+            className="space-y-8"
+            data-aos="fade-left"
+            data-aos-duration="1000"
+            data-aos-delay="200"
+          >
             {/* Section Header */}
             <div className="text-center mb-16">
               <Badge className="bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200 mb-4">
