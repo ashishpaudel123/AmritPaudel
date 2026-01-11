@@ -102,61 +102,12 @@ export function AboutSection() {
             {/* CTA Button */}
             <Button
               size="lg"
-              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3"
+              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 transition-transform duration-300 ease-out hover:-translate-y-2 hover:scale-105"
             >
               Download My Resume
             </Button>
           </div>
         </div>
-
-        {/* Skills Section */}
-        {/* <div className="mt-20">
-          <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-4">Core Competencies</h3>
-            <p className="text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
-              My expertise spans across all major digital marketing channels with proven track records of success.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            {skills.map((skill, index) => (
-              <div key={index} className="space-y-2">
-                <div className="flex justify-between">
-                  <span className="text-slate-700 dark:text-slate-300 font-medium">{skill.name}</span>
-                  <span className="text-slate-500 dark:text-slate-400">{skill.level}%</span>
-                </div>
-                <div className="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-2">
-                  <div 
-                    className="bg-gradient-to-r from-blue-500 to-purple-600 h-2 rounded-full transition-all duration-1000 ease-out"
-                    style={{ width: `${skill.level}%` }}
-                  ></div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div> */}
-
-        {/* Achievements Grid
-        <div className="mt-20">
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
-            {achievements.map((achievement, index) => (
-              <div
-                key={index}
-                className="text-center p-6 bg-white/50 dark:bg-slate-800/50 rounded-xl backdrop-blur border border-slate-200 dark:border-slate-700 hover:shadow-lg transition-all duration-300"
-              >
-                <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full mb-4">
-                  <achievement.icon className="w-6 h-6 text-white" />
-                </div>
-                <div className="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white">
-                  {achievement.number}
-                </div>
-                <div className="text-sm text-slate-600 dark:text-slate-400">
-                  {achievement.label}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div> */}
       </div>
     </section>
   );
