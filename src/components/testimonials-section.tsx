@@ -43,7 +43,11 @@ export function TestimonialsSection() {
 
       <div className="container mx-auto px-4 relative">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div
+          className="text-center mb-16"
+          data-aos="fade-up"
+          data-aos-duration="800"
+        >
           <Badge className="bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200 mb-4">
             Client Success Stories
           </Badge>
@@ -62,7 +66,12 @@ export function TestimonialsSection() {
         </div>
 
         {/* Main Testimonial Carousel */}
-        <div className="relative max-w-6xl mx-auto mb-16">
+        <div
+          className="relative max-w-6xl mx-auto mb-16"
+          data-aos="fade-up"
+          data-aos-duration="800"
+          data-aos-delay="200"
+        >
           <div className="bg-white dark:bg-slate-900 rounded-3xl shadow-2xl border border-slate-200 dark:border-slate-700 overflow-hidden">
             <div className="relative">
               {/* Main Testimonial */}
@@ -151,11 +160,14 @@ export function TestimonialsSection() {
 
         {/* Testimonial Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-          {testimonials.slice(0, 3).map((testimonial) => (
+          {testimonials.slice(0, 3).map((testimonial, index) => (
             <div
               key={testimonial.id}
               className="bg-white dark:bg-slate-900 rounded-2xl p-6 shadow-lg border border-slate-200 dark:border-slate-700 hover:shadow-xl transition-all duration-300 cursor-pointer"
               onClick={() => goToSlide(testimonial.id - 1)}
+              data-aos="fade-up"
+              data-aos-duration="600"
+              data-aos-delay={index * 100}
             >
               {/* Header */}
               <div className="flex items-center justify-between mb-4">
