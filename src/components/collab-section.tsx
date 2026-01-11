@@ -30,7 +30,7 @@ export function CollabSection() {
 
   return (
     <section className="pb-20 bg-white dark:bg-neutral-900 text-center">
-      <div className="mb-1">
+      <div className="mb-1" data-aos="fade-up" data-aos-duration="800">
         <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-2">
           COLLABORATED WITH
         </h2>
@@ -48,6 +48,9 @@ export function CollabSection() {
               target="_blank"
               rel="noopener noreferrer"
               className="group transition-all duration-300 hover:scale-110 flex flex-col items-center"
+              data-aos="zoom-in"
+              data-aos-duration="600"
+              data-aos-delay={index * 150}
             >
               <div className="w-40 h-40 rounded-full overflow-hidden dark:bg-neutral-800 shadow-lg flex items-center justify-center dark:border-neutral-700">
                 <img
