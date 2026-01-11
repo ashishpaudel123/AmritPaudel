@@ -390,7 +390,7 @@ export function BlogSection({ onPostClick }: BlogSectionProps = {}) {
                   >
                     {/* Title and Excerpt */}
                     <div className="flex-1">
-                      <h3 className="text-2xl text-black font-semibold mb-6 leading-tight">
+                      <h3 className="text-2xl text-black dark:text-neutral-100 font-semibold mb-6 leading-tight">
                         {post.title}
                       </h3>
 
