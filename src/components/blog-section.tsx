@@ -365,15 +365,16 @@ export function BlogSection({ onPostClick }: BlogSectionProps = {}) {
                   borderColor: "#e2e8f0",
                 }}
                 onClick={() => onPostClick?.(post.id)}
-                data-aos="fade-up"
-                data-aos-duration="600"
-                data-aos-delay={(index % 2) * 100}
+                data-aos="zoom-in"
+                data-aos-duration="800"
+                data-aos-delay={index * 300}
               >
                 <div className="flex flex-row">
                   {/* Left Side - Image */}
                   <div className="md:w-1/2 relative overflow-hidden bg-slate-100 dark:bg-slate-800">
                     <div className="absolute top-6 left-6 z-10"></div>
                     <img
+                      loading="lazy"
                       src={post.image}
                       alt={post.title}
                       className="w-full h-full min-h-[300px] object-cover group-hover:scale-110 transition-transform duration-700"
