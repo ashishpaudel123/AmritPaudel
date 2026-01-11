@@ -29,37 +29,37 @@ export function CollabSection() {
   );
 
   return (
-    <section className="pb-20 bg-white dark:bg-neutral-900 text-center">
+    <section className="py-12 sm:py-16 md:py-20 bg-white dark:bg-neutral-900 text-center px-4">
       <div className="mb-1" data-aos="fade-up" data-aos-duration="800">
-        <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-2">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-2">
           COLLABORATED WITH
         </h2>
         <div className="flex justify-center mt-3">
-          <div className="w-80 h-1 bg-gradient-to-r from-blue-400 to-purple-600"></div>
+          <div className="w-48 sm:w-64 md:w-80 h-1 bg-gradient-to-r from-blue-400 to-purple-600"></div>
         </div>
       </div>
 
-      <div className="relative overflow-hidden p-8">
-        <div className="flex justify-center items-center gap-12 transition-opacity duration-500">
+      <div className="relative overflow-hidden p-4 sm:p-6 md:p-8">
+        <div className="flex flex-wrap justify-center items-start gap-6 sm:gap-8 md:gap-12 transition-opacity duration-500">
           {visibleCompanies.map((company, index) => (
             <a
               key={currentPage * logosPerPage + index}
               href={company.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="group transition-all duration-300 hover:scale-110 flex flex-col items-center"
+              className="group transition-all duration-300 hover:scale-105 sm:hover:scale-110 flex flex-col items-center"
               data-aos="zoom-in"
-              data-aos-duration="600"
+              data-aos-duration="800"
               data-aos-delay={index * 150}
             >
-              <div className="w-40 h-40 rounded-full overflow-hidden dark:bg-neutral-800 shadow-lg flex items-center justify-center dark:border-neutral-700">
+              <div className="w-24 h-24 sm:w-28 sm:h-28 md:w-36 md:h-36 lg:w-40 lg:h-40 rounded-full overflow-hidden dark:bg-neutral-800 shadow-lg flex items-center justify-center dark:border-neutral-700 transition-all duration-500 ease-out group-hover:scale-110 group-hover:shadow-xl">
                 <img
                   src={company.logo}
                   alt={company.name}
-                  className="w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-80"
+                  className="w-full h-full object-cover transition-all duration-500 ease-out group-hover:scale-110 group-hover:opacity-90"
                 />
               </div>
-              <p className="text-lg text-wrap capitalize pt-2 font-semibold text-gray-700 dark:text-gray-300 text-center">
+              <p className="text-sm sm:text-base md:text-lg max-w-[120px] sm:max-w-[150px] md:max-w-[180px] text-wrap capitalize pt-2 font-semibold text-gray-700 dark:text-gray-300 text-center">
                 {company.name}
               </p>
             </a>
