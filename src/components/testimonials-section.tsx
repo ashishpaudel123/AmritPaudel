@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Button } from "./ui/button";
 import { Badge } from "./ui/badge";
 import { Star, Quote, ChevronLeft, ChevronRight } from "lucide-react";
@@ -6,6 +6,9 @@ import { testimonials } from "@/lib/utils";
 
 export function TestimonialsSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const [scrollPosition, setScrollPosition] = useState(0);
 
   // Auto-advance carousel
   useEffect(() => {
@@ -15,6 +18,37 @@ export function TestimonialsSection() {
 
     return () => clearInterval(timer);
   }, [testimonials.length]);
+
+  // Auto-scroll horizontal testimonials
+  useEffect(() => {
+    if (isPaused) return;
+
+    const scrollInterval = setInterval(() => {
+      setScrollPosition((prev) => prev + 1);
+    }, 30);
+
+    return () => clearInterval(scrollInterval);
+  }, [isPaused]);
+
+  // Apply scroll position
+  useEffect(() => {
+    if (scrollRef.current) {
+      const maxScroll = scrollRef.current.scrollWidth / 2;
+      if (scrollPosition >= maxScroll) {
+        setScrollPosition(0);
+      }
+      scrollRef.current.style.transform = `translateX(-${scrollPosition}px)`;
+    }
+  }, [scrollPosition]);
+
+  // Scroll left/right handlers
+  const scrollLeft = () => {
+    setScrollPosition((prev) => Math.max(0, prev - 300));
+  };
+
+  const scrollRight = () => {
+    setScrollPosition((prev) => prev + 300);
+  };
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % testimonials.length);
@@ -158,48 +192,77 @@ export function TestimonialsSection() {
           </div>
         </div>
 
-        {/* Testimonial Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-          {testimonials.slice(0, 3).map((testimonial, index) => (
-            <div
-              key={testimonial.id}
-              className="bg-white dark:bg-slate-900 rounded-2xl p-6 shadow-lg border border-slate-200 dark:border-slate-700 hover:shadow-xl transition-all duration-300 cursor-pointer"
-              onClick={() => goToSlide(testimonial.id - 1)}
-              data-aos="fade-up"
-              data-aos-duration="600"
-              data-aos-delay={index * 100}
-            >
-              {/* Header */}
-              <div className="flex items-center justify-between mb-4">
-                <div className="flex items-center space-x-3">
-                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center text-white font-bold">
-                    {testimonial.avatar}
-                  </div>
-                  <div>
-                    <h5 className="font-semibold text-slate-900 dark:text-white">
-                      {testimonial.name}
-                    </h5>
-                    <p className="text-sm text-slate-600 dark:text-slate-400">
-                      {testimonial.company}
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-center">
-                  {[...Array(5)].map((_, i) => (
-                    <Star
-                      key={i}
-                      className="w-4 h-4 fill-yellow-400 text-yellow-400"
-                    />
-                  ))}
-                </div>
-              </div>
+        {/* Testimonial Grid - Infinite Horizontal Scroll */}
+        <div className="relative">
+          {/* Left Arrow */}
+          <button
+            onClick={scrollLeft}
+            className="absolute left-0 sm:-left-2 md:-left-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 sm:w-12 sm:h-12 bg-white dark:bg-slate-800 rounded-full shadow-lg border border-slate-200 dark:border-slate-700 flex items-center justify-center hover:bg-slate-50 dark:hover:bg-slate-700 hover:scale-110 transition-all duration-300 cursor-pointer"
+          >
+            <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6 text-slate-600 dark:text-slate-300" />
+          </button>
 
-              {/* Quote */}
-              <p className="text-slate-700 dark:text-slate-300 text-sm line-clamp-4 mb-4">
-                "{testimonial.text}"
-              </p>
+          {/* Right Arrow */}
+          <button
+            onClick={scrollRight}
+            className="absolute right-0 sm:-right-2 md:-right-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 sm:w-12 sm:h-12 bg-white dark:bg-slate-800 rounded-full shadow-lg border border-slate-200 dark:border-slate-700 flex items-center justify-center hover:bg-slate-50 dark:hover:bg-slate-700 hover:scale-110 transition-all duration-300 cursor-pointer"
+          >
+            <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 text-slate-600 dark:text-slate-300" />
+          </button>
+
+          {/* Scrolling Container */}
+          <div
+            className="overflow-hidden mx-8 sm:mx-10 md:mx-12"
+            onMouseEnter={() => setIsPaused(true)}
+            onMouseLeave={() => setIsPaused(false)}
+            onTouchStart={() => setIsPaused(true)}
+            onTouchEnd={() => setIsPaused(false)}
+          >
+            <div
+              ref={scrollRef}
+              className="flex gap-4 sm:gap-6 transition-transform duration-100 ease-linear"
+              style={{ width: "max-content" }}
+            >
+              {/* Duplicate testimonials for infinite scroll effect */}
+              {[...testimonials, ...testimonials].map((testimonial, index) => (
+                <div
+                  key={`${testimonial.id}-${index}`}
+                  className="w-[280px] sm:w-[320px] md:w-[380px] flex-shrink-0 bg-white dark:bg-slate-900 rounded-2xl p-4 sm:p-5 md:p-6 shadow-lg border border-slate-200 dark:border-slate-700 hover:shadow-xl hover:scale-[1.02] transition-all duration-300 cursor-pointer"
+                  onClick={() => goToSlide(testimonial.id - 1)}
+                >
+                  {/* Header */}
+                  <div className="flex items-center justify-between mb-3 sm:mb-4">
+                    <div className="flex items-center space-x-2 sm:space-x-3">
+                      <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center text-white font-bold text-sm sm:text-base">
+                        {testimonial.avatar}
+                      </div>
+                      <div>
+                        <h5 className="font-semibold text-sm sm:text-base text-slate-900 dark:text-white">
+                          {testimonial.name}
+                        </h5>
+                        <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400">
+                          {testimonial.company}
+                        </p>
+                      </div>
+                    </div>
+                    <div className="flex items-center">
+                      {[...Array(5)].map((_, i) => (
+                        <Star
+                          key={i}
+                          className="w-3 h-3 sm:w-4 sm:h-4 fill-yellow-400 text-yellow-400"
+                        />
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Quote */}
+                  <p className="text-slate-700 dark:text-slate-300 text-xs sm:text-sm line-clamp-4 mb-3 sm:mb-4">
+                    "{testimonial.text}"
+                  </p>
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
         </div>
       </div>
     </section>
