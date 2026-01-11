@@ -40,7 +40,11 @@ export function PortfolioSection({
 
       <div className="container mx-auto px-4 relative">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div
+          className="text-center mb-16"
+          data-aos="fade-up"
+          data-aos-duration="800"
+        >
           <Badge className="bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200 mb-4">
             Portfolio
           </Badge>
@@ -60,13 +64,16 @@ export function PortfolioSection({
 
         {/* Portfolio Categories - Two Main Cards */}
         <div className="grid lg:grid-cols-2 gap-8 mb-16 max-w-6xl mx-auto">
-          {portfolioCategories.map((category) => {
+          {portfolioCategories.map((category, index) => {
             const Icon = category.icon;
             return (
               <div
                 key={category.id}
                 className="group relative bg-white dark:bg-slate-800 rounded-3xl shadow-2xl border-2 border-slate-200 dark:border-slate-700 overflow-hidden hover:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.3)] transition-all duration-700 hover:scale-[1.02] cursor-pointer"
                 onClick={handleCategoryClick.bind(null, category.action)}
+                data-aos={index === 0 ? "fade-right" : "fade-left"}
+                data-aos-duration="800"
+                data-aos-delay={index * 150}
               >
                 {/* Animated gradient border on hover */}
                 <div
