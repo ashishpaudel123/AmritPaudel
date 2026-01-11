@@ -29,7 +29,11 @@ export function ServicesSection({}: ServicesSectionProps) {
 
       <div className="container mx-auto px-4 relative">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div
+          className="text-center mb-16"
+          data-aos="fade-up"
+          data-aos-duration="800"
+        >
           <Badge className="bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200 mb-4">
             My Services
           </Badge>
@@ -52,6 +56,9 @@ export function ServicesSection({}: ServicesSectionProps) {
             <div
               key={index}
               className="group relative bg-white dark:bg-slate-900 rounded-2xl p-8 shadow-lg border border-slate-200 dark:border-slate-700 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
+              data-aos="fade-up"
+              data-aos-duration="600"
+              data-aos-delay={(index % 3) * 100}
             >
               {/* Icon */}
               <div
@@ -104,7 +111,11 @@ export function ServicesSection({}: ServicesSectionProps) {
         )}
 
         {/* Process Section */}
-        <div className="bg-white dark:bg-slate-900 rounded-3xl p-8 md:p-12 border border-slate-200 dark:border-slate-700">
+        <div
+          className="bg-white dark:bg-slate-900 rounded-3xl p-8 md:p-12 border border-slate-200 dark:border-slate-700"
+          data-aos="fade-up"
+          data-aos-duration="800"
+        >
           <h3 className="text-3xl text-center font-bold text-slate-900 dark:text-white mb-10">
             My Proven Process
           </h3>
