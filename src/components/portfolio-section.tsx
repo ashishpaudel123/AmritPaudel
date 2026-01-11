@@ -72,8 +72,7 @@ export function PortfolioSection({
                 className="group relative bg-white dark:bg-slate-800 rounded-3xl shadow-2xl border-2 border-slate-200 dark:border-slate-700 overflow-hidden hover:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.3)] transition-all duration-700 hover:scale-[1.02] cursor-pointer"
                 onClick={handleCategoryClick.bind(null, category.action)}
                 data-aos={index === 0 ? "fade-right" : "fade-left"}
-                data-aos-duration="800"
-                data-aos-delay={index * 150}
+                data-aos-duration="1500"
               >
                 {/* Animated gradient border on hover */}
                 <div
