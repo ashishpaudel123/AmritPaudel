@@ -20,7 +20,11 @@ export function HeroSection() {
       <div className="relative container mx-auto px-4 pt-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
           {/* Left Content */}
-          <div className="order-2 lg:order-1 space-y-8 animate-fade-in-up">
+          <div
+            className="order-2 lg:order-1 space-y-8"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          >
             {/* Main Heading */}
             <div className="space-y-6">
               <div className="space-y-2">
@@ -100,7 +104,12 @@ export function HeroSection() {
           </div>
 
           {/* Hero Image/Visual */}
-          <div className="order-1 lg:order-2 relative animate-fade-in-right">
+          <div
+            className="order-1 lg:order-2 relative"
+            data-aos="fade-left"
+            data-aos-duration="1000"
+            data-aos-delay="200"
+          >
             {/* Image wrapper*/}
             <div className="relative w-full max-w-lg mx-auto">
               {/* Main image container */}
