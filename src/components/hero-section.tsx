@@ -65,7 +65,7 @@ export function HeroSection() {
                     element.scrollIntoView({ behavior: "smooth" });
                   }
                 }}
-                className="group relative bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 hover:from-blue-700 hover:via-purple-700 hover:to-pink-700 text-white px-8 py-6 text-lg font-bold shadow-xl shadow-purple-500/30 hover:shadow-2xl hover:shadow-purple-500/50 transform hover:scale-105 transition-all duration-300 cursor-pointer overflow-hidden"
+                className="group relative bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 hover:from-blue-700 hover:via-purple-700 hover:to-pink-700 text-white px-8 py-6 text-lg font-bold shadow-xl shadow-purple-500/30 hover:shadow-2xl hover:shadow-purple-500/50 transition-transform duration-300 ease-out hover:-translate-y-2 hover:scale-105 cursor-pointer overflow-hidden"
               >
                 <span className="relative z-10 flex items-center">
                   Get Free Consultation
@@ -77,7 +77,7 @@ export function HeroSection() {
               <Button
                 size="lg"
                 variant="outline"
-                className="group relativ border-2 border-slate-300 dark:border-slate-600 hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 dark:hover:from-slate-800 dark:hover:to-slate-800 px-8 py-5.5 text-lg font-bold transform hover:scale-105 hover:border-purple-500 dark:hover:border-purple-500 transition-all duration-300 shadow-lg hover:shadow-xl"
+                className="group relative border-2 border-slate-300 dark:border-slate-600 hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 dark:hover:from-slate-800 dark:hover:to-slate-800 px-8 py-5.5 text-lg font-bold hover:border-purple-500 dark:hover:border-purple-500 shadow-lg hover:shadow-xl transition-transform duration-300 ease-out hover:-translate-y-2 hover:scale-105"
                 onClick={(e) => {
                   e.preventDefault();
                   const element = document.getElementById("portfolio");
