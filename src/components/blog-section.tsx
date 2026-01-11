@@ -175,7 +175,11 @@ export function BlogSection({ onPostClick }: BlogSectionProps = {}) {
 
       <div className="container mx-auto px-4 relative">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div
+          className="text-center mb-16"
+          data-aos="fade-up"
+          data-aos-duration="800"
+        >
           <Badge className="mb-4 bg-gradient-to-r from-blue-500/10 to-purple-500/10 border-blue-200 dark:border-purple-400/30 text-blue-600 dark:text-purple-300">
             Knowledge Hub
           </Badge>
@@ -196,7 +200,12 @@ export function BlogSection({ onPostClick }: BlogSectionProps = {}) {
         </div>
 
         {/* Search and Filter Bar */}
-        <div className="mb-12">
+        <div
+          className="mb-12"
+          data-aos="fade-up"
+          data-aos-duration="600"
+          data-aos-delay="100"
+        >
           <div className="flex flex-col md:flex-row gap-4 items-center justify-between">
             {/* Search */}
             <div className="relative flex-1 max-w-md">
@@ -351,12 +360,14 @@ export function BlogSection({ onPostClick }: BlogSectionProps = {}) {
             {displayedPosts.map((post, index) => (
               <article
                 key={post.id}
-                className="group rounded-3xl overflow-hidden hover:shadow-2xl transition-all duration-500 hover:scale-[1.01] animate-fade-in-up cursor-pointer border-2"
+                className="group rounded-3xl overflow-hidden hover:shadow-2xl transition-all duration-500 hover:scale-[1.01] cursor-pointer border-2"
                 style={{
-                  animationDelay: `${index * 100}ms`,
                   borderColor: "#e2e8f0",
                 }}
                 onClick={() => onPostClick?.(post.id)}
+                data-aos="fade-up"
+                data-aos-duration="600"
+                data-aos-delay={(index % 2) * 100}
               >
                 <div className="flex flex-row">
                   {/* Left Side - Image */}
