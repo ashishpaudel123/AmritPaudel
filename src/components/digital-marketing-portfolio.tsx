@@ -33,7 +33,7 @@ export function DigitalMarketingPortfolio({
   const { openModal } = useContactModal();
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [selectedAnalytics, setSelectedAnalytics] = useState<number | null>(
-    null
+    null,
   );
   const [fullScreenImage, setFullScreenImage] = useState<string | null>(null);
 
@@ -271,24 +271,25 @@ export function DigitalMarketingPortfolio({
 
       {/* Analytics Dashboard Modal */}
       {selectedProject && (
-        <div className="fixed mt-10 inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
+        <div className="fixed mt-20 lg:mt-10 inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
           <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-2xl max-w-6xl w-full max-h-[90vh] overflow-y-auto relative">
             {/* Header */}
-            <div className="sticky top-0 bg-gradient-to-r from-blue-600 to-indigo-600 text-white p-6 rounded-t-2xl z-10">
+            <div className="lg:sticky top-0 bg-gradient-to-r from-blue-600 to-indigo-600 text-white p-6 rounded-t-2xl z-10">
               <div className="flex items-start justify-between">
                 <div>
                   <div className="flex items-center gap-2 mb-2">
                     <BarChart3 className="w-6 h-6" />
-                    <h3 className="text-2xl font-bold">
+                    <h3 className="text-lg font-bold">
                       Meta Business Analytics ({selectedProject.type})
                     </h3>
                   </div>
-                  <p className="text-blue-100 text-lg">
+                  <p className="text-blue-100 text-sm">
                     {selectedProject.title}
                   </p>
                   <div className="flex items-center gap-4 mt-3">
                     <Badge className="bg-white/20 backdrop-blur text-white border-white/30">
-                      {selectedProject.timeline} Campaign
+                      {selectedProject.timeline}
+                      <span className="text-sm ps-1">Campaign</span>
                     </Badge>
                   </div>
                 </div>
@@ -319,23 +320,23 @@ export function DigitalMarketingPortfolio({
                     ) : (
                       <Eye className="w-8 h-8 text-blue-600 mb-2" />
                     )}
-                    <div className="text-2xl font-bold text-slate-900 dark:text-white mb-1">
+                    <div className="text-xl lg:text-2xl font-bold text-slate-900 dark:text-white mb-1">
                       {selectedProject.category === "paid"
                         ? selectedProject.metaInsights.messagingConversations
                         : selectedProject.category === "paidEngagement"
-                        ? selectedProject.metaInsights.reach
-                        : selectedProject.category === "paidLeads"
-                        ? selectedProject.metaInsights.leads
-                        : selectedProject.metaInsights.views}
+                          ? selectedProject.metaInsights.reach
+                          : selectedProject.category === "paidLeads"
+                            ? selectedProject.metaInsights.leads
+                            : selectedProject.metaInsights.views}
                     </div>
                     <div className="text-sm text-slate-600 dark:text-slate-400 mb-2">
                       {selectedProject.category === "paid"
                         ? "Messaging Conversations"
                         : selectedProject.category === "paidEngagement"
-                        ? "Reach"
-                        : selectedProject.category === "paidLeads"
-                        ? "Leads"
-                        : "Total Views"}
+                          ? "Reach"
+                          : selectedProject.category === "paidLeads"
+                            ? "Leads"
+                            : "Total Views"}
                     </div>
                     {selectedProject.category !== "paidEngagement" &&
                       selectedProject.category !== "paidLeads" && (
@@ -356,23 +357,23 @@ export function DigitalMarketingPortfolio({
                     ) : (
                       <Users className="w-8 h-8 text-green-600 mb-2" />
                     )}
-                    <div className="text-2xl font-bold text-slate-900 dark:text-white mb-1">
+                    <div className="text-xl lg:text-2xl font-bold text-slate-900 dark:text-white mb-1">
                       {selectedProject.category === "paid"
                         ? selectedProject.metaInsights.cpm
                         : selectedProject.category === "paidEngagement"
-                        ? selectedProject.metaInsights.cpr
-                        : selectedProject.category === "paidLeads"
-                        ? selectedProject.metaInsights.perMetaLeads
-                        : selectedProject.metaInsights.viewers}
+                          ? selectedProject.metaInsights.cpr
+                          : selectedProject.category === "paidLeads"
+                            ? selectedProject.metaInsights.perMetaLeads
+                            : selectedProject.metaInsights.viewers}
                     </div>
                     <div className="text-sm text-slate-600 dark:text-slate-400 mb-2">
                       {selectedProject.category === "paid"
                         ? "CPM"
                         : selectedProject.category === "paidEngagement"
-                        ? "CPR"
-                        : selectedProject.category === "paidLeads"
-                        ? "Per Meta Leads"
-                        : "Unique Viewers"}
+                          ? "CPR"
+                          : selectedProject.category === "paidLeads"
+                            ? "Per Meta Leads"
+                            : "Unique Viewers"}
                     </div>
                     {selectedProject.category !== "paidEngagement" &&
                       selectedProject.category !== "paidLeads" && (
@@ -393,7 +394,7 @@ export function DigitalMarketingPortfolio({
                     ) : (
                       <Activity className="w-8 h-8 text-purple-600 mb-2" />
                     )}
-                    <div className="text-2xl font-bold text-slate-900 dark:text-white mb-1">
+                    <div className="md:text-xl lg:text-2xl font-bold text-slate-900 dark:text-white mb-1">
                       {selectedProject.category === "paid" ||
                       selectedProject.category === "paidEngagement" ||
                       selectedProject.category === "paidLeads"
@@ -427,23 +428,23 @@ export function DigitalMarketingPortfolio({
                     ) : (
                       <MousePointerClick className="w-8 h-8 text-orange-600 mb-2" />
                     )}
-                    <div className="text-2xl font-bold text-slate-900 dark:text-white mb-1">
+                    <div className="text-xl lg:text-2xl font-bold text-slate-900 dark:text-white mb-1">
                       {selectedProject.category === "paid"
                         ? selectedProject.metaInsights.days
                         : selectedProject.category === "paidEngagement"
-                        ? selectedProject.metaInsights.age
-                        : selectedProject.category === "paidLeads"
-                        ? selectedProject.metaInsights.duration
-                        : selectedProject.metaInsights.linkClicks}
+                          ? selectedProject.metaInsights.age
+                          : selectedProject.category === "paidLeads"
+                            ? selectedProject.metaInsights.duration
+                            : selectedProject.metaInsights.linkClicks}
                     </div>
                     <div className="text-sm text-slate-600 dark:text-slate-400 mb-2">
                       {selectedProject.category === "paid"
                         ? "Days"
                         : selectedProject.category === "paidEngagement"
-                        ? "Top Age Group"
-                        : selectedProject.category === "paidLeads"
-                        ? "Duration"
-                        : "Link Clicks"}
+                          ? "Top Age Group"
+                          : selectedProject.category === "paidLeads"
+                            ? "Duration"
+                            : "Link Clicks"}
                     </div>
                     {selectedProject.category !== "paidEngagement" &&
                       selectedProject.category !== "paidLeads" && (
@@ -465,23 +466,23 @@ export function DigitalMarketingPortfolio({
                     ) : (
                       <UserPlus className="w-8 h-8 text-pink-600 mb-2" />
                     )}
-                    <div className="text-2xl font-bold text-slate-900 dark:text-white mb-1">
+                    <div className="text-xl lg:text-2xl font-bold text-slate-900 dark:text-white mb-1">
                       {selectedProject.category === "paid"
                         ? selectedProject.metaInsights.age
                         : selectedProject.category === "paidEngagement"
-                        ? selectedProject.metaInsights.genderSplit
-                        : selectedProject.category === "paidLeads"
-                        ? selectedProject.metaInsights.targetAge
-                        : selectedProject.metaInsights.followers}
+                          ? selectedProject.metaInsights.genderSplit
+                          : selectedProject.category === "paidLeads"
+                            ? selectedProject.metaInsights.targetAge
+                            : selectedProject.metaInsights.followers}
                     </div>
                     <div className="text-sm text-slate-600 dark:text-slate-400 mb-2">
                       {selectedProject.category === "paid"
                         ? "Age"
                         : selectedProject.category === "paidEngagement"
-                        ? "Gender Split"
-                        : selectedProject.category === "paidLeads"
-                        ? "Target Age"
-                        : "New Followers"}
+                          ? "Gender Split"
+                          : selectedProject.category === "paidLeads"
+                            ? "Target Age"
+                            : "New Followers"}
                     </div>
                     {selectedProject.category !== "paidEngagement" &&
                       selectedProject.category !== "paidLeads" && (
@@ -660,7 +661,7 @@ export function DigitalMarketingPortfolio({
                         ? "Age"
                         : "Top Age Group"}
                     </div>
-                    <div className="text-2xl font-bold text-slate-900 dark:text-white">
+                    <div className="text-xl lg:text-2xl font-bold text-slate-900 dark:text-white">
                       {selectedProject.metaInsights.detailedMetrics.topAgeGroup}
                     </div>
                     <div className="text-xs text-slate-500 dark:text-slate-400 mt-1">
@@ -676,7 +677,7 @@ export function DigitalMarketingPortfolio({
                     <div className="text-sm text-slate-600 dark:text-slate-400 mb-2">
                       Gender Split
                     </div>
-                    <div className="text-2xl font-bold text-slate-900 dark:text-white">
+                    <div className="text-xl lg:text-2xl font-bold text-slate-900 dark:text-white">
                       {selectedProject.metaInsights.detailedMetrics.topGender}
                     </div>
                     <div className="text-xs text-slate-500 dark:text-slate-400 mt-1">
@@ -692,7 +693,7 @@ export function DigitalMarketingPortfolio({
                         ? "Location"
                         : "Top Location"}
                     </div>
-                    <div className="text-2xl font-bold text-slate-900 dark:text-white">
+                    <div className="text-xl lg:text-2xl font-bold text-slate-900 dark:text-white">
                       {selectedProject.category === "paid" ||
                       selectedProject.category === "paidEngagement" ||
                       selectedProject.category === "paidLeads"
@@ -773,7 +774,7 @@ export function DigitalMarketingPortfolio({
                             </div>
                           </div>
                         </div>
-                      )
+                      ),
                     )}
                   </div>
 
@@ -786,7 +787,7 @@ export function DigitalMarketingPortfolio({
                             key={index}
                             className="w-2 h-2 rounded-full bg-slate-300 dark:bg-slate-600"
                           />
-                        )
+                        ),
                       )}
                     </div>
                   )}
@@ -808,16 +809,16 @@ export function DigitalMarketingPortfolio({
               </div>
 
               {/* Action Buttons */}
-              <div className="flex gap-3 justify-end pt-4 border-t border-slate-200 dark:border-slate-700">
+              <div className="flex flex-wrap-reverse gap-3 justify-center md:justify-end pt-4 border-t border-slate-200 dark:border-slate-700">
                 <Button
                   variant="outline"
                   onClick={() => setSelectedAnalytics(null)}
-                  className="px-6"
+                  className="px-6 sm:w-auto w-full"
                 >
                   Close Dashboard
                 </Button>
                 <Button
-                  className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-6"
+                  className="sm:w-auto w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-6"
                   onClick={() => openModal("Request Full Analytics Report")}
                 >
                   Request Full Report
@@ -840,7 +841,7 @@ export function DigitalMarketingPortfolio({
         <Button
           variant="outline"
           onClick={onBack}
-          className="flex items-center gap-2 hover:bg-purple-50 dark:hover:bg-purple-900/20"
+          className="flex items-center mb-5 gap-2 hover:bg-purple-50 dark:hover:bg-purple-900/20"
         >
           <ArrowLeft className="w-4 h-4" />
           Back to Portfolio
@@ -950,19 +951,19 @@ export function DigitalMarketingPortfolio({
                         {project.category === "paid"
                           ? project.metaInsights.messagingConversations
                           : project.category === "paidEngagement"
-                          ? project.metaInsights.reach
-                          : project.category === "paidLeads"
-                          ? project.metaInsights.leads
-                          : project.metaInsights.views}
+                            ? project.metaInsights.reach
+                            : project.category === "paidLeads"
+                              ? project.metaInsights.leads
+                              : project.metaInsights.views}
                       </div>
                       <div className="text-xs text-slate-600 dark:text-slate-400">
                         {project.category === "paid"
                           ? "Messages"
                           : project.category === "paidEngagement"
-                          ? "Reach"
-                          : project.category === "paidLeads"
-                          ? "Leads"
-                          : "Views"}
+                            ? "Reach"
+                            : project.category === "paidLeads"
+                              ? "Leads"
+                              : "Views"}
                       </div>
                     </div>
 
@@ -978,19 +979,19 @@ export function DigitalMarketingPortfolio({
                         {project.category === "paid"
                           ? project.metaInsights.cpm
                           : project.category === "paidEngagement"
-                          ? project.metaInsights.cpr
-                          : project.category === "paidLeads"
-                          ? project.metaInsights.perMetaLeads
-                          : project.metaInsights.viewers}
+                            ? project.metaInsights.cpr
+                            : project.category === "paidLeads"
+                              ? project.metaInsights.perMetaLeads
+                              : project.metaInsights.viewers}
                       </div>
                       <div className="text-xs text-slate-600 dark:text-slate-400">
                         {project.category === "paid"
                           ? "CPM"
                           : project.category === "paidEngagement"
-                          ? "CPR"
-                          : project.category === "paidLeads"
-                          ? "Per Lead"
-                          : "Viewers"}
+                            ? "CPR"
+                            : project.category === "paidLeads"
+                              ? "Per Lead"
+                              : "Viewers"}
                       </div>
                     </div>
 
@@ -1033,19 +1034,19 @@ export function DigitalMarketingPortfolio({
                         {project.category === "paid"
                           ? project.metaInsights.days
                           : project.category === "paidEngagement"
-                          ? project.metaInsights.age
-                          : project.category === "paidLeads"
-                          ? project.metaInsights.duration
-                          : project.metaInsights.linkClicks}
+                            ? project.metaInsights.age
+                            : project.category === "paidLeads"
+                              ? project.metaInsights.duration
+                              : project.metaInsights.linkClicks}
                       </div>
                       <div className="text-xs text-slate-600 dark:text-slate-400">
                         {project.category === "paid"
                           ? "Days"
                           : project.category === "paidEngagement"
-                          ? "Age"
-                          : project.category === "paidLeads"
-                          ? "Duration"
-                          : "Link Clicks"}
+                            ? "Age"
+                            : project.category === "paidLeads"
+                              ? "Duration"
+                              : "Link Clicks"}
                       </div>
                     </div>
 
@@ -1062,19 +1063,19 @@ export function DigitalMarketingPortfolio({
                         {project.category === "paid"
                           ? project.metaInsights.age
                           : project.category === "paidEngagement"
-                          ? project.metaInsights.genderSplit
-                          : project.category === "paidLeads"
-                          ? project.metaInsights.targetAge
-                          : project.metaInsights.followers}
+                            ? project.metaInsights.genderSplit
+                            : project.category === "paidLeads"
+                              ? project.metaInsights.targetAge
+                              : project.metaInsights.followers}
                       </div>
                       <div className="text-xs text-slate-600 dark:text-slate-400">
                         {project.category === "paid"
                           ? "Age"
                           : project.category === "paidEngagement"
-                          ? "Gender Split"
-                          : project.category === "paidLeads"
-                          ? "Target Age"
-                          : "Followers"}
+                            ? "Gender Split"
+                            : project.category === "paidLeads"
+                              ? "Target Age"
+                              : "Followers"}
                       </div>
                     </div>
                   </div>
@@ -1100,7 +1101,7 @@ export function DigitalMarketingPortfolio({
 
         {/* CTA */}
         <div className="text-center">
-          <h3 className="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white mb-4">
+          <h3 className="text-xl lg:text-2xl md:text-3xl font-bold text-slate-900 dark:text-white mb-4">
             Ready to Scale Your Digital Presence?
           </h3>
           <p className="text-lg text-slate-600 dark:text-slate-300 mb-8 max-w-2xl mx-auto">
