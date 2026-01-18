@@ -41,7 +41,7 @@ export function Footer() {
                     AM
                   </div>
                   <span className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                    Someone
+                    Amrit paudel
                   </span>
                 </div>
               </div>
@@ -51,12 +51,12 @@ export function Footer() {
                 <div className="flex items-center space-x-3 text-slate-300">
                   <Mail className="w-5 h-5 text-blue-400" />
                   <a href="mailto:paudelamrit2060@gmail.com">
-                    {/* paudelamrit2060@gmail.com */}
+                    paudelamrit2060@gmail.com
                   </a>
                 </div>
                 <div className="flex items-center space-x-3 text-slate-300">
                   <Phone className="w-5 h-5 text-blue-400" />
-                  {/* <a>+977 9865846429</a> */}
+                  <a>+977 9865846429</a>
                 </div>
                 <div className="flex items-center space-x-3 text-slate-300">
                   <MapPin className="w-5 h-5 text-blue-400" />
@@ -163,7 +163,7 @@ export function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center">
             {/* Copyright */}
             <div className="flex items-center space-x-1 text-slate-400 text-sm">
-              <span>© {currentYear} Someone | </span>
+              <span>© {currentYear} Amrit Paudel | </span>
               <span>Design & Developed by Ashish Paudel</span>
             </div>
 
