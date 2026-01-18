@@ -18,7 +18,7 @@ export function HeroSection() {
       </div>
 
       <div className="relative container mx-auto px-4 pt-20">
-        <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
+        <div className="grid lg:grid-cols-2 gap-12 items-center justify-between min-h-[80vh]">
           {/* Left Content */}
           <div
             className="order-2 lg:order-1 space-y-8"
@@ -29,20 +29,16 @@ export function HeroSection() {
             <div className="space-y-6">
               <div className="space-y-2">
                 <div className="inline-block">
-                  <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-2">
-                    <span className="text-slate-900 dark:text-white drop-shadow-sm">
-                      I'm Amrit Paudel
-                    </span>
+                  <h1 className="font-extrabold tracking-tight mb-2 ext-slate-900 dark:text-white drop-shadow-sm">
+                    I'm Amrit Paudel
                   </h1>
                   <div className="h-1 w-24 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 rounded-full"></div>
                 </div>
-                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight">
-                  <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent animate-gradient">
-                    Digital Marketing Consultant
-                  </span>
+                <h2 className="text-2xl md:text-3xl font-bold tracking-tight bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent animate-gradient">
+                  Digital Marketing Consultant
                 </h2>
               </div>
-              <p className="text-xl text-slate-600 dark:text-slate-300 max-w-2xl text-justify leading-relaxed">
+              <p className="text-sm md:text-xl text-slate-600 dark:text-slate-300 max-w-2xl text-justify leading-relaxed">
                 with 1 year of hands-on experience in social media marketing,
                 paid advertising, branding, and graphic design. I have worked on
                 real projects for businesses, focusing on creating visually
@@ -105,60 +101,44 @@ export function HeroSection() {
 
           {/* Hero Image/Visual */}
           <div
-            className="order-1 lg:order-2 relative"
+            className="order-1 md:order-2 relative  "
             data-aos="fade-left"
             data-aos-duration="1000"
             data-aos-delay="200"
           >
-            {/* Image wrapper*/}
-            <div className="relative w-full max-w-lg mx-auto">
-              {/* Main image container */}
-              <div className="relative right-[20%] overflow-hidden aspect-square">
-                <img
-                  src="video/hero.gif"
-                  alt="Amrit Paudel - Digital Marketing Consultant"
-                  className="animate-fade-in absolute right-0"
-                />
-              </div>
+            <div className="relative w-full max-w-lg mx-auto aspect-square">
+              <img
+                src="video/hero.gif"
+                alt="Amrit Paudel - Digital Marketing Consultant"
+                className="absolute inset-0 m-auto max-w-[70%] max-h-[70%] object-contain animate-fade-in"
+              />
               {/* skill badges */}
-              <div
-                style={{ top: "30px", left: "-20px" }}
-                className="group absolute bg-gradient-to-br from-pink-500 via-rose-500 to-red-500 rounded-2xl px-5 py-3 shadow-2xl shadow-pink-500/50 hover:shadow-pink-500/70 transform hover:scale-110 hover:-rotate-3 transition-all duration-300 animate-float z-10 backdrop-blur-sm border border-white/20"
-              >
-                <div className="text-white font-extrabold text-sm whitespace-nowrap drop-shadow-lg">
+              <div className="group absolute top-0 left-0 md:top-[30px] md:left-[-20px] bg-gradient-to-br from-pink-500 via-rose-500 to-red-500 rounded-2xl p-2 md:px-5 md:py-3 shadow-2xl shadow-pink-500/50 hover:shadow-pink-500/70 transform hover:scale-110 hover:-rotate-3 transition-all duration-300 animate-float z-10 backdrop-blur-sm border border-white/20">
+                <span className="text-white font-semibold md:font-extrabold text-xs md:text-sm whitespace-nowrap drop-shadow-lg">
                   IDEA
-                </div>
-                <div className="absolute -top-1 -right-1 w-3 h-3 bg-yellow-400 rounded-full animate-ping"></div>
+                </span>
+                <span className="absolute -top-1 -right-1 w-3 h-3 bg-yellow-400 rounded-full animate-ping"></span>
               </div>
 
-              <div
-                style={{ top: "30px", right: "-20px" }}
-                className="group absolute bg-gradient-to-br from-blue-500 via-cyan-500 to-teal-500 rounded-2xl px-5 py-3 shadow-2xl shadow-blue-500/50 hover:shadow-blue-500/70 transform hover:scale-110 hover:rotate-3 transition-all duration-300 animate-float animation-delay-1000 z-10 backdrop-blur-sm border border-white/20"
-              >
-                <div className="text-white font-extrabold text-sm whitespace-nowrap drop-shadow-lg">
+              <div className="group absolute top-0 right-0 md:top-[30px] md:right-[-20px] bg-gradient-to-br from-blue-500 via-cyan-500 to-teal-500 rounded-2xl p-2 md:px-5 md:py-3 shadow-2xl shadow-blue-500/50 hover:shadow-blue-500/70 transform hover:scale-110 hover:rotate-3 transition-all duration-300 animate-float animation-delay-1000 z-10 backdrop-blur-sm border border-white/20">
+                <span className="text-white font-extrabold text-xs md:text-sm whitespace-nowrap drop-shadow-lg">
                   DESIGN
-                </div>
-                <div className="absolute -top-1 -left-1 w-3 h-3 bg-green-400 rounded-full animate-ping animation-delay-1000"></div>
+                </span>
+                <span className="absolute -top-1 -left-1 w-3 h-3 bg-green-400 rounded-full animate-ping animation-delay-1000"></span>
               </div>
 
-              <div
-                style={{ bottom: "40px", right: "-20px" }}
-                className="group absolute bg-gradient-to-br from-green-500 via-emerald-500 to-teal-500 rounded-2xl px-5 py-3 shadow-2xl shadow-green-500/50 hover:shadow-green-500/70 transform hover:scale-110 hover:-rotate-3 transition-all duration-300 animate-float animation-delay-2000 z-10 backdrop-blur-sm border border-white/20"
-              >
-                <div className="text-white font-extrabold text-sm whitespace-nowrap drop-shadow-lg">
+              <div className="group absolute bottom-0 right-0 md:bottom-[40px] md:right-[-20px] bg-gradient-to-br from-green-500 via-emerald-500 to-teal-500 rounded-2xl p-2 md:px-5 md:py-3 shadow-2xl shadow-green-500/50 hover:shadow-green-500/70 transform hover:scale-110 hover:-rotate-3 transition-all duration-300 animate-float animation-delay-2000 z-10 backdrop-blur-sm border border-white/20">
+                <span className="text-white font-extrabold text-xs md:text-sm whitespace-nowrap drop-shadow-lg">
                   RESULT
-                </div>
-                <div className="absolute -bottom-1 -left-1 w-3 h-3 bg-blue-400 rounded-full animate-ping animation-delay-2000"></div>
+                </span>
+                <span className="absolute -top-1 -right-1 w-3 h-3 bg-blue-400 rounded-full animate-ping animation-delay-2000"></span>
               </div>
 
-              <div
-                style={{ bottom: "40px", left: "-20px" }}
-                className="group absolute bg-gradient-to-br from-yellow-500 via-orange-500 to-red-500 rounded-2xl px-5 py-3 shadow-2xl shadow-orange-500/50 hover:shadow-orange-500/70 transform hover:scale-110 hover:rotate-3 transition-all duration-300 animate-float animation-delay-3000 z-10 backdrop-blur-sm border border-white/20"
-              >
-                <div className="text-white font-extrabold text-sm whitespace-nowrap drop-shadow-lg">
+              <div className="group absolute bottom-0 left-0 md:bottom-[40px] md:left-[-20px] bg-gradient-to-br from-yellow-500 via-orange-500 to-red-500 rounded-2xl p-2 md:px-5 md:py-3 shadow-2xl shadow-orange-500/50 hover:shadow-orange-500/70 transform hover:scale-110 hover:rotate-3 transition-all duration-300 animate-float animation-delay-3000 z-10 backdrop-blur-sm border border-white/20">
+                <span className="text-white font-extrabold text-xs md:text-sm whitespace-nowrap drop-shadow-lg">
                   MARKETING
-                </div>
-                <div className="absolute -bottom-1 -right-1 w-3 h-3 bg-purple-400 rounded-full animate-ping animation-delay-3000"></div>
+                </span>
+                <span className="absolute -top-1 -right-1 w-3 h-3 bg-purple-400 rounded-full animate-ping animation-delay-3000"></span>
               </div>
             </div>
           </div>
