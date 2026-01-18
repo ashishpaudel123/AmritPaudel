@@ -247,7 +247,7 @@ export function BlogSection({ onPostClick }: BlogSectionProps = {}) {
                       </span>
                     )}
                   </button>
-                )
+                ),
               )}
               {!showAllCategories && categories.length > 4 && (
                 <button
@@ -369,7 +369,7 @@ export function BlogSection({ onPostClick }: BlogSectionProps = {}) {
                 data-aos-duration="800"
                 data-aos-delay={index * 300}
               >
-                <div className="flex flex-row">
+                <div className="flex flex-col md:flex-row">
                   {/* Left Side - Image */}
                   <div className="md:w-1/2 relative overflow-hidden bg-slate-100 dark:bg-slate-800">
                     <div className="absolute top-6 left-6 z-10"></div>
@@ -377,7 +377,7 @@ export function BlogSection({ onPostClick }: BlogSectionProps = {}) {
                       loading="lazy"
                       src={post.image}
                       alt={post.title}
-                      className="w-full h-full min-h-[300px] object-cover group-hover:scale-110 transition-transform duration-700"
+                      className="w-full h-full min-h-[200px] md:min-h-[300px] object-cover group-hover:scale-110 transition-transform duration-700"
                     />
                   </div>
 
