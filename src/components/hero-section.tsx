@@ -31,7 +31,7 @@ export function HeroSection() {
                 <div className="inline-block">
                   <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-2">
                     <span className="text-slate-900 dark:text-white drop-shadow-sm">
-                      I'm Amrit Paudel
+                      I'm Someone
                     </span>
                   </h1>
                   <div className="h-1 w-24 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 rounded-full"></div>
