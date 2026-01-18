@@ -56,7 +56,7 @@ export function TestimonialsSection() {
 
   const prevSlide = () => {
     setCurrentSlide(
-      (prev) => (prev - 1 + testimonials.length) % testimonials.length
+      (prev) => (prev - 1 + testimonials.length) % testimonials.length,
     );
   };
 
@@ -145,7 +145,7 @@ export function TestimonialsSection() {
                   {/* Center - Quote */}
                   <div className="lg:col-span-2 space-y-6">
                     <Quote className="w-12 h-12 text-purple-600 opacity-50" />
-                    <blockquote className="text-2xl md:text-3xl font-medium text-slate-900 dark:text-white leading-relaxed">
+                    <blockquote className="text-xl md:text-3xl font-medium text-slate-900 dark:text-white leading-relaxed">
                       "{testimonials[currentSlide].text}"
                     </blockquote>
                   </div>
