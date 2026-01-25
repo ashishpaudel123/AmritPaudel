@@ -67,7 +67,7 @@ export function DigitalMarketingPortfolio({
       id: 1,
       category: "organic",
       type: "Organic",
-      title: "Education Consultancy Organic Growth",
+      title: "Local Business Initial Growth",
       description:
         "Achieved strong organic growth for an education consultancy through strategic social media optimization.",
       image: "/api/placeholder/400/300",
