@@ -66,10 +66,10 @@ export function DigitalMarketingPortfolio({
     {
       id: 1,
       category: "organic",
-      type: "Organic",
+      type: "Organic + Paid",
       title: "Local Business Initial Growth",
       description:
-        "Achieved strong organic growth for an education consultancy through strategic social media optimization.",
+        "Achieved strong growth for an local business through strategic social media optimization.",
       image: "/api/placeholder/400/300",
       metaInsights: {
         views: "75.3k",
