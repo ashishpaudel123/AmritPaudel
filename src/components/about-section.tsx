@@ -23,7 +23,7 @@ export function AboutSection() {
             data-aos="fade-right"
             data-aos-duration="1000"
           >
-            <img src="hero.png" alt="Amrit Paudel" />
+            <img src="hero.png" alt="Amritya" />
           </div>
 
           {/* Right Side - Content */}

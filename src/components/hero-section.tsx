@@ -30,7 +30,7 @@ export function HeroSection() {
               <div className="space-y-2">
                 <div className="inline-block">
                   <h1 className="font-extrabold tracking-tight mb-2 ext-slate-900 dark:text-white drop-shadow-sm">
-                    I'm Amrit Paudel
+                    I'm Amritya
                   </h1>
                   <div className="h-1 w-24 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 rounded-full"></div>
                 </div>
@@ -109,7 +109,7 @@ export function HeroSection() {
             <div className="relative w-full max-w-lg mx-auto aspect-square">
               <img
                 src="video/hero.gif"
-                alt="Amrit Paudel - Digital Marketing Consultant"
+                alt="Amritya - Digital Marketing Consultant"
                 className="absolute inset-0 m-auto max-w-[70%] max-h-[70%] object-contain animate-fade-in"
               />
               {/* skill badges */}

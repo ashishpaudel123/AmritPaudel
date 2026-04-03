@@ -24,7 +24,7 @@ export function BlogSection({ onPostClick }: BlogSectionProps = {}) {
       title: "10 Digital Marketing Trends That Will Dominate 2025",
       excerpt:
         "Discover the latest trends in digital marketing that will shape the industry this year. From AI-powered campaigns to voice search optimization.",
-      author: "Amrit Paudel",
+      author: "Amritya",
       date: "2025-01-15",
       readTime: "8 min read",
       views: 2450,
@@ -39,7 +39,7 @@ export function BlogSection({ onPostClick }: BlogSectionProps = {}) {
       title: "How to Increase Your ROI with Advanced PPC Strategies",
       excerpt:
         "Learn proven techniques to maximize your return on investment through strategic pay-per-click advertising campaigns.",
-      author: "Amrit Paudel",
+      author: "Amritya",
       date: "2025-01-12",
       readTime: "12 min read",
       views: 1890,
@@ -54,7 +54,7 @@ export function BlogSection({ onPostClick }: BlogSectionProps = {}) {
       title: "The Complete Guide to SEO Content Strategy",
       excerpt:
         "Master the art of creating content that ranks high on search engines while providing genuine value to your audience.",
-      author: "Amrit Paudel",
+      author: "Amritya",
       date: "2025-01-08",
       readTime: "15 min read",
       views: 3200,
@@ -69,7 +69,7 @@ export function BlogSection({ onPostClick }: BlogSectionProps = {}) {
       title: "Social Media Marketing: Building Authentic Connections",
       excerpt:
         "Explore strategies for creating meaningful relationships with your audience across all social media platforms.",
-      author: "Amrit Paudel",
+      author: "Amritya",
       date: "2025-01-05",
       readTime: "10 min read",
       views: 1560,
@@ -84,7 +84,7 @@ export function BlogSection({ onPostClick }: BlogSectionProps = {}) {
       title: "Email Marketing Automation That Actually Converts",
       excerpt:
         "Discover how to set up email sequences that nurture leads and turn prospects into loyal customers.",
-      author: "Amrit Paudel",
+      author: "Amritya",
       date: "2025-01-02",
       readTime: "11 min read",
       views: 2100,
@@ -99,7 +99,7 @@ export function BlogSection({ onPostClick }: BlogSectionProps = {}) {
       title: "Analytics Deep Dive: Measuring What Really Matters",
       excerpt:
         "Learn to identify and track the metrics that actually impact your business growth and revenue.",
-      author: "Amrit Paudel",
+      author: "Amritya",
       date: "2024-12-28",
       readTime: "14 min read",
       views: 1750,

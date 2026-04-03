@@ -41,7 +41,7 @@ export function Footer() {
                     AM
                   </div>
                   <span className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                    Amrit paudel
+                    Amritya
                   </span>
                 </div>
               </div>
@@ -163,7 +163,7 @@ export function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center">
             {/* Copyright */}
             <div className="flex items-center space-x-1 text-slate-400 text-sm">
-              <span>© {currentYear} Amrit Paudel | </span>
+              <span>© {currentYear} Amritya | </span>
               <span>Design & Developed by Ashish Paudel</span>
             </div>
 

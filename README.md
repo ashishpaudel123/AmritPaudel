@@ -1,4 +1,4 @@
-# Amrit Paudel Portfolio Website
+# Amritya Portfolio Website
 
 A modern personal portfolio and service website built with React, TypeScript, Vite, Tailwind CSS v4, Radix UI primitives, and AOS animations.
 
@@ -392,5 +392,5 @@ There is no backend/API integration yet. Forms are simulated client-side.
 
 ## 12. License / Ownership
 
-This repository appears to be a personal/professional portfolio website for Amrit Paudel.
+This repository appears to be a personal/professional portfolio website for Amritya.
 Confirm licensing and image/content ownership policy before public redistribution.

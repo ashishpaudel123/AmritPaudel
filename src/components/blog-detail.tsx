@@ -92,7 +92,7 @@ export function BlogDetail({
 
         <p>The key is to start implementing these strategies gradually, testing and iterating based on your unique audience needs. Remember, the best marketing trend is the one that genuinely serves your customers better.</p>
       `,
-      author: "Amrit Paudel",
+      author: "Amritya",
       authorBio:
         "Digital Marketing Strategist & Growth Consultant with 8+ years of experience helping businesses scale through data-driven marketing strategies.",
       authorImage:
@@ -159,7 +159,7 @@ export function BlogDetail({
         <h2 id="ppc-conclusion">Conclusion</h2>
         <p>Advanced PPC strategies require ongoing testing, optimization, and adaptation. By implementing these techniques systematically, businesses can achieve significant improvements in ROI while scaling their advertising efforts effectively.</p>
       `,
-      author: "Amrit Paudel",
+      author: "Amritya",
       authorBio:
         "Digital Marketing Strategist & Growth Consultant with 8+ years of experience helping businesses scale through data-driven marketing strategies.",
       authorImage:
@@ -221,7 +221,7 @@ export function BlogDetail({
         <h2 id="seo-conclusion">Conclusion</h2>
         <p>SEO success comes from consistently creating valuable content that serves user needs while following search engine best practices. Focus on quality over quantity, and results will follow.</p>
       `,
-      author: "Amrit Paudel",
+      author: "Amritya",
       authorBio:
         "Digital Marketing Strategist & Growth Consultant with 8+ years of experience helping businesses scale through data-driven marketing strategies.",
       authorImage:
@@ -284,7 +284,7 @@ export function BlogDetail({
         <h2 id="social-conclusion">Conclusion</h2>
         <p>Successful social media marketing prioritizes relationship building over direct selling. By consistently providing value and engaging authentically, brands can build loyal communities that drive long-term business success.</p>
       `,
-      author: "Amrit Paudel",
+      author: "Amritya",
       authorBio:
         "Digital Marketing Strategist & Growth Consultant with 8+ years of experience helping businesses scale through data-driven marketing strategies.",
       authorImage:
@@ -347,7 +347,7 @@ export function BlogDetail({
         <h2 id="email-conclusion">Conclusion</h2>
         <p>Email marketing automation success comes from combining strategic thinking, technical execution, and continuous optimization. Focus on providing value at every touchpoint, and conversions will follow naturally.</p>
       `,
-      author: "Amrit Paudel",
+      author: "Amritya",
       authorBio:
         "Digital Marketing Strategist & Growth Consultant with 8+ years of experience helping businesses scale through data-driven marketing strategies.",
       authorImage:
@@ -410,7 +410,7 @@ export function BlogDetail({
         <h2 id="analytics-conclusion">Conclusion</h2>
         <p>Effective marketing analytics transform raw data into actionable insights that drive business growth. Focus on metrics that matter, and let data guide your strategic decisions for optimal results.</p>
       `,
-      author: "Amrit Paudel",
+      author: "Amritya",
       authorBio:
         "Digital Marketing Strategist & Growth Consultant with 8+ years of experience helping businesses scale through data-driven marketing strategies.",
       authorImage:
@@ -451,7 +451,7 @@ export function BlogDetail({
         `Attempt ${attempt}: Looking for element with ID:`,
         sectionId,
         "Found:",
-        element
+        element,
       );
 
       if (element) {
@@ -474,18 +474,18 @@ export function BlogDetail({
           "Element not found after",
           maxAttempts,
           "attempts. ID:",
-          sectionId
+          sectionId,
         );
         // Debug: show all available IDs
         const allIds = Array.from(document.querySelectorAll("[id]")).map(
-          (el) => el.id
+          (el) => el.id,
         );
         console.log("Available IDs on page:", allIds);
 
         // Alternative: try to find the element by text content
         const headings = Array.from(document.querySelectorAll("h2, h3"));
         const matchingHeading = headings.find((h) =>
-          h.textContent?.includes(sectionId.replace("-", " "))
+          h.textContent?.includes(sectionId.replace("-", " ")),
         );
         if (matchingHeading) {
           console.log("Found heading by text content, scrolling to it");
@@ -506,7 +506,7 @@ export function BlogDetail({
     // Check for elements after component mounts
     setTimeout(() => {
       const allIds = Array.from(document.querySelectorAll("[id]")).map(
-        (el) => el.id
+        (el) => el.id,
       );
       console.log("All IDs found after mount:", allIds);
     }, 200);

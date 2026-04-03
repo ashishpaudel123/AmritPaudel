@@ -36,7 +36,7 @@ export function ContactModal({
   const handleInputChange = (
     e: React.ChangeEvent<
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
-    >
+    >,
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -231,7 +231,7 @@ export function ContactModal({
 
               <p className="text-xs text-slate-500 dark:text-slate-400 text-center">
                 By submitting this form, you agree to receive communication from
-                Amrit Paudel Digital Marketing.
+                Amritya Digital Marketing.
               </p>
             </form>
           ) : (
