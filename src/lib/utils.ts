@@ -50,7 +50,7 @@ export const services = [
       "Campaign Setup & Optimization",
     ],
     price: "Starting at $800/mo",
-    gradient: "from-blue-500 to-cyan-600",
+    gradient: "from-orange-500 to-lime-600",
   },
   {
     id: 3,
@@ -67,7 +67,7 @@ export const services = [
       "Audience Engagement & Message Handling",
     ],
     price: "Starting at $900/mo",
-    gradient: "from-emerald-500 to-teal-600",
+    gradient: "from-emerald-500 to-green-600",
   },
   {
     id: 4,
@@ -84,7 +84,7 @@ export const services = [
       "Audience Engagement & Message Handling",
     ],
     price: "Starting at $600/mo",
-    gradient: "from-pink-500 to-rose-600",
+    gradient: "from-lime-500 to-lime-600",
   },
   {
     id: 5,
@@ -101,7 +101,7 @@ export const services = [
       "Ongoing Guidance & Support",
     ],
     price: "Starting at $400/mo",
-    gradient: "from-purple-500 to-violet-600",
+    gradient: "from-green-500 to-green-600",
   },
   {
     id: 6,
@@ -135,7 +135,7 @@ export const services = [
       "Final Logo Files & Variations Delivery",
     ],
     price: "Starting at $300",
-    gradient: "from-purple-500 to-pink-600",
+    gradient: "from-green-500 to-lime-600",
   },
   {
     id: 8,
@@ -152,7 +152,7 @@ export const services = [
       "Monthly Performance Reporting",
     ],
     price: "Starting at $250/mo",
-    gradient: "from-blue-500 to-cyan-600",
+    gradient: "from-orange-500 to-lime-600",
   },
   {
     id: 9,
@@ -169,7 +169,7 @@ export const services = [
       "Brand Storytelling & Messaging",
     ],
     price: "Starting at $300",
-    gradient: "from-rose-500 to-red-600",
+    gradient: "from-lime-500 to-red-600",
   },
 ];
 
@@ -181,10 +181,10 @@ export const portfolioCategories = [
     description:
       "Real campaigns. Real results. Real analytics. Explore case studies with verified Meta Business insights, detailed performance metrics, and proven strategies that drive measurable success.",
     icon: Megaphone,
-    color: "from-pink-600 to-purple-600",
-    hoverColor: "hover:from-pink-700 hover:to-purple-700",
-    accentColor: "text-pink-600 dark:text-pink-400",
-    borderColor: "border-pink-200 dark:border-pink-800",
+    color: "from-orange-500 to-orange-700",
+    hoverColor: "hover:from-orange-600 hover:to-orange-800",
+    accentColor: "text-orange-600 dark:text-orange-400",
+    borderColor: "border-orange-200 dark:border-orange-800",
     features: [
       "Organic Growth Campaigns",
       "Meta Ads Performance",
@@ -201,10 +201,10 @@ export const portfolioCategories = [
     description:
       "From concept to creation. Browse stunning visual designs that tell stories, build brands, and captivate audiences across all platforms and mediums.",
     icon: Palette,
-    color: "from-pink-600 to-purple-600",
-    hoverColor: "hover:from-pink-700 hover:to-purple-700",
-    accentColor: "text-pink-600 dark:text-pink-400",
-    borderColor: "border-pink-200 dark:border-pink-800",
+    color: "from-orange-500 to-orange-700",
+    hoverColor: "hover:from-orange-600 hover:to-orange-800",
+    accentColor: "text-orange-600 dark:text-orange-400",
+    borderColor: "border-orange-200 dark:border-orange-800",
     features: [
       "Brand Identity & Logos",
       "Social Media Graphics",
