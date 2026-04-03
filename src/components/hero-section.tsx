@@ -3,18 +3,10 @@ import { ArrowRight, PlayCircle, Users } from "lucide-react";
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50 dark:from-slate-950 dark:via-slate-900 dark:to-purple-950 overflow-hidden">
+    <section className="relative min-h-screen bg-slate-50 dark:bg-slate-950 overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
-        {/* animated gradient orbs */}
-        <div className="absolute -top-40 -right-40 w-96 h-96 bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-500 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-3xl opacity-60 dark:opacity-30 animate-blob"></div>
-        <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-gradient-to-r from-purple-400 via-pink-400 to-rose-500 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-3xl opacity-60 dark:opacity-30 animate-blob animation-delay-2000"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-cyan-300 via-blue-400 to-indigo-500 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-3xl opacity-60 dark:opacity-30 animate-blob animation-delay-4000"></div>
-
-        {/* Floating particles */}
-        <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-blue-400 rounded-full animate-float opacity-50"></div>
-        <div className="absolute top-3/4 right-1/4 w-2 h-2 bg-purple-400 rounded-full animate-float animation-delay-1000 opacity-50"></div>
-        <div className="absolute top-1/2 right-1/3 w-2 h-2 bg-pink-400 rounded-full animate-float animation-delay-2000 opacity-50"></div>
+        <div className="absolute inset-0 bg-grid-slate-100 dark:bg-grid-slate-800 opacity-40"></div>
       </div>
 
       <div className="relative container mx-auto px-4 pt-20">
@@ -32,9 +24,9 @@ export function HeroSection() {
                   <h1 className="font-extrabold tracking-tight mb-2 ext-slate-900 dark:text-white drop-shadow-sm">
                     I'm Amritya
                   </h1>
-                  <div className="h-1 w-24 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 rounded-full"></div>
+                  <div className="h-1 w-24 bg-orange-600 rounded-full"></div>
                 </div>
-                <h2 className="text-2xl md:text-3xl font-bold tracking-tight bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent animate-gradient">
+                <h2 className="text-2xl md:text-3xl font-bold tracking-tight bg-orange-600 bg-clip-text text-transparent animate-gradient">
                   Digital Marketing Consultant
                 </h2>
               </div>
@@ -61,7 +53,7 @@ export function HeroSection() {
                     element.scrollIntoView({ behavior: "smooth" });
                   }
                 }}
-                className="group relative bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 hover:from-blue-700 hover:via-purple-700 hover:to-pink-700 text-white px-8 py-6 text-lg font-bold shadow-xl shadow-purple-500/30 hover:shadow-2xl hover:shadow-purple-500/50 transition-transform duration-300 ease-out hover:-translate-y-2 hover:scale-105 cursor-pointer overflow-hidden"
+                className="group relative bg-green-700 hover:bg-green-800 text-white px-8 py-6 text-lg font-bold shadow-xl shadow-green-900/20 hover:shadow-2xl hover:shadow-green-900/30 transition-transform duration-300 ease-out hover:-translate-y-2 hover:scale-105 cursor-pointer overflow-hidden"
               >
                 <span className="relative z-10 flex items-center">
                   Get Free Consultation
@@ -73,7 +65,7 @@ export function HeroSection() {
               <Button
                 size="lg"
                 variant="outline"
-                className="group relative border-2 border-slate-300 dark:border-slate-600 hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 dark:hover:from-slate-800 dark:hover:to-slate-800 px-8 py-5.5 text-lg font-bold hover:border-purple-500 dark:hover:border-purple-500 shadow-lg hover:shadow-xl transition-transform duration-300 ease-out hover:-translate-y-2 hover:scale-105"
+                className="group relative border-2 border-slate-300 dark:border-slate-600 hover:bg-gradient-to-r hover:from-orange-50 hover:to-green-50 dark:hover:from-slate-800 dark:hover:to-slate-800 px-8 py-5.5 text-lg font-bold hover:border-green-500 dark:hover:border-green-500 shadow-lg hover:shadow-xl transition-transform duration-300 ease-out hover:-translate-y-2 hover:scale-105"
                 onClick={(e) => {
                   e.preventDefault();
                   const element = document.getElementById("portfolio");
@@ -113,32 +105,32 @@ export function HeroSection() {
                 className="absolute inset-0 m-auto max-w-[70%] max-h-[70%] object-contain animate-fade-in"
               />
               {/* skill badges */}
-              <div className="group absolute top-0 left-0 md:top-[30px] md:left-[-20px] bg-gradient-to-br from-pink-500 via-rose-500 to-red-500 rounded-2xl p-2 md:px-5 md:py-3 shadow-2xl shadow-pink-500/50 hover:shadow-pink-500/70 transform hover:scale-110 hover:-rotate-3 transition-all duration-300 animate-float z-10 backdrop-blur-sm border border-white/20">
+              <div className="group absolute top-0 left-0 md:top-[30px] md:left-[-20px] bg-gradient-to-br from-orange-500 via-orange-600 to-orange-700 rounded-2xl p-2 md:px-5 md:py-3 shadow-2xl shadow-orange-500/50 hover:shadow-orange-500/70 transform hover:scale-110 hover:-rotate-3 transition-all duration-300 animate-float z-10 backdrop-blur-sm border border-white/20">
                 <span className="text-white font-semibold md:font-extrabold text-xs md:text-sm whitespace-nowrap drop-shadow-lg">
                   IDEA
                 </span>
                 <span className="absolute -top-1 -right-1 w-3 h-3 bg-yellow-400 rounded-full animate-ping"></span>
               </div>
 
-              <div className="group absolute top-0 right-0 md:top-[30px] md:right-[-20px] bg-gradient-to-br from-blue-500 via-cyan-500 to-teal-500 rounded-2xl p-2 md:px-5 md:py-3 shadow-2xl shadow-blue-500/50 hover:shadow-blue-500/70 transform hover:scale-110 hover:rotate-3 transition-all duration-300 animate-float animation-delay-1000 z-10 backdrop-blur-sm border border-white/20">
+              <div className="group absolute top-0 right-0 md:top-[30px] md:right-[-20px] bg-gradient-to-br from-orange-500 via-orange-600 to-orange-700 rounded-2xl p-2 md:px-5 md:py-3 shadow-2xl shadow-orange-500/50 hover:shadow-orange-500/70 transform hover:scale-110 hover:rotate-3 transition-all duration-300 animate-float animation-delay-1000 z-10 backdrop-blur-sm border border-white/20">
                 <span className="text-white font-extrabold text-xs md:text-sm whitespace-nowrap drop-shadow-lg">
                   DESIGN
                 </span>
-                <span className="absolute -top-1 -left-1 w-3 h-3 bg-green-400 rounded-full animate-ping animation-delay-1000"></span>
+                <span className="absolute -top-1 -left-1 w-3 h-3 bg-orange-300 rounded-full animate-ping animation-delay-1000"></span>
               </div>
 
-              <div className="group absolute bottom-0 right-0 md:bottom-[40px] md:right-[-20px] bg-gradient-to-br from-green-500 via-emerald-500 to-teal-500 rounded-2xl p-2 md:px-5 md:py-3 shadow-2xl shadow-green-500/50 hover:shadow-green-500/70 transform hover:scale-110 hover:-rotate-3 transition-all duration-300 animate-float animation-delay-2000 z-10 backdrop-blur-sm border border-white/20">
+              <div className="group absolute bottom-0 right-0 md:bottom-[40px] md:right-[-20px] bg-gradient-to-br from-green-500 via-emerald-500 to-green-500 rounded-2xl p-2 md:px-5 md:py-3 shadow-2xl shadow-green-500/50 hover:shadow-green-500/70 transform hover:scale-110 hover:-rotate-3 transition-all duration-300 animate-float animation-delay-2000 z-10 backdrop-blur-sm border border-white/20">
                 <span className="text-white font-extrabold text-xs md:text-sm whitespace-nowrap drop-shadow-lg">
                   RESULT
                 </span>
-                <span className="absolute -top-1 -right-1 w-3 h-3 bg-blue-400 rounded-full animate-ping animation-delay-2000"></span>
+                <span className="absolute -top-1 -right-1 w-3 h-3 bg-orange-400 rounded-full animate-ping animation-delay-2000"></span>
               </div>
 
               <div className="group absolute bottom-0 left-0 md:bottom-[40px] md:left-[-20px] bg-gradient-to-br from-yellow-500 via-orange-500 to-red-500 rounded-2xl p-2 md:px-5 md:py-3 shadow-2xl shadow-orange-500/50 hover:shadow-orange-500/70 transform hover:scale-110 hover:rotate-3 transition-all duration-300 animate-float animation-delay-3000 z-10 backdrop-blur-sm border border-white/20">
                 <span className="text-white font-extrabold text-xs md:text-sm whitespace-nowrap drop-shadow-lg">
                   MARKETING
                 </span>
-                <span className="absolute -top-1 -right-1 w-3 h-3 bg-purple-400 rounded-full animate-ping animation-delay-3000"></span>
+                <span className="absolute -top-1 -right-1 w-3 h-3 bg-green-400 rounded-full animate-ping animation-delay-3000"></span>
               </div>
             </div>
           </div>

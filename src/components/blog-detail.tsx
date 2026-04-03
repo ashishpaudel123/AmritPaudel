@@ -659,20 +659,20 @@ export function BlogDetail({
     }));
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/30 to-purple-50/30 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-orange-50/30 to-green-50/30 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 bg-grid-slate-100 dark:bg-grid-slate-800 [mask-image:radial-gradient(ellipse_at_center,white,transparent)]"></div>
 
       {/* Floating Orbs */}
-      <div className="absolute top-20 left-10 w-32 h-32 bg-gradient-to-r from-blue-400/20 to-purple-400/20 rounded-full blur-xl animate-float"></div>
-      <div className="absolute bottom-20 right-10 w-40 h-40 bg-gradient-to-r from-purple-400/20 to-pink-400/20 rounded-full blur-xl animate-float animation-delay-2000"></div>
+      <div className="absolute top-20 left-10 w-32 h-32 bg-gradient-to-r from-orange-400/20 to-green-400/20 rounded-full blur-xl animate-float"></div>
+      <div className="absolute bottom-20 right-10 w-40 h-40 bg-gradient-to-r from-green-400/20 to-lime-400/20 rounded-full blur-xl animate-float animation-delay-2000"></div>
 
       {/* Header Navigation */}
       <div className="container mx-auto px-4 pt-10 pb-8 relative">
         <div className="flex items-center gap-4">
           <Button
             variant="ghost"
-            className="bg-white/60 dark:bg-slate-800/60 backdrop-blur-md border border-slate-200/50 dark:border-slate-600/50 hover:bg-blue-50 dark:hover:bg-slate-700/60"
+            className="bg-white/60 dark:bg-slate-800/60 backdrop-blur-md border border-slate-200/50 dark:border-slate-600/50 hover:bg-orange-50 dark:hover:bg-slate-700/60"
             onClick={() => onBackClick?.()}
           >
             <ArrowLeft className="w-4 h-4 mr-2" />
@@ -683,7 +683,7 @@ export function BlogDetail({
           <nav className="flex items-center text-sm text-slate-600 dark:text-slate-400">
             <a
               href="#blog"
-              className="hover:text-blue-600 dark:hover:text-blue-400"
+              className="hover:text-orange-600 dark:hover:text-orange-400"
             >
               Blog
             </a>
@@ -711,7 +711,7 @@ export function BlogDetail({
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent"></div>
                 <div className="absolute bottom-6 left-6">
-                  <Badge className="bg-gradient-to-r from-blue-500/20 to-purple-500/20 backdrop-blur-md border-blue-200/50 dark:border-purple-400/30 text-blue-600 dark:text-purple-300">
+                  <Badge className="bg-gradient-to-r from-orange-500/20 to-green-500/20 backdrop-blur-md border-orange-200/50 dark:border-green-400/30 text-orange-600 dark:text-green-300">
                     {currentPost.category}
                   </Badge>
                 </div>
@@ -778,7 +778,7 @@ export function BlogDetail({
                     <Button
                       variant="ghost"
                       size="sm"
-                      className="text-slate-600 dark:text-slate-400 hover:text-blue-500"
+                      className="text-slate-600 dark:text-slate-400 hover:text-orange-500"
                     >
                       <MessageCircle className="w-4 h-4 mr-2" />
                       {currentPost.comments}
@@ -812,7 +812,7 @@ export function BlogDetail({
                         {/* LinkedIn - Official LinkedIn Blue Background */}
                         <a
                           href="#"
-                          className="group flex items-center justify-center w-7 h-7 bg-[#0077B5]/80 backdrop-blur-md hover:bg-[#0077B5] rounded-lg transition-all duration-300 shadow-md hover:shadow-lg hover:shadow-blue-500/25 hover:scale-105"
+                          className="group flex items-center justify-center w-7 h-7 bg-[#0077B5]/80 backdrop-blur-md hover:bg-[#0077B5] rounded-lg transition-all duration-300 shadow-md hover:shadow-lg hover:shadow-orange-500/25 hover:scale-105"
                         >
                           <svg
                             className="w-5 h-5 group-hover:scale-110 transition-transform duration-200"
@@ -842,7 +842,7 @@ export function BlogDetail({
                         {/* Instagram - Official Instagram Gradient Background */}
                         <a
                           href="#"
-                          className="group flex items-center justify-center w-7 h-7 bg-gradient-to-tr from-[#833AB4] via-[#C13584] to-[#E1306C] backdrop-blur-md hover:from-[#7c2d8e] hover:via-[#b12a75] hover:to-[#d42c5c] rounded-lg transition-all duration-300 shadow-md hover:shadow-lg hover:shadow-pink-500/25 hover:scale-105"
+                          className="group flex items-center justify-center w-7 h-7 bg-gradient-to-tr from-[#833AB4] via-[#C13584] to-[#E1306C] backdrop-blur-md hover:from-[#7c2d8e] hover:via-[#b12a75] hover:to-[#d42c5c] rounded-lg transition-all duration-300 shadow-md hover:shadow-lg hover:shadow-lime-500/25 hover:scale-105"
                         >
                           <svg
                             className="w-5 h-5 group-hover:scale-110 transition-transform duration-200"
@@ -875,7 +875,7 @@ export function BlogDetail({
             {/* Article Content */}
             <div className="bg-white/60 dark:bg-slate-800/60 backdrop-blur-md rounded-3xl border border-slate-200/50 dark:border-slate-600/50 p-8 md:p-12 shadow-xl mb-8">
               <div
-                className="prose prose-lg dark:prose-invert max-w-none prose-headings:text-slate-900 dark:prose-headings:text-white prose-p:text-slate-700 dark:prose-p:text-slate-300 prose-li:text-slate-700 dark:prose-li:text-slate-300 prose-blockquote:border-l-blue-500 prose-blockquote:bg-blue-50/50 dark:prose-blockquote:bg-blue-900/20 prose-blockquote:py-4 prose-blockquote:px-6 prose-blockquote:rounded-r-lg"
+                className="prose prose-lg dark:prose-invert max-w-none prose-headings:text-slate-900 dark:prose-headings:text-white prose-p:text-slate-700 dark:prose-p:text-slate-300 prose-li:text-slate-700 dark:prose-li:text-slate-300 prose-blockquote:border-l-orange-500 prose-blockquote:bg-orange-50/50 dark:prose-blockquote:bg-orange-900/20 prose-blockquote:py-4 prose-blockquote:px-6 prose-blockquote:rounded-r-lg"
                 dangerouslySetInnerHTML={{ __html: currentPost.content }}
               />
             </div>
@@ -895,7 +895,7 @@ export function BlogDetail({
                   <p className="text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">
                     {currentPost.authorBio}
                   </p>
-                  <Button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">
+                  <Button className="bg-orange-600 hover:bg-orange-700">
                     Follow Author
                   </Button>
                 </div>
@@ -909,7 +909,7 @@ export function BlogDetail({
               {/* Table of Contents */}
               <div className="bg-white/60 dark:bg-slate-800/60 backdrop-blur-md rounded-2xl border border-slate-200/50 dark:border-slate-600/50 p-6 shadow-xl">
                 <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-4 flex items-center gap-2">
-                  <TrendingUp className="w-5 h-5 text-blue-500" />
+                  <TrendingUp className="w-5 h-5 text-orange-500" />
                   Table of Contents
                 </h3>
                 <nav className="space-y-2">
@@ -917,7 +917,7 @@ export function BlogDetail({
                     <button
                       key={item.id}
                       onClick={() => scrollToSection(item.id)}
-                      className="block w-full text-left text-sm text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300 py-1 cursor-pointer"
+                      className="block w-full text-left text-sm text-slate-600 dark:text-slate-400 hover:text-orange-600 dark:hover:text-orange-400 transition-colors duration-300 py-1 cursor-pointer"
                     >
                       {item.title}
                     </button>
@@ -926,7 +926,7 @@ export function BlogDetail({
               </div>
 
               {/* Newsletter Signup */}
-              <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 backdrop-blur-md rounded-2xl border border-blue-200/50 dark:border-purple-400/30 p-6 shadow-xl">
+              <div className="bg-gradient-to-r from-orange-500/10 to-green-500/10 backdrop-blur-md rounded-2xl border border-orange-200/50 dark:border-green-400/30 p-6 shadow-xl">
                 <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-3">
                   Stay Updated
                 </h3>
@@ -938,11 +938,11 @@ export function BlogDetail({
                   <input
                     type="email"
                     placeholder="Enter your email"
-                    className="w-full px-3 py-2 bg-white/60 dark:bg-slate-800/60 backdrop-blur-md border border-slate-200/50 dark:border-slate-600/50 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500/50 text-slate-900 dark:text-white placeholder-slate-500 text-sm"
+                    className="w-full px-3 py-2 bg-white/60 dark:bg-slate-800/60 backdrop-blur-md border border-slate-200/50 dark:border-slate-600/50 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500/50 text-slate-900 dark:text-white placeholder-slate-500 text-sm"
                   />
                   <Button
                     size="sm"
-                    className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
+                    className="w-full bg-orange-600 hover:bg-orange-700"
                   >
                     Subscribe
                   </Button>
@@ -968,10 +968,10 @@ export function BlogDetail({
                           className="w-16 h-16 rounded-lg object-cover flex-shrink-0 group-hover:scale-105 transition-transform duration-300"
                         />
                         <div className="flex-1 min-w-0">
-                          <Badge className="mb-1 text-xs bg-gradient-to-r from-blue-500/20 to-purple-500/20 border-blue-200/50 dark:border-purple-400/30 text-blue-600 dark:text-purple-300">
+                          <Badge className="mb-1 text-xs bg-gradient-to-r from-orange-500/20 to-green-500/20 border-orange-200/50 dark:border-green-400/30 text-orange-600 dark:text-green-300">
                             {post.category}
                           </Badge>
-                          <h4 className="text-sm font-medium text-slate-900 dark:text-white line-clamp-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300 mb-1">
+                          <h4 className="text-sm font-medium text-slate-900 dark:text-white line-clamp-2 group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors duration-300 mb-1">
                             {post.title}
                           </h4>
                           <div className="flex items-center gap-2 text-xs text-slate-500 dark:text-slate-400">
@@ -990,7 +990,7 @@ export function BlogDetail({
                 <Button
                   variant="outline"
                   size="sm"
-                  className="w-full mt-6 bg-white/60 dark:bg-slate-800/60 backdrop-blur-md border-slate-200/50 dark:border-slate-600/50 hover:bg-blue-50 dark:hover:bg-slate-700/60"
+                  className="w-full mt-6 bg-white/60 dark:bg-slate-800/60 backdrop-blur-md border-slate-200/50 dark:border-slate-600/50 hover:bg-orange-50 dark:hover:bg-slate-700/60"
                   onClick={() => onBackClick?.()}
                 >
                   View All Articles

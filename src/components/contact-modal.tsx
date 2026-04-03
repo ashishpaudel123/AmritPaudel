@@ -79,14 +79,14 @@ export function ContactModal({
       {/* Modal */}
       <div className="relative bg-white dark:bg-slate-900 rounded-3xl shadow-2xl border border-slate-200 dark:border-slate-700 w-full max-w-2xl max-h-[90vh] overflow-y-auto">
         {/* Header */}
-        <div className="sticky top-0 bg-gradient-to-r from-blue-600 to-purple-600 text-white p-6 rounded-t-3xl">
+        <div className="sticky top-0 bg-orange-600 text-white p-6 rounded-t-3xl">
           <div className="flex items-center justify-between">
             <div>
               <Badge className="bg-white/20 text-white border-white/30 mb-2">
                 Free Consultation
               </Badge>
               <h2 className="text-2xl md:text-3xl font-bold">{title}</h2>
-              <p className="text-blue-100 mt-1">
+              <p className="text-orange-100 mt-1">
                 Let's discuss how I can help grow your business
               </p>
             </div>
@@ -118,7 +118,7 @@ export function ContactModal({
                     value={formData.name}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                    className="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-colors"
                     placeholder="Your full name"
                   />
                 </div>
@@ -133,7 +133,7 @@ export function ContactModal({
                     value={formData.email}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                    className="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-colors"
                     placeholder="your@email.com"
                   />
                 </div>
@@ -150,7 +150,7 @@ export function ContactModal({
                     name="phone"
                     value={formData.phone}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                    className="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-colors"
                     placeholder="+977 98XXXXXXXX"
                   />
                 </div>
@@ -163,7 +163,7 @@ export function ContactModal({
                     name="service"
                     value={formData.service}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                    className="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-colors"
                   >
                     <option value="">Select a service (optional)</option>
                     {services.map((service) => (
@@ -187,17 +187,17 @@ export function ContactModal({
                   onChange={handleInputChange}
                   required
                   rows={4}
-                  className="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors resize-none"
+                  className="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-colors resize-none"
                   placeholder="Describe your current marketing challenges, goals, and what you'd like to achieve..."
                 />
               </div>
 
               {/* What to Expect */}
-              <div className="bg-blue-50 dark:bg-blue-900/20 rounded-xl p-4 border border-blue-200 dark:border-blue-800">
-                <h4 className="font-semibold text-blue-800 dark:text-blue-200 mb-2">
+              <div className="bg-orange-50 dark:bg-orange-900/20 rounded-xl p-4 border border-orange-200 dark:border-orange-800">
+                <h4 className="font-semibold text-orange-800 dark:text-orange-200 mb-2">
                   What to expect:
                 </h4>
-                <ul className="text-sm text-blue-700 dark:text-blue-300 space-y-1">
+                <ul className="text-sm text-orange-700 dark:text-orange-300 space-y-1">
                   <li>• Free 30-minute strategy consultation call</li>
                   <li>• Personalized marketing audit & recommendations</li>
                   <li>• Custom proposal with pricing & timeline</li>
@@ -214,7 +214,7 @@ export function ContactModal({
                   !formData.email ||
                   !formData.message
                 }
-                className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white py-4 text-lg font-semibold rounded-xl transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full bg-orange-600 hover:bg-orange-700 text-white py-4 text-lg font-semibold rounded-xl transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {isSubmitting ? (
                   <div className="flex items-center justify-center">
@@ -247,7 +247,7 @@ export function ContactModal({
                 Thank you for your interest! I'll review your request and get
                 back to you within 24 hours with next steps.
               </p>
-              <div className="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 rounded-xl p-4">
+              <div className="bg-gradient-to-r from-orange-50 to-green-50 dark:from-orange-900/20 dark:to-green-900/20 rounded-xl p-4">
                 <p className="text-sm text-slate-700 dark:text-slate-300">
                   <strong>What's next:</strong> I'll send you a calendar link to
                   schedule your free 30-minute strategy call where we can

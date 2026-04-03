@@ -35,7 +35,7 @@ export function CollabSection() {
           COLLABORATED WITH
         </h2>
         <div className="flex justify-center mt-3">
-          <div className="w-48 sm:w-64 md:w-80 h-1 bg-gradient-to-r from-blue-400 to-purple-600"></div>
+          <div className="w-48 sm:w-64 md:w-80 h-1 bg-gradient-to-r from-orange-400 to-green-600"></div>
         </div>
       </div>
 

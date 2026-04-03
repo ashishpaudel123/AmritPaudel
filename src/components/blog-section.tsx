@@ -164,14 +164,14 @@ export function BlogSection({ onPostClick }: BlogSectionProps = {}) {
   return (
     <section
       id="blog"
-      className="py-20 bg-gradient-to-br from-slate-50 via-blue-50/30 to-purple-50/30 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 relative overflow-hidden"
+      className="py-20 bg-gradient-to-br from-slate-50 via-orange-50/30 to-green-50/30 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 relative overflow-hidden"
     >
       {/* Background Elements */}
       <div className="absolute inset-0 bg-grid-slate-100 dark:bg-grid-slate-800 [mask-image:radial-gradient(ellipse_at_center,white,transparent)]"></div>
 
       {/* Floating Orbs */}
-      <div className="absolute top-20 left-10 w-32 h-32 bg-gradient-to-r from-blue-400/20 to-purple-400/20 rounded-full blur-xl animate-float"></div>
-      <div className="absolute bottom-20 right-10 w-40 h-40 bg-gradient-to-r from-purple-400/20 to-pink-400/20 rounded-full blur-xl animate-float animation-delay-2000"></div>
+      <div className="absolute top-20 left-10 w-32 h-32 bg-gradient-to-r from-orange-400/20 to-green-400/20 rounded-full blur-xl animate-float"></div>
+      <div className="absolute bottom-20 right-10 w-40 h-40 bg-gradient-to-r from-green-400/20 to-lime-400/20 rounded-full blur-xl animate-float animation-delay-2000"></div>
 
       <div className="container mx-auto px-4 relative">
         {/* Header */}
@@ -180,7 +180,7 @@ export function BlogSection({ onPostClick }: BlogSectionProps = {}) {
           data-aos="fade-up"
           data-aos-duration="800"
         >
-          <Badge className="mb-4 bg-gradient-to-r from-blue-500/10 to-purple-500/10 border-blue-200 dark:border-purple-400/30 text-blue-600 dark:text-purple-300">
+          <Badge className="mb-4 bg-orange-100 border-orange-200 dark:bg-orange-900/30 dark:border-orange-700/40 text-orange-700 dark:text-orange-300">
             Knowledge Hub
           </Badge>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
@@ -188,7 +188,7 @@ export function BlogSection({ onPostClick }: BlogSectionProps = {}) {
               Digital Marketing
             </span>
             <br />
-            <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent animate-gradient">
+            <span className="bg-orange-600 bg-clip-text text-transparent animate-gradient">
               Blog & Insights
             </span>
           </h2>
@@ -215,7 +215,7 @@ export function BlogSection({ onPostClick }: BlogSectionProps = {}) {
                 placeholder="Search articles..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-10 pr-10 py-3 bg-white/60 dark:bg-slate-800/60 backdrop-blur-md border border-slate-200/50 dark:border-slate-600/50 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-transparent text-slate-900 dark:text-white placeholder-slate-500"
+                className="w-full pl-10 pr-10 py-3 bg-white/60 dark:bg-slate-800/60 backdrop-blur-md border border-slate-200/50 dark:border-slate-600/50 rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-500/50 focus:border-transparent text-slate-900 dark:text-white placeholder-slate-500"
               />
               {searchQuery && (
                 <button
@@ -236,8 +236,8 @@ export function BlogSection({ onPostClick }: BlogSectionProps = {}) {
                     onClick={() => setSelectedCategory(category.name)}
                     className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 backdrop-blur-md cursor-pointer ${
                       selectedCategory === category.name
-                        ? "bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-lg"
-                        : "bg-white/60 dark:bg-slate-800/60 text-slate-600 dark:text-slate-300 border border-slate-200/50 dark:border-slate-600/50 hover:bg-blue-50 dark:hover:bg-slate-700/60"
+                        ? "bg-orange-600 text-white shadow-lg"
+                        : "bg-white/60 dark:bg-slate-800/60 text-slate-600 dark:text-slate-300 border border-slate-200/50 dark:border-slate-600/50 hover:bg-orange-50 dark:hover:bg-slate-700/60"
                     }`}
                   >
                     {category.name}
@@ -252,7 +252,7 @@ export function BlogSection({ onPostClick }: BlogSectionProps = {}) {
               {!showAllCategories && categories.length > 4 && (
                 <button
                   onClick={() => setShowAllCategories(true)}
-                  className="px-4 py-2 rounded-lg text-sm font-medium bg-white/60 dark:bg-slate-800/60 backdrop-blur-md border border-slate-200/50 dark:border-slate-600/50 text-slate-600 dark:text-slate-300 hover:bg-blue-50 dark:hover:bg-slate-700/60 transition-all duration-300 flex items-center gap-2 cursor-pointer"
+                  className="px-4 py-2 rounded-lg text-sm font-medium bg-white/60 dark:bg-slate-800/60 backdrop-blur-md border border-slate-200/50 dark:border-slate-600/50 text-slate-600 dark:text-slate-300 hover:bg-orange-50 dark:hover:bg-slate-700/60 transition-all duration-300 flex items-center gap-2 cursor-pointer"
                 >
                   <Filter className="w-4 h-4" />
                   More
@@ -261,7 +261,7 @@ export function BlogSection({ onPostClick }: BlogSectionProps = {}) {
               {showAllCategories && (
                 <button
                   onClick={() => setShowAllCategories(false)}
-                  className="px-4 py-2 rounded-lg text-sm font-medium bg-white/60 dark:bg-slate-800/60 backdrop-blur-md border border-slate-200/50 dark:border-slate-600/50 text-slate-600 dark:text-slate-300 hover:bg-blue-50 dark:hover:bg-slate-700/60 transition-all duration-300 flex items-center gap-2 cursor-pointer"
+                  className="px-4 py-2 rounded-lg text-sm font-medium bg-white/60 dark:bg-slate-800/60 backdrop-blur-md border border-slate-200/50 dark:border-slate-600/50 text-slate-600 dark:text-slate-300 hover:bg-orange-50 dark:hover:bg-slate-700/60 transition-all duration-300 flex items-center gap-2 cursor-pointer"
                 >
                   <X className="w-4 h-4" />
                   Less
@@ -277,7 +277,7 @@ export function BlogSection({ onPostClick }: BlogSectionProps = {}) {
             <div className="bg-white/40 dark:bg-slate-800/40 backdrop-blur-md rounded-2xl border border-slate-200/30 dark:border-slate-600/30 p-4 shadow-lg">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
-                  <Search className="w-5 h-5 text-blue-500" />
+                  <Search className="w-5 h-5 text-orange-500" />
                   <div>
                     <p className="text-sm text-slate-600 dark:text-slate-300">
                       {filteredPosts.length === 0 ? (
@@ -285,7 +285,7 @@ export function BlogSection({ onPostClick }: BlogSectionProps = {}) {
                       ) : (
                         <>
                           Showing{" "}
-                          <span className="font-semibold text-blue-600 dark:text-blue-400">
+                          <span className="font-semibold text-orange-600 dark:text-orange-400">
                             {filteredPosts.length}
                           </span>{" "}
                           article{filteredPosts.length !== 1 ? "s" : ""}
@@ -346,7 +346,7 @@ export function BlogSection({ onPostClick }: BlogSectionProps = {}) {
                 </p>
                 <Button
                   onClick={clearSearch}
-                  className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
+                  className="bg-orange-600 hover:bg-orange-700"
                 >
                   Clear Search
                 </Button>
@@ -402,9 +402,9 @@ export function BlogSection({ onPostClick }: BlogSectionProps = {}) {
 
                     {/* Read More */}
                     <div className="flex items-center gap-3 group-hover:gap-4 transition-all duration-300">
-                      <div className="h-0.5 w-12 bg-blue-600"></div>
-                      <div className="w-2.5 h-2.5 rounded-full bg-blue-600"></div>
-                      <span className="text-base font-semibold text-blue-600 dark:text-blue-500">
+                      <div className="h-0.5 w-12 bg-orange-600"></div>
+                      <div className="w-2.5 h-2.5 rounded-full bg-orange-600"></div>
+                      <span className="text-base font-semibold text-orange-600 dark:text-orange-500">
                         Read More
                       </span>
                     </div>
@@ -422,7 +422,7 @@ export function BlogSection({ onPostClick }: BlogSectionProps = {}) {
               <Button
                 size="lg"
                 onClick={loadMorePosts}
-                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 px-8"
+                className="bg-orange-600 hover:bg-orange-700 px-8"
               >
                 Load More Articles
                 <ArrowRight className="w-5 h-5 ml-2" />
