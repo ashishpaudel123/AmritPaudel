@@ -24,8 +24,8 @@ export function Footer() {
     <footer className="bg-slate-900 text-white relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-0 left-1/4 w-64 h-64 bg-gradient-to-r from-blue-500/10 to-purple-600/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-gradient-to-r from-cyan-500/10 to-pink-600/10 rounded-full blur-3xl"></div>
+        <div className="absolute top-0 left-1/4 w-64 h-64 bg-gradient-to-r from-orange-500/10 to-green-600/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-gradient-to-r from-lime-500/10 to-lime-600/10 rounded-full blur-3xl"></div>
       </div>
 
       <div className="container mx-auto px-4 relative">
@@ -50,17 +50,17 @@ export function Footer() {
               {/* Contact Info */}
               <div className="space-y-3">
                 <div className="flex items-center space-x-3 text-slate-300">
-                  <Mail className="w-5 h-5 text-blue-400" />
+                  <Mail className="w-5 h-5 text-orange-400" />
                   <a href="mailto:paudelamrit2060@gmail.com">
                     paudelamrit2060@gmail.com
                   </a>
                 </div>
                 <div className="flex items-center space-x-3 text-slate-300">
-                  <Phone className="w-5 h-5 text-blue-400" />
+                  <Phone className="w-5 h-5 text-orange-400" />
                   <a>+977 9865846429</a>
                 </div>
                 <div className="flex items-center space-x-3 text-slate-300">
-                  <MapPin className="w-5 h-5 text-blue-400" />
+                  <MapPin className="w-5 h-5 text-orange-400" />
                   <a
                     href="https://maps.app.goo.gl/icKGjmbH3DqCEVqRA"
                     target="_blank"
@@ -80,7 +80,7 @@ export function Footer() {
                   <li key={index}>
                     <a
                       href={service.route}
-                      className="text-slate-300 hover:text-blue-400 transition-colors duration-300"
+                      className="text-slate-300 hover:text-orange-400 transition-colors duration-300"
                     >
                       {service.title}
                     </a>
@@ -97,7 +97,7 @@ export function Footer() {
                   <li key={index}>
                     <a
                       href={link.href}
-                      className="text-slate-300 hover:text-blue-400 transition-colors duration-300"
+                      className="text-slate-300 hover:text-orange-400 transition-colors duration-300"
                     >
                       {link.name}
                     </a>
@@ -107,14 +107,14 @@ export function Footer() {
             </div>
             {/* Social Links */}
             <div>
-              <h4 className="text-lg font-semibold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-3">
+              <h4 className="text-lg font-semibold bg-gradient-to-r from-orange-400 to-green-400 bg-clip-text text-transparent mb-3">
                 Get In Touch
               </h4>
               <div className="flex space-x-3">
                 {/* LinkedIn - Official LinkedIn Blue Background */}
                 <a
                   href="https://www.linkedin.com/in/amrit-paudel-9105722b0/"
-                  className="group flex items-center justify-center w-10 h-10 bg-[#0077B5]/80 backdrop-blur-md hover:bg-[#0077B5] rounded-lg transition-all duration-300 shadow-md hover:shadow-lg hover:shadow-blue-500/25 hover:scale-105"
+                  className="group flex items-center justify-center w-10 h-10 bg-[#0077B5]/80 backdrop-blur-md hover:bg-[#0077B5] rounded-lg transition-all duration-300 shadow-md hover:shadow-lg hover:shadow-orange-500/25 hover:scale-105"
                 >
                   <svg
                     className="w-5 h-5 group-hover:scale-110 transition-transform duration-200"
@@ -144,7 +144,7 @@ export function Footer() {
                 {/* Instagram - Official Instagram Gradient Background */}
                 {/* <a
                   href="#"
-                  className="group flex items-center justify-center w-10 h-10 bg-gradient-to-tr from-[#833AB4] via-[#C13584] to-[#E1306C] backdrop-blur-md hover:from-[#7c2d8e] hover:via-[#b12a75] hover:to-[#d42c5c] rounded-lg transition-all duration-300 shadow-md hover:shadow-lg hover:shadow-pink-500/25 hover:scale-105"
+                  className="group flex items-center justify-center w-10 h-10 bg-gradient-to-tr from-[#833AB4] via-[#C13584] to-[#E1306C] backdrop-blur-md hover:from-[#7c2d8e] hover:via-[#b12a75] hover:to-[#d42c5c] rounded-lg transition-all duration-300 shadow-md hover:shadow-lg hover:shadow-lime-500/25 hover:scale-105"
                 >
                   <svg
                     className="w-5 h-5 group-hover:scale-110 transition-transform duration-200"
