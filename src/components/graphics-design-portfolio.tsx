@@ -211,9 +211,9 @@ export function GraphicsDesignPortfolio({
     >
       {/* Background Elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-gradient-to-r from-pink-400/10 to-purple-500/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-blue-400/10 to-indigo-500/10 rounded-full blur-3xl"></div>
-        <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-gradient-to-r from-orange-400/10 to-pink-500/10 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-gradient-to-r from-lime-400/10 to-green-500/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-orange-400/10 to-green-500/10 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-gradient-to-r from-orange-400/10 to-lime-500/10 rounded-full blur-3xl"></div>
       </div>
 
       <div className="container mx-auto px-4 relative">
@@ -221,7 +221,7 @@ export function GraphicsDesignPortfolio({
         <Button
           variant="outline"
           onClick={onBack}
-          className="flex items-center gap-2 hover:bg-purple-50 dark:hover:bg-purple-900/20"
+          className="flex items-center gap-2 hover:bg-green-50 dark:hover:bg-green-900/20"
         >
           <ArrowLeft className="w-4 h-4" />
           Back to Portfolio
@@ -229,12 +229,12 @@ export function GraphicsDesignPortfolio({
 
         {/* Section Header */}
         <div className="text-center mb-16">
-          <Badge className="bg-pink-100 text-pink-800 dark:bg-pink-900 dark:text-pink-200 mb-4">
+          <Badge className="bg-lime-100 text-lime-800 dark:bg-lime-900 dark:text-lime-200 mb-4">
             Graphics Design
           </Badge>
           <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6">
             Creative Design
-            <span className="bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent">
+            <span className="bg-orange-600 bg-clip-text text-transparent">
               {" "}
               Portfolio
             </span>
@@ -258,8 +258,8 @@ export function GraphicsDesignPortfolio({
                 onClick={() => setSelectedCategory(category.id)}
                 className={`${
                   selectedCategory === category.id
-                    ? "bg-gradient-to-r from-pink-600 to-purple-600 text-white"
-                    : "hover:bg-pink-50 dark:hover:bg-pink-900/20"
+                    ? "bg-orange-600 text-white"
+                    : "hover:bg-lime-50 dark:hover:bg-lime-900/20"
                 } transition-all duration-300`}
               >
                 {category.label}
@@ -315,7 +315,7 @@ export function GraphicsDesignPortfolio({
         )}
 
         {/* Skills Section */}
-        <div className="bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20 rounded-3xl p-8 md:p-12 mb-16 border border-purple-200 dark:border-purple-800">
+        <div className="bg-gradient-to-br from-green-50 to-lime-50 dark:from-green-900/20 dark:to-lime-900/20 rounded-3xl p-8 md:p-12 mb-16 border border-green-200 dark:border-green-800">
           <div className="text-center mb-8">
             <h3 className="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white mb-4">
               Design Tools & Expertise
@@ -329,7 +329,7 @@ export function GraphicsDesignPortfolio({
             {skills.map((skill, index) => (
               <Badge
                 key={index}
-                className="px-6 py-3 text-base bg-white dark:bg-slate-800 text-slate-900 dark:text-white border-2 border-purple-200 dark:border-purple-700 hover:border-purple-500 dark:hover:border-purple-400 transition-all duration-300 hover:scale-110"
+                className="px-6 py-3 text-base bg-white dark:bg-slate-800 text-slate-900 dark:text-white border-2 border-green-200 dark:border-green-700 hover:border-green-500 dark:hover:border-green-400 transition-all duration-300 hover:scale-110"
               >
                 {skill}
               </Badge>
@@ -350,7 +350,7 @@ export function GraphicsDesignPortfolio({
             <Button
               size="lg"
               onClick={() => openModal("Start Design Project")}
-              className="bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-700 hover:to-purple-700 text-white px-8 py-3 text-lg font-semibold"
+              className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 text-lg font-semibold"
             >
               Get Started Today
               <ArrowRight className="w-5 h-5 ml-2" />

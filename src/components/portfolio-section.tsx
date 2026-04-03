@@ -34,8 +34,8 @@ export function PortfolioSection({
     >
       {/* Background Elements */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/3 right-1/4 w-72 h-72 bg-gradient-to-r from-purple-400/10 to-pink-500/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-1/3 left-1/4 w-72 h-72 bg-gradient-to-r from-blue-400/10 to-cyan-500/10 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/3 right-1/4 w-72 h-72 bg-gradient-to-r from-green-400/10 to-lime-500/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-1/3 left-1/4 w-72 h-72 bg-gradient-to-r from-orange-400/10 to-lime-500/10 rounded-full blur-3xl"></div>
       </div>
 
       <div className="container mx-auto px-4 relative">
@@ -45,12 +45,12 @@ export function PortfolioSection({
           data-aos="fade-up"
           data-aos-duration="800"
         >
-          <Badge className="bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200 mb-4">
+          <Badge className="bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-200 mb-4">
             Portfolio
           </Badge>
           <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6">
             My Work
-            <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+            <span className="bg-orange-600 bg-clip-text text-transparent">
               {" "}
               Speaks For Itself
             </span>
@@ -155,9 +155,7 @@ export function PortfolioSection({
                   </ul>
 
                   {/* CTA Button with enhanced design */}
-                  <Button
-                    className={`w-full bg-gradient-to-r ${category.color} ${category.hoverColor} text-white font-bold py-6 text-lg shadow-lg group-hover:shadow-2xl transition-all duration-300 relative overflow-hidden`}
-                  >
+                  <Button className="w-full bg-orange-600 hover:bg-orange-700 text-white font-bold py-6 text-lg shadow-lg group-hover:shadow-2xl transition-all duration-300 relative overflow-hidden">
                     {/* Shine effect */}
                     <div className="absolute inset-0 w-1/2 h-full bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12 -translate-x-full group-hover:translate-x-[200%] transition-transform duration-1000"></div>
 

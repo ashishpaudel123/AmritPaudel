@@ -59,7 +59,7 @@ function NavigationMenuItem({
 }
 
 const navigationMenuTriggerStyle = cva(
-  "group inline-flex h-9 w-max items-center justify-center rounded-md bg-slate-100/80 dark:bg-slate-800/80 text-slate-700 dark:text-slate-200 px-4 py-2 text-sm font-medium hover:bg-blue-50 hover:text-blue-700 dark:hover:bg-blue-900/50 dark:hover:text-blue-200 focus:bg-blue-50 focus:text-blue-700 dark:focus:bg-blue-900/50 dark:focus:text-blue-200 disabled:pointer-events-none disabled:opacity-50 data-[state=open]:bg-blue-100 data-[state=open]:text-blue-800 dark:data-[state=open]:bg-blue-900/70 dark:data-[state=open]:text-blue-100 focus-visible:ring-blue-500/50 outline-none transition-all duration-200 focus-visible:ring-[3px] focus-visible:outline-1"
+  "group inline-flex h-9 w-max items-center justify-center rounded-md bg-slate-100/80 dark:bg-slate-800/80 text-slate-700 dark:text-slate-200 px-4 py-2 text-sm font-medium hover:bg-orange-50 hover:text-orange-700 dark:hover:bg-orange-900/50 dark:hover:text-orange-200 focus:bg-orange-50 focus:text-orange-700 dark:focus:bg-orange-900/50 dark:focus:text-orange-200 disabled:pointer-events-none disabled:opacity-50 data-[state=open]:bg-orange-100 data-[state=open]:text-orange-800 dark:data-[state=open]:bg-orange-900/70 dark:data-[state=open]:text-orange-100 focus-visible:ring-orange-500/50 outline-none transition-all duration-200 focus-visible:ring-[3px] focus-visible:outline-1"
 )
 
 function NavigationMenuTrigger({

@@ -72,7 +72,7 @@ export function TestimonialsSection() {
       {/* Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 left-1/3 w-96 h-96 bg-gradient-to-r from-amber-400/10 to-orange-500/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-1/4 right-1/3 w-96 h-96 bg-gradient-to-r from-emerald-400/10 to-teal-500/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-1/4 right-1/3 w-96 h-96 bg-gradient-to-r from-orange-300/10 to-orange-500/10 rounded-full blur-3xl"></div>
       </div>
 
       <div className="container mx-auto px-4 relative">
@@ -82,12 +82,12 @@ export function TestimonialsSection() {
           data-aos="fade-up"
           data-aos-duration="800"
         >
-          <Badge className="bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200 mb-4">
+          <Badge className="bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-200 mb-4">
             Client Success Stories
           </Badge>
           <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6">
             What My Clients Say About
-            <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+            <span className="bg-orange-600 bg-clip-text text-transparent">
               {" "}
               Working Together
             </span>
@@ -115,7 +115,7 @@ export function TestimonialsSection() {
                   <div className="space-y-6">
                     {/* Avatar and Basic Info */}
                     <div className="flex items-center space-x-4">
-                      <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center text-white font-bold text-xl">
+                      <div className="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center text-white font-bold text-xl">
                         {testimonials[currentSlide].avatar}
                       </div>
                       <div>
@@ -125,7 +125,7 @@ export function TestimonialsSection() {
                         <p className="text-slate-600 dark:text-slate-300">
                           {testimonials[currentSlide].position}
                         </p>
-                        <p className="text-purple-600 font-medium">
+                        <p className="text-orange-600 font-medium">
                           {testimonials[currentSlide].company}
                         </p>
                       </div>
@@ -144,7 +144,7 @@ export function TestimonialsSection() {
 
                   {/* Center - Quote */}
                   <div className="lg:col-span-2 space-y-6">
-                    <Quote className="w-12 h-12 text-purple-600 opacity-50" />
+                    <Quote className="w-12 h-12 text-orange-600 opacity-50" />
                     <blockquote className="text-xl md:text-3xl font-medium text-slate-900 dark:text-white leading-relaxed">
                       "{testimonials[currentSlide].text}"
                     </blockquote>
@@ -184,7 +184,7 @@ export function TestimonialsSection() {
                 onClick={() => goToSlide(index)}
                 className={`w-3 h-3 rounded-full transition-all duration-300 cursor-pointer ${
                   currentSlide === index
-                    ? "bg-purple-600"
+                    ? "bg-orange-600"
                     : "bg-slate-300 dark:bg-slate-600 hover:bg-slate-400 dark:hover:bg-slate-500"
                 }`}
               />
@@ -233,7 +233,7 @@ export function TestimonialsSection() {
                   {/* Header */}
                   <div className="flex items-center justify-between mb-3 sm:mb-4">
                     <div className="flex items-center space-x-2 sm:space-x-3">
-                      <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center text-white font-bold text-sm sm:text-base">
+                      <div className="w-10 h-10 sm:w-12 sm:h-12 bg-orange-600 rounded-full flex items-center justify-center text-white font-bold text-sm sm:text-base">
                         {testimonial.avatar}
                       </div>
                       <div>

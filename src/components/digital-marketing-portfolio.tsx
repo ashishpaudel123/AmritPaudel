@@ -274,7 +274,7 @@ export function DigitalMarketingPortfolio({
         <div className="fixed mt-20 lg:mt-10 inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
           <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-2xl max-w-6xl w-full max-h-[90vh] overflow-y-auto relative">
             {/* Header */}
-            <div className="lg:sticky top-0 bg-gradient-to-r from-blue-600 to-indigo-600 text-white p-6 rounded-t-2xl z-10">
+            <div className="lg:sticky top-0 bg-orange-600 text-white p-6 rounded-t-2xl z-10">
               <div className="flex items-start justify-between">
                 <div>
                   <div className="flex items-center gap-2 mb-2">
@@ -283,7 +283,7 @@ export function DigitalMarketingPortfolio({
                       Meta Business Analytics ({selectedProject.type})
                     </h3>
                   </div>
-                  <p className="text-blue-100 text-sm">
+                  <p className="text-orange-100 text-sm">
                     {selectedProject.title}
                   </p>
                   <div className="flex items-center gap-4 mt-3">
@@ -308,17 +308,17 @@ export function DigitalMarketingPortfolio({
               {/* Primary Metrics */}
               <div className="mb-8">
                 <h4 className="text-lg font-bold text-slate-900 dark:text-white mb-4 flex items-center">
-                  <TrendingUp className="w-5 h-5 mr-2 text-blue-600" />
+                  <TrendingUp className="w-5 h-5 mr-2 text-orange-600" />
                   Primary Metrics
                 </h4>
                 <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
-                  <div className="bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-950/50 dark:to-blue-900/50 rounded-xl p-4 border-2 border-blue-200 dark:border-blue-800">
+                  <div className="bg-gradient-to-br from-orange-50 to-orange-100 dark:from-orange-950/50 dark:to-orange-900/50 rounded-xl p-4 border-2 border-orange-200 dark:border-orange-800">
                     {selectedProject.category === "paid" ? (
-                      <MessageCircle className="w-8 h-8 text-blue-600 mb-2" />
+                      <MessageCircle className="w-8 h-8 text-orange-600 mb-2" />
                     ) : selectedProject.category === "paidLeads" ? (
-                      <Users className="w-8 h-8 text-blue-600 mb-2" />
+                      <Users className="w-8 h-8 text-orange-600 mb-2" />
                     ) : (
-                      <Eye className="w-8 h-8 text-blue-600 mb-2" />
+                      <Eye className="w-8 h-8 text-orange-600 mb-2" />
                     )}
                     <div className="text-xl lg:text-2xl font-bold text-slate-900 dark:text-white mb-1">
                       {selectedProject.category === "paid"
@@ -377,7 +377,7 @@ export function DigitalMarketingPortfolio({
                     </div>
                     {selectedProject.category !== "paidEngagement" &&
                       selectedProject.category !== "paidLeads" && (
-                        <Badge className="bg-blue-100 text-blue-800 dark:bg-blue-900/50 dark:text-blue-200 text-xs">
+                        <Badge className="bg-orange-100 text-orange-800 dark:bg-orange-900/50 dark:text-orange-200 text-xs">
                           {selectedProject.category === "paid"
                             ? "Cost"
                             : selectedProject.metaInsights.detailedMetrics
@@ -386,13 +386,13 @@ export function DigitalMarketingPortfolio({
                       )}
                   </div>
 
-                  <div className="bg-gradient-to-br from-purple-50 to-purple-100 dark:from-purple-950/50 dark:to-purple-900/50 rounded-xl p-4 border-2 border-purple-200 dark:border-purple-800">
+                  <div className="bg-gradient-to-br from-green-50 to-green-100 dark:from-green-950/50 dark:to-green-900/50 rounded-xl p-4 border-2 border-green-200 dark:border-green-800">
                     {selectedProject.category === "paid" ||
                     selectedProject.category === "paidEngagement" ||
                     selectedProject.category === "paidLeads" ? (
-                      <DollarSign className="w-8 h-8 text-purple-600 mb-2" />
+                      <DollarSign className="w-8 h-8 text-green-600 mb-2" />
                     ) : (
-                      <Activity className="w-8 h-8 text-purple-600 mb-2" />
+                      <Activity className="w-8 h-8 text-green-600 mb-2" />
                     )}
                     <div className="md:text-xl lg:text-2xl font-bold text-slate-900 dark:text-white mb-1">
                       {selectedProject.category === "paid" ||
@@ -410,7 +410,7 @@ export function DigitalMarketingPortfolio({
                     </div>
                     {selectedProject.category !== "paidEngagement" &&
                       selectedProject.category !== "paidLeads" && (
-                        <Badge className="bg-purple-100 text-purple-800 dark:bg-purple-900/50 dark:text-purple-200 text-xs">
+                        <Badge className="bg-green-100 text-green-800 dark:bg-green-900/50 dark:text-green-200 text-xs">
                           {selectedProject.category === "paid"
                             ? "Budget"
                             : selectedProject.metaInsights.detailedMetrics
@@ -457,14 +457,14 @@ export function DigitalMarketingPortfolio({
                       )}
                   </div>
 
-                  <div className="bg-gradient-to-br from-pink-50 to-pink-100 dark:from-pink-950/50 dark:to-pink-900/50 rounded-xl p-4 border-2 border-pink-200 dark:border-pink-800">
+                  <div className="bg-gradient-to-br from-lime-50 to-lime-100 dark:from-lime-950/50 dark:to-lime-900/50 rounded-xl p-4 border-2 border-lime-200 dark:border-lime-800">
                     {selectedProject.category === "paid" ? (
-                      <Target className="w-8 h-8 text-pink-600 mb-2" />
+                      <Target className="w-8 h-8 text-lime-600 mb-2" />
                     ) : selectedProject.category === "paidEngagement" ||
                       selectedProject.category === "paidLeads" ? (
-                      <Users className="w-8 h-8 text-pink-600 mb-2" />
+                      <Users className="w-8 h-8 text-lime-600 mb-2" />
                     ) : (
-                      <UserPlus className="w-8 h-8 text-pink-600 mb-2" />
+                      <UserPlus className="w-8 h-8 text-lime-600 mb-2" />
                     )}
                     <div className="text-xl lg:text-2xl font-bold text-slate-900 dark:text-white mb-1">
                       {selectedProject.category === "paid"
@@ -486,7 +486,7 @@ export function DigitalMarketingPortfolio({
                     </div>
                     {selectedProject.category !== "paidEngagement" &&
                       selectedProject.category !== "paidLeads" && (
-                        <Badge className="bg-pink-100 text-pink-800 dark:bg-pink-900/50 dark:text-pink-200 text-xs">
+                        <Badge className="bg-lime-100 text-lime-800 dark:bg-lime-900/50 dark:text-lime-200 text-xs">
                           {selectedProject.category === "paid"
                             ? "Range"
                             : selectedProject.metaInsights.detailedMetrics
@@ -503,7 +503,7 @@ export function DigitalMarketingPortfolio({
                 selectedProject.category !== "paidLeads" && (
                   <div className="mb-8">
                     <h4 className="text-lg font-bold text-slate-900 dark:text-white mb-4 flex items-center">
-                      <Activity className="w-5 h-5 mr-2 text-purple-600" />
+                      <Activity className="w-5 h-5 mr-2 text-green-600" />
                       Engagement Breakdown
                     </h4>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -518,7 +518,7 @@ export function DigitalMarketingPortfolio({
                       </div>
 
                       <div className="bg-slate-50 dark:bg-slate-700 rounded-lg p-4 text-center">
-                        <MessageCircle className="w-6 h-6 mx-auto mb-2 text-blue-500" />
+                        <MessageCircle className="w-6 h-6 mx-auto mb-2 text-orange-500" />
                         <div className="text-xl font-bold text-slate-900 dark:text-white">
                           {
                             selectedProject.metaInsights.detailedMetrics
@@ -541,7 +541,7 @@ export function DigitalMarketingPortfolio({
                       </div>
 
                       <div className="bg-slate-50 dark:bg-slate-700 rounded-lg p-4 text-center">
-                        <BarChart3 className="w-6 h-6 mx-auto mb-2 text-purple-500" />
+                        <BarChart3 className="w-6 h-6 mx-auto mb-2 text-green-500" />
                         <div className="text-xl font-bold text-slate-900 dark:text-white">
                           {selectedProject.metaInsights.detailedMetrics.saves}
                         </div>
@@ -559,9 +559,9 @@ export function DigitalMarketingPortfolio({
                 selectedProject.category !== "paidLeads" && (
                   <div className="grid md:grid-cols-2 gap-6 mb-8">
                     {/* Video Performance */}
-                    <div className="bg-gradient-to-br from-indigo-50 to-purple-50 dark:from-indigo-950/30 dark:to-purple-950/30 rounded-xl p-6 border border-indigo-200 dark:border-indigo-800">
+                    <div className="bg-gradient-to-br from-green-50 to-green-50 dark:from-green-950/30 dark:to-green-950/30 rounded-xl p-6 border border-green-200 dark:border-green-800">
                       <h4 className="text-lg font-bold text-slate-900 dark:text-white mb-4 flex items-center">
-                        <Eye className="w-5 h-5 mr-2 text-indigo-600" />
+                        <Eye className="w-5 h-5 mr-2 text-green-600" />
                         Performance
                       </h4>
                       <div className="space-y-3">
@@ -602,9 +602,9 @@ export function DigitalMarketingPortfolio({
                     </div>
 
                     {/* Publishing Insights */}
-                    <div className="bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-blue-950/30 dark:to-cyan-950/30 rounded-xl p-6 border border-blue-200 dark:border-blue-800">
+                    <div className="bg-gradient-to-br from-orange-50 to-lime-50 dark:from-orange-950/30 dark:to-lime-950/30 rounded-xl p-6 border border-orange-200 dark:border-orange-800">
                       <h4 className="text-lg font-bold text-slate-900 dark:text-white mb-4 flex items-center">
-                        <Calendar className="w-5 h-5 mr-2 text-blue-600" />
+                        <Calendar className="w-5 h-5 mr-2 text-orange-600" />
                         Publishing Insights
                       </h4>
                       <div className="space-y-3">
@@ -673,7 +673,7 @@ export function DigitalMarketingPortfolio({
                     </div>
                   </div>
 
-                  <div className="bg-gradient-to-br from-pink-50 to-rose-50 dark:from-pink-950/30 dark:to-rose-950/30 rounded-lg p-5 border border-pink-200 dark:border-pink-800">
+                  <div className="bg-gradient-to-br from-lime-50 to-lime-50 dark:from-lime-950/30 dark:to-lime-950/30 rounded-lg p-5 border border-lime-200 dark:border-lime-800">
                     <div className="text-sm text-slate-600 dark:text-slate-400 mb-2">
                       Gender Split
                     </div>
@@ -685,7 +685,7 @@ export function DigitalMarketingPortfolio({
                     </div>
                   </div>
 
-                  <div className="bg-gradient-to-br from-blue-50 to-sky-50 dark:from-blue-950/30 dark:to-sky-950/30 rounded-lg p-5 border border-blue-200 dark:border-blue-800">
+                  <div className="bg-gradient-to-br from-orange-50 to-lime-50 dark:from-orange-950/30 dark:to-lime-950/30 rounded-lg p-5 border border-orange-200 dark:border-orange-800">
                     <div className="text-sm text-slate-600 dark:text-slate-400 mb-2">
                       {selectedProject.category === "paid" ||
                       selectedProject.category === "paidEngagement" ||
@@ -712,7 +712,7 @@ export function DigitalMarketingPortfolio({
               <div className="bg-slate-50 dark:bg-slate-700 rounded-xl p-6 mb-6">
                 <h4 className="text-lg font-bold text-slate-900 dark:text-white mb-4 flex items-center justify-between">
                   <div className="flex items-center">
-                    <TrendingUp className="w-5 h-5 mr-2 text-blue-600" />
+                    <TrendingUp className="w-5 h-5 mr-2 text-orange-600" />
                     Performance Trends & Analytics
                   </div>
                   <Badge className="text-xs">
@@ -723,7 +723,7 @@ export function DigitalMarketingPortfolio({
 
                 {/* Horizontal Scrollable Gallery */}
                 <div className="relative">
-                  <div className="flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-thin scrollbar-thumb-blue-600 scrollbar-track-slate-200 dark:scrollbar-track-slate-600">
+                  <div className="flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-thin scrollbar-thumb-orange-600 scrollbar-track-slate-200 dark:scrollbar-track-slate-600">
                     {selectedProject.metaInsights.insightImages.map(
                       (image, index) => (
                         <div
@@ -731,11 +731,11 @@ export function DigitalMarketingPortfolio({
                           className="flex-shrink-0 w-full md:w-[calc(50%-8px)] lg:w-[calc(33.333%-11px)] snap-start"
                         >
                           <div
-                            className="relative rounded-lg overflow-hidden border-2 border-slate-200 dark:border-slate-600 bg-white dark:bg-slate-800 cursor-pointer hover:border-blue-500 dark:hover:border-blue-400 transition-all duration-300 hover:shadow-xl group"
+                            className="relative rounded-lg overflow-hidden border-2 border-slate-200 dark:border-slate-600 bg-white dark:bg-slate-800 cursor-pointer hover:border-orange-500 dark:hover:border-orange-400 transition-all duration-300 hover:shadow-xl group"
                             onClick={() => setFullScreenImage(image)}
                           >
                             {/* Screenshot Container */}
-                            <div className="relative aspect-video bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-950/20 dark:to-indigo-950/20 flex items-center justify-center">
+                            <div className="relative aspect-video bg-gradient-to-br from-orange-50 to-green-50 dark:from-orange-950/20 dark:to-green-950/20 flex items-center justify-center">
                               <img
                                 src={image}
                                 alt={`${
@@ -748,7 +748,7 @@ export function DigitalMarketingPortfolio({
                               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 flex items-center justify-center">
                                 <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform group-hover:scale-110">
                                   <div className="bg-white dark:bg-slate-800 rounded-full p-3 shadow-lg">
-                                    <Eye className="w-6 h-6 text-blue-600 dark:text-blue-400" />
+                                    <Eye className="w-6 h-6 text-orange-600 dark:text-orange-400" />
                                   </div>
                                 </div>
                               </div>
@@ -756,7 +756,7 @@ export function DigitalMarketingPortfolio({
 
                             {/* Image number badge */}
                             <div className="absolute top-2 left-2">
-                              <Badge className="bg-blue-600 text-white shadow-lg text-xs">
+                              <Badge className="bg-orange-600 text-white shadow-lg text-xs">
                                 {index + 1} /{" "}
                                 {
                                   selectedProject.metaInsights.insightImages
@@ -818,7 +818,7 @@ export function DigitalMarketingPortfolio({
                   Close Dashboard
                 </Button>
                 <Button
-                  className="sm:w-auto w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-6"
+                  className="sm:w-auto w-full bg-orange-600 hover:bg-orange-700 text-white px-6"
                   onClick={() => openModal("Request Full Analytics Report")}
                 >
                   Request Full Report
@@ -832,8 +832,8 @@ export function DigitalMarketingPortfolio({
 
       {/* Background Elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-1/3 right-1/4 w-72 h-72 bg-gradient-to-r from-purple-400/10 to-pink-500/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-1/3 left-1/4 w-72 h-72 bg-gradient-to-r from-blue-400/10 to-cyan-500/10 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/3 right-1/4 w-72 h-72 bg-gradient-to-r from-green-400/10 to-lime-500/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-1/3 left-1/4 w-72 h-72 bg-gradient-to-r from-orange-400/10 to-lime-500/10 rounded-full blur-3xl"></div>
       </div>
 
       <div className="container mx-auto px-4 relative">
@@ -841,7 +841,7 @@ export function DigitalMarketingPortfolio({
         <Button
           variant="outline"
           onClick={onBack}
-          className="flex items-center mb-5 gap-2 hover:bg-purple-50 dark:hover:bg-purple-900/20"
+          className="flex items-center mb-5 gap-2 hover:bg-green-50 dark:hover:bg-green-900/20"
         >
           <ArrowLeft className="w-4 h-4" />
           Back to Portfolio
@@ -849,12 +849,12 @@ export function DigitalMarketingPortfolio({
 
         {/* Section Header */}
         <div className="text-center mb-16">
-          <Badge className="bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 mb-4">
+          <Badge className="bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-200 mb-4">
             Digital Marketing
           </Badge>
           <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6">
             Digital Marketing
-            <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+            <span className="bg-orange-600 bg-clip-text text-transparent">
               {" "}
               Case Studies
             </span>
@@ -875,8 +875,8 @@ export function DigitalMarketingPortfolio({
               onClick={() => setSelectedCategory(category.id)}
               className={`${
                 selectedCategory === category.id
-                  ? "bg-gradient-to-r from-blue-600 to-indigo-600 text-white"
-                  : "hover:bg-blue-50 dark:hover:bg-blue-900/20"
+                  ? "bg-orange-600 text-white"
+                  : "hover:bg-orange-50 dark:hover:bg-orange-900/20"
               } transition-all duration-300`}
             >
               {category.label}
@@ -899,7 +899,7 @@ export function DigitalMarketingPortfolio({
                       {project.title}
                     </h3>
                     <div className="flex items-center gap-2">
-                      <Badge className="bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200">
+                      <Badge className="bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-200">
                         <Calendar className="w-3 h-3 mr-1" />
                         {project.timeline}
                       </Badge>
@@ -921,17 +921,17 @@ export function DigitalMarketingPortfolio({
 
                 {/* Meta Business Insights Section */}
                 <div
-                  className="mb-5 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-950/30 dark:to-indigo-950/30 rounded-xl p-4 border border-blue-200 dark:border-blue-800 cursor-pointer hover:shadow-lg transition-all duration-300 hover:scale-[1.02]"
+                  className="mb-5 bg-gradient-to-br from-orange-50 to-green-50 dark:from-orange-950/30 dark:to-green-950/30 rounded-xl p-4 border border-orange-200 dark:border-orange-800 cursor-pointer hover:shadow-lg transition-all duration-300 hover:scale-[1.02]"
                   onClick={() => setSelectedAnalytics(project.id)}
                 >
                   <div className="flex items-center gap-2 mb-3">
-                    <BarChart3 className="w-5 h-5 text-blue-600 dark:text-blue-400" />
+                    <BarChart3 className="w-5 h-5 text-orange-600 dark:text-orange-400" />
                     <h4 className="text-sm font-bold text-slate-900 dark:text-white">
                       Meta Business Insights ({project?.type})
                     </h4>
                     <Badge
                       variant="secondary"
-                      className="ml-auto text-xs bg-blue-100 text-blue-800 dark:bg-blue-900/50 dark:text-blue-200"
+                      className="ml-auto text-xs bg-orange-100 text-orange-800 dark:bg-orange-900/50 dark:text-orange-200"
                     >
                       Verified
                     </Badge>
@@ -941,11 +941,11 @@ export function DigitalMarketingPortfolio({
                   <div className="grid grid-cols-3 gap-2 mb-3">
                     <div className="bg-white dark:bg-slate-800 rounded-lg p-2.5 text-center border border-slate-200 dark:border-slate-700">
                       {project.category === "paid" ? (
-                        <MessageCircle className="w-4 h-4 mx-auto mb-1 text-blue-600 dark:text-blue-400" />
+                        <MessageCircle className="w-4 h-4 mx-auto mb-1 text-orange-600 dark:text-orange-400" />
                       ) : project.category === "paidLeads" ? (
-                        <Users className="w-4 h-4 mx-auto mb-1 text-blue-600 dark:text-blue-400" />
+                        <Users className="w-4 h-4 mx-auto mb-1 text-orange-600 dark:text-orange-400" />
                       ) : (
-                        <Eye className="w-4 h-4 mx-auto mb-1 text-blue-600 dark:text-blue-400" />
+                        <Eye className="w-4 h-4 mx-auto mb-1 text-orange-600 dark:text-orange-400" />
                       )}
                       <div className="text-sm font-bold text-slate-900 dark:text-white">
                         {project.category === "paid"
@@ -999,9 +999,9 @@ export function DigitalMarketingPortfolio({
                       {project.category === "paid" ||
                       project.category === "paidEngagement" ||
                       project.category === "paidLeads" ? (
-                        <DollarSign className="w-4 h-4 mx-auto mb-1 text-purple-600 dark:text-purple-400" />
+                        <DollarSign className="w-4 h-4 mx-auto mb-1 text-green-600 dark:text-green-400" />
                       ) : (
-                        <Activity className="w-4 h-4 mx-auto mb-1 text-purple-600 dark:text-purple-400" />
+                        <Activity className="w-4 h-4 mx-auto mb-1 text-green-600 dark:text-green-400" />
                       )}
                       <div className="text-sm font-bold text-slate-900 dark:text-white">
                         {project.category === "paid" ||
@@ -1052,12 +1052,12 @@ export function DigitalMarketingPortfolio({
 
                     <div className="bg-white dark:bg-slate-800 rounded-lg p-2.5 text-center border border-slate-200 dark:border-slate-700">
                       {project.category === "paid" ? (
-                        <Target className="w-4 h-4 mx-auto mb-1 text-pink-600 dark:text-pink-400" />
+                        <Target className="w-4 h-4 mx-auto mb-1 text-lime-600 dark:text-lime-400" />
                       ) : project.category === "paidEngagement" ||
                         project.category === "paidLeads" ? (
-                        <Users className="w-4 h-4 mx-auto mb-1 text-pink-600 dark:text-pink-400" />
+                        <Users className="w-4 h-4 mx-auto mb-1 text-lime-600 dark:text-lime-400" />
                       ) : (
-                        <UserPlus className="w-4 h-4 mx-auto mb-1 text-pink-600 dark:text-pink-400" />
+                        <UserPlus className="w-4 h-4 mx-auto mb-1 text-lime-600 dark:text-lime-400" />
                       )}
                       <div className="text-sm font-bold text-slate-900 dark:text-white">
                         {project.category === "paid"
@@ -1081,7 +1081,7 @@ export function DigitalMarketingPortfolio({
                   </div>
 
                   {/* Click to view details indicator */}
-                  <div className="mt-3 flex items-center justify-center gap-2 text-xs text-blue-600 dark:text-blue-400 font-medium">
+                  <div className="mt-3 flex items-center justify-center gap-2 text-xs text-orange-600 dark:text-orange-400 font-medium">
                     <BarChart3 className="w-4 h-4" />
                     <span>Click to view detailed analytics</span>
                     <ArrowRight className="w-3 h-3" />
@@ -1089,7 +1089,7 @@ export function DigitalMarketingPortfolio({
                 </div>
 
                 {/* Testimonial */}
-                <div className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-lg p-4 border-l-4 border-blue-500">
+                <div className="bg-gradient-to-r from-orange-50 to-green-50 dark:from-orange-900/20 dark:to-green-900/20 rounded-lg p-4 border-l-4 border-orange-500">
                   <p className="text-sm italic text-slate-700 dark:text-slate-300 mb-2">
                     {project.note}
                   </p>
@@ -1111,7 +1111,7 @@ export function DigitalMarketingPortfolio({
           <Button
             size="lg"
             onClick={() => openModal("Digital Marketing Consultation")}
-            className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-8 py-3 text-lg font-semibold cursor-pointer"
+            className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 text-lg font-semibold cursor-pointer"
           >
             Get Started Today
             <ArrowRight className="w-5 h-5 ml-2" />

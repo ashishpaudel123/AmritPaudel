@@ -102,7 +102,7 @@ export function ServiceDetail({ serviceId, onBack }: ServiceDetailProps) {
       fullDescription: "Our PPC & Google Ads service focuses on delivering immediate, measurable results through strategic paid advertising campaigns. We optimize every aspect of your campaigns to ensure maximum ROI and sustainable growth.",
       price: "Starting at $800/mo",
       duration: "Results visible within 2-4 weeks",
-      gradient: "from-blue-500 to-cyan-600",
+      gradient: "from-orange-500 to-lime-600",
       features: [
         "Google Ads Campaign Setup & Management",
         "Keyword Research & Bidding Strategy",
@@ -168,7 +168,7 @@ export function ServiceDetail({ serviceId, onBack }: ServiceDetailProps) {
       fullDescription: "Our Social Media Marketing service helps you build meaningful connections with your audience while driving brand awareness and business growth through strategic content creation and community management.",
       price: "Starting at $600/mo",
       duration: "Results visible within 4-8 weeks",
-      gradient: "from-pink-500 to-rose-600",
+      gradient: "from-lime-500 to-lime-600",
       features: [
         "Social Media Strategy Development",
         "Content Creation & Curation",
@@ -234,7 +234,7 @@ export function ServiceDetail({ serviceId, onBack }: ServiceDetailProps) {
       fullDescription: "Our Email Marketing service focuses on building lasting customer relationships through strategic email campaigns that nurture leads, drive conversions, and maximize customer lifetime value.",
       price: "Starting at $400/mo",
       duration: "Results visible within 2-6 weeks",
-      gradient: "from-purple-500 to-violet-600",
+      gradient: "from-green-500 to-green-600",
       features: [
         "Email Marketing Strategy & Planning",
         "List Building & Segmentation",
@@ -366,7 +366,7 @@ export function ServiceDetail({ serviceId, onBack }: ServiceDetailProps) {
       fullDescription: "Our Marketing Automation service helps you scale your marketing efforts efficiently by implementing automated workflows that nurture leads, engage customers, and drive conversions without manual intervention.",
       price: "Starting at $500/mo",
       duration: "Setup within 2-4 weeks",
-      gradient: "from-indigo-500 to-blue-600", 
+      gradient: "from-green-500 to-orange-600", 
       features: [
         "Marketing Automation Platform Setup",
         "Lead Scoring & Qualification Systems",
@@ -495,8 +495,8 @@ export function ServiceDetail({ serviceId, onBack }: ServiceDetailProps) {
             <div className="bg-white dark:bg-slate-900 rounded-2xl p-8 border border-slate-200 dark:border-slate-700">
               <div className="grid md:grid-cols-3 gap-6 mb-8">
                 <div className="text-center">
-                  <div className="flex items-center justify-center w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-full mb-3">
-                    <Target className="w-6 h-6 text-blue-600" />
+                  <div className="flex items-center justify-center w-12 h-12 bg-orange-100 dark:bg-orange-900 rounded-full mb-3">
+                    <Target className="w-6 h-6 text-orange-600" />
                   </div>
                   <h4 className="font-semibold text-slate-900 dark:text-white mb-1">Investment</h4>
                   <p className="text-slate-600 dark:text-slate-300">{service.price}</p>
@@ -509,8 +509,8 @@ export function ServiceDetail({ serviceId, onBack }: ServiceDetailProps) {
                   <p className="text-slate-600 dark:text-slate-300">{service.duration}</p>
                 </div>
                 <div className="text-center">
-                  <div className="flex items-center justify-center w-12 h-12 bg-purple-100 dark:bg-purple-900 rounded-full mb-3">
-                    <Users className="w-6 h-6 text-purple-600" />
+                  <div className="flex items-center justify-center w-12 h-12 bg-green-100 dark:bg-green-900 rounded-full mb-3">
+                    <Users className="w-6 h-6 text-green-600" />
                   </div>
                   <h4 className="font-semibold text-slate-900 dark:text-white mb-1">Dedicated Team</h4>
                   <p className="text-slate-600 dark:text-slate-300">Expert specialists</p>
@@ -537,7 +537,7 @@ export function ServiceDetail({ serviceId, onBack }: ServiceDetailProps) {
               <div className="space-y-6">
                 {service.process.map((step, index) => (
                   <div key={index} className="flex">
-                    <div className="flex items-center justify-center w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full text-white text-sm font-bold mr-4 flex-shrink-0">
+                    <div className="flex items-center justify-center w-8 h-8 bg-gradient-to-r from-orange-500 to-green-600 rounded-full text-white text-sm font-bold mr-4 flex-shrink-0">
                       {index + 1}
                     </div>
                     <div>
@@ -558,7 +558,7 @@ export function ServiceDetail({ serviceId, onBack }: ServiceDetailProps) {
               <div className="grid md:grid-cols-2 gap-4">
                 {service.benefits.map((benefit, index) => (
                   <div key={index} className="flex items-start">
-                    <TrendingUp className="w-5 h-5 text-blue-500 mr-3 flex-shrink-0 mt-0.5" />
+                    <TrendingUp className="w-5 h-5 text-orange-500 mr-3 flex-shrink-0 mt-0.5" />
                     <span className="text-slate-700 dark:text-slate-300">{benefit}</span>
                   </div>
                 ))}
@@ -566,7 +566,7 @@ export function ServiceDetail({ serviceId, onBack }: ServiceDetailProps) {
             </div>
 
             {/* Case Study */}
-            <div className="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 rounded-2xl p-8 border border-slate-200 dark:border-slate-700">
+            <div className="bg-gradient-to-r from-orange-50 to-green-50 dark:from-orange-900/20 dark:to-green-900/20 rounded-2xl p-8 border border-slate-200 dark:border-slate-700">
               <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">Case Study</h3>
               <h4 className="text-xl font-semibold text-slate-800 dark:text-slate-200 mb-3">{service.caseStudy.title}</h4>
               <p className="text-slate-600 dark:text-slate-300 mb-6">{service.caseStudy.description}</p>
@@ -592,7 +592,7 @@ export function ServiceDetail({ serviceId, onBack }: ServiceDetailProps) {
               <div className="space-y-3">
                 <Button 
                   onClick={() => openModal(`Schedule Free Consultation - ${service.title}`)}
-                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 cursor-pointer"
+                  className="w-full bg-orange-600 hover:bg-orange-700 cursor-pointer"
                 >
                   <Calendar className="w-4 h-4 mr-2" />
                   Schedule Free Consultation
@@ -631,7 +631,7 @@ export function ServiceDetail({ serviceId, onBack }: ServiceDetailProps) {
             </div>
 
             {/* Quick Stats */}
-            <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-6 text-white">
+            <div className="bg-orange-600 rounded-2xl p-6 text-white">
               <h3 className="text-xl font-bold mb-4">Why Choose This Service?</h3>
               <div className="space-y-4">
                 <div className="flex items-center justify-between">

@@ -23,8 +23,8 @@ export function ServicesSection({}: ServicesSectionProps) {
     >
       {/* Background Elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-gradient-to-r from-blue-400/20 to-purple-500/20 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-gradient-to-r from-pink-400/20 to-orange-500/20 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-gradient-to-r from-orange-400/20 to-green-500/20 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-gradient-to-r from-lime-400/20 to-orange-500/20 rounded-full blur-3xl"></div>
       </div>
 
       <div className="container mx-auto px-4 relative">
@@ -34,12 +34,12 @@ export function ServicesSection({}: ServicesSectionProps) {
           data-aos="fade-up"
           data-aos-duration="800"
         >
-          <Badge className="bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200 mb-4">
+          <Badge className="bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-200 mb-4">
             My Services
           </Badge>
           <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6">
             Comprehensive Digital Marketing
-            <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+            <span className="bg-orange-600 bg-clip-text text-transparent">
               Solutions
             </span>
           </h2>
@@ -60,9 +60,7 @@ export function ServicesSection({}: ServicesSectionProps) {
               data-aos-delay={(index % 3) * 500}
             >
               {/* Icon */}
-              <div
-                className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r ${service.gradient} rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300`}
-              >
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-orange-500 to-orange-700 rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
                 <service.icon className="w-8 h-8 text-white" />
               </div>
 
@@ -82,7 +80,7 @@ export function ServicesSection({}: ServicesSectionProps) {
                       key={featureIndex}
                       className="flex items-center text-sm text-slate-700 dark:text-slate-300"
                     >
-                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-orange-500 mr-2 flex-shrink-0" />
                       {feature}
                     </li>
                   ))}
@@ -152,7 +150,7 @@ export function ServicesSection({}: ServicesSectionProps) {
                 key={index}
                 className="text-center"
               >
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full text-white font-bold text-lg mb-4">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-orange-600 rounded-full text-white font-bold text-lg mb-4">
                   {process.step}
                 </div>
                 <h4 className="text-xl font-semibold text-slate-900 dark:text-white mb-2">

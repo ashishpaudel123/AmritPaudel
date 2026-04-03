@@ -78,7 +78,7 @@ export function Header() {
               <NavigationMenuList>
                 <NavigationMenuItem>
                   <NavigationMenuLink
-                    className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-slate-100/80 dark:bg-slate-800/80 text-slate-700 dark:text-slate-200 px-4 py-2 text-sm font-medium transition-all duration-200 hover:bg-blue-50 hover:text-blue-700 dark:hover:bg-blue-900/50 dark:hover:text-blue-200 focus:bg-blue-50 focus:text-blue-700 dark:focus:bg-blue-900/50 dark:focus:text-blue-200 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-blue-100 data-[active]:text-blue-800 dark:data-[active]:bg-blue-900/70 dark:data-[active]:text-blue-100"
+                    className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-slate-100/80 dark:bg-slate-800/80 text-slate-700 dark:text-slate-200 px-4 py-2 text-sm font-medium transition-all duration-200 hover:bg-orange-50 hover:text-orange-700 dark:hover:bg-orange-900/50 dark:hover:text-orange-200 focus:bg-orange-50 focus:text-orange-700 dark:focus:bg-orange-900/50 dark:focus:text-orange-200 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-orange-100 data-[active]:text-orange-800 dark:data-[active]:bg-orange-900/70 dark:data-[active]:text-orange-100"
                     href="/"
                   >
                     Home
@@ -86,7 +86,7 @@ export function Header() {
                 </NavigationMenuItem>
                 <NavigationMenuItem>
                   <NavigationMenuLink
-                    className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-slate-100/80 dark:bg-slate-800/80 text-slate-700 dark:text-slate-200 px-4 py-2 text-sm font-medium transition-all duration-200 hover:bg-blue-50 hover:text-blue-700 dark:hover:bg-blue-900/50 dark:hover:text-blue-200 focus:bg-blue-50 focus:text-blue-700 dark:focus:bg-blue-900/50 dark:focus:text-blue-200 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-blue-100 data-[active]:text-blue-800 dark:data-[active]:bg-blue-900/70 dark:data-[active]:text-blue-100"
+                    className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-slate-100/80 dark:bg-slate-800/80 text-slate-700 dark:text-slate-200 px-4 py-2 text-sm font-medium transition-all duration-200 hover:bg-orange-50 hover:text-orange-700 dark:hover:bg-orange-900/50 dark:hover:text-orange-200 focus:bg-orange-50 focus:text-orange-700 dark:focus:bg-orange-900/50 dark:focus:text-orange-200 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-orange-100 data-[active]:text-orange-800 dark:data-[active]:bg-orange-900/70 dark:data-[active]:text-orange-100"
                     href="/#about"
                     onClick={(e) => handleSectionClick(e, "about")}
                   >
@@ -146,7 +146,7 @@ export function Header() {
                 </NavigationMenuItem>
                 <NavigationMenuItem>
                   <NavigationMenuLink
-                    className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-slate-100/80 dark:bg-slate-800/80 text-slate-700 dark:text-slate-200 px-4 py-2 text-sm font-medium transition-all duration-200 hover:bg-blue-50 hover:text-blue-700 dark:hover:bg-blue-900/50 dark:hover:text-blue-200 focus:bg-blue-50 focus:text-blue-700 dark:focus:bg-blue-900/50 dark:focus:text-blue-200 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-blue-100 data-[active]:text-blue-800 dark:data-[active]:bg-blue-900/70 dark:data-[active]:text-blue-100"
+                    className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-slate-100/80 dark:bg-slate-800/80 text-slate-700 dark:text-slate-200 px-4 py-2 text-sm font-medium transition-all duration-200 hover:bg-orange-50 hover:text-orange-700 dark:hover:bg-orange-900/50 dark:hover:text-orange-200 focus:bg-orange-50 focus:text-orange-700 dark:focus:bg-orange-900/50 dark:focus:text-orange-200 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-orange-100 data-[active]:text-orange-800 dark:data-[active]:bg-orange-900/70 dark:data-[active]:text-orange-100"
                     href="/#portfolio"
                     onClick={(e) => handleSectionClick(e, "portfolio")}
                   >
@@ -155,7 +155,7 @@ export function Header() {
                 </NavigationMenuItem>
                 <NavigationMenuItem>
                   <NavigationMenuLink
-                    className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-slate-100/80 dark:bg-slate-800/80 text-slate-700 dark:text-slate-200 px-4 py-2 text-sm font-medium transition-all duration-200 hover:bg-blue-50 hover:text-blue-700 dark:hover:bg-blue-900/50 dark:hover:text-blue-200 focus:bg-blue-50 focus:text-blue-700 dark:focus:bg-blue-900/50 dark:focus:text-blue-200 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-blue-100 data-[active]:text-blue-800 dark:data-[active]:bg-blue-900/70 dark:data-[active]:text-blue-100"
+                    className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-slate-100/80 dark:bg-slate-800/80 text-slate-700 dark:text-slate-200 px-4 py-2 text-sm font-medium transition-all duration-200 hover:bg-orange-50 hover:text-orange-700 dark:hover:bg-orange-900/50 dark:hover:text-orange-200 focus:bg-orange-50 focus:text-orange-700 dark:focus:bg-orange-900/50 dark:focus:text-orange-200 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-orange-100 data-[active]:text-orange-800 dark:data-[active]:bg-orange-900/70 dark:data-[active]:text-orange-100"
                     href="/#testimonials"
                     onClick={(e) => handleSectionClick(e, "testimonials")}
                   >
@@ -164,7 +164,7 @@ export function Header() {
                 </NavigationMenuItem>
                 <NavigationMenuItem>
                   <NavigationMenuLink
-                    className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-slate-100/80 dark:bg-slate-800/80 text-slate-700 dark:text-slate-200 px-4 py-2 text-sm font-medium transition-all duration-200 hover:bg-blue-50 hover:text-blue-700 dark:hover:bg-blue-900/50 dark:hover:text-blue-200 focus:bg-blue-50 focus:text-blue-700 dark:focus:bg-blue-900/50 dark:focus:text-blue-200 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-blue-100 data-[active]:text-blue-800 dark:data-[active]:bg-blue-900/70 dark:data-[active]:text-blue-100"
+                    className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-slate-100/80 dark:bg-slate-800/80 text-slate-700 dark:text-slate-200 px-4 py-2 text-sm font-medium transition-all duration-200 hover:bg-orange-50 hover:text-orange-700 dark:hover:bg-orange-900/50 dark:hover:text-orange-200 focus:bg-orange-50 focus:text-orange-700 dark:focus:bg-orange-900/50 dark:focus:text-orange-200 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-orange-100 data-[active]:text-orange-800 dark:data-[active]:bg-orange-900/70 dark:data-[active]:text-orange-100"
                     href="/#blog"
                     onClick={(e) => handleSectionClick(e, "blog")}
                   >
@@ -173,7 +173,7 @@ export function Header() {
                 </NavigationMenuItem>
                 <NavigationMenuItem>
                   <NavigationMenuLink
-                    className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-slate-100/80 dark:bg-slate-800/80 text-slate-700 dark:text-slate-200 px-4 py-2 text-sm font-medium transition-all duration-200 hover:bg-blue-50 hover:text-blue-700 dark:hover:bg-blue-900/50 dark:hover:text-blue-200 focus:bg-blue-50 focus:text-blue-700 dark:focus:bg-blue-900/50 dark:focus:text-blue-200 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-blue-100 data-[active]:text-blue-800 dark:data-[active]:bg-blue-900/70 dark:data-[active]:text-blue-100"
+                    className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-slate-100/80 dark:bg-slate-800/80 text-slate-700 dark:text-slate-200 px-4 py-2 text-sm font-medium transition-all duration-200 hover:bg-orange-50 hover:text-orange-700 dark:hover:bg-orange-900/50 dark:hover:text-orange-200 focus:bg-orange-50 focus:text-orange-700 dark:focus:bg-orange-900/50 dark:focus:text-orange-200 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-orange-100 data-[active]:text-orange-800 dark:data-[active]:bg-orange-900/70 dark:data-[active]:text-orange-100"
                     href="/#contact"
                     onClick={(e) => handleSectionClick(e, "contact")}
                   >
@@ -189,7 +189,7 @@ export function Header() {
             <ModeToggle />
             <Button
               onClick={() => openModal("Get Free Consultation")}
-              className="hidden xl:inline-flex bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 whitespace-nowrap cursor-pointer"
+              className="hidden xl:inline-flex bg-green-700 hover:bg-green-800 whitespace-nowrap cursor-pointer"
             >
               Get Free Consultation
             </Button>
@@ -315,7 +315,7 @@ export function Header() {
             <div className="pt-4 border-t">
               <Button
                 onClick={() => openModal("Get Free Consultation")}
-                className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 cursor-pointer"
+                className="w-full bg-green-700 hover:bg-green-800 cursor-pointer"
               >
                 Get Free Consultation
               </Button>
