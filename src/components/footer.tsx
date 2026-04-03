@@ -1,6 +1,6 @@
 import { services } from "@/lib/utils";
 import { Mail, Phone, MapPin, ArrowUp } from "lucide-react";
-
+import logo from "@/assets/logo.png";
 export function Footer() {
   const currentYear = new Date().getFullYear();
 
@@ -37,12 +37,13 @@ export function Footer() {
               <div>
                 {/* Logo */}
                 <div className="flex items-center space-x-3 mb-4">
-                  <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center font-bold text-lg">
-                    AM
-                  </div>
-                  <span className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                    Amritya
-                  </span>
+                  <a href="/" className="flex items-center space-x-2">
+                    <img
+                      className="w-40 h-auto"
+                      src={logo}
+                      alt="Amritya Logo"
+                    />
+                  </a>
                 </div>
               </div>
 

@@ -18,7 +18,7 @@ import {
 } from "./ui/dropdown-menu";
 import { ModeToggle } from "./mode-toggle";
 import { useContactModal } from "../hooks/use-contact-modal";
-
+import logo from "@/assets/logo.png";
 export function Header() {
   const { openModal } = useContactModal();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -63,17 +63,12 @@ export function Header() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-[100] w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 shadow-sm">
-      <div className="max-w-full mx-auto px-4">
+      <div className="container mx-auto px-4 ">
         <div className="flex h-16 items-center">
           {/* Left - Logo */}
           <div className="flex items-center flex-shrink-0 min-w-0">
             <a href="/" className="flex items-center space-x-2">
-              <div className="flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-r from-blue-600 to-purple-600 text-primary-foreground font-bold">
-                AM
-              </div>
-              <span className="font-bold text-xl bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent whitespace-nowrap">
-                Amritya
-              </span>
+              <img className="w-40 h-auto" src={logo} alt="Amritya Logo" />
             </a>
           </div>
 
